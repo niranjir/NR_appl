@@ -54,8 +54,79 @@
 
 
 % What I am interested in
-I am interested in solving problems that emerge when computing is coupled with physical world/processes. \\
-I am interested in a principled approach for sensing and estimation in cyber-physical systems (CPS) in the real-world. \\
+
+%I am interested in solving problems that emerge when we integrate cyber-physical systems (CPS)  
+%I am interested in solving problems that emerge when physical systems in the real-world are integrated with physically distributed computing systems over a network. 
+%Cyber-Physical Systems (CPS) is the paradigm 
+I am interested in a principled approach for sensing and estimation in cyber-physical systems (CPS) in the real-world. CPS are systems where
+computing is integrated with the physical world through physically distributed sensors and actuators over a network. The goal of this integration is to monitor and change the state of the physical world.  %They rely on a model of the system.
+%Advancements in low-power microcontrollers, radios, sensors, devices, communication and network technologies are now pushing CPS to a point where .\\
+Some examples of CPS applications are smart grids, internet-of-things, swarm robotics, smart infrastructure. Large-scale real-world physical systems are complex, have temporal dynamics, vary with several parameters, and as a result are difficult to model. This makes it hard to design computing systems that achieve reliable performance at scale. Performance is measured by - accuracy, timing and predictability of estimating and controling the physical system.  A common approach is to improve performance by using more resources - such as higher density or more expensive sensors. Another approach is to customize the system, such as performing environment-specific calibration to compensate for an unknown or low fidelity model of the system. \\
+
+My approach to sensing and estimation in CPS is to work at the intersection of theory and practice and develop abstractions that are both general so we can apply pricipled approaches, and practical in the real-world. My approach to sensing is opportunistic - to do the best with the available sensors, by developing better abstractions and algorithms. I develop this through an experimental systems approach and an understanding of signals and systems from first principles. More broadly, I apply tools from estimation, signal processing and optimzation to embedded sensing systems. I implement and evaluate my approaches by deploying systems in the real-world. \\
+
+\textbf{Short summary of my research and impact:}\\
+My disseration focuses on indoor localization - a classic instance of a CPS problem, with tight coupling between computing and the physical world. Location is also a fundamental property for several CPS applications. There are more than a million papers on indoor positioning and indoor localization, yet it isn't an everyday reality yet. Indoor localization faces the typical CPS challenges while scaling up from labs to real-world - (1) complexity of indoor environments (2) temporal dynamics due to people, devices and things moving (3) each environment is unique and varied, and as a result it is hard to model the interaction of signals with indoor spaces. Ideally, we want a system that is accurate all the time. So performance in indoor localization is characterized by accuracy, acquisition time (time to initialize), and the update rate. The cost is characterized by amount of infrastructure deployed, additional hardware on the receiver (the thing/person/device being localized), and the effort and time to calibrate, map or setup the system. Existing solutions for mobile localization are of two types. \\
+
+Infrastructure-free approaches use sensors on mobiles (inertial, magnetic, camera), WiFi devices already present in the environment, and floor plan information. These systems can require environment-specific, device-specific calibration, and can only be accurate after the person has moved a long distance (high acquisition time). Infrastructure-based are capable of accurate positioning but they use custom deployed beacons and require these beacons to be setup and mapped. No existing solution is accurate, instant, updates all the time and has zero-cost. \\
+My approach to indoor loclaization is to  
+
+Across existing literature in localization, accuracy is achieved by 
+
+difficulty in modeling systems complexity of indoor spaces design trade-offs between performance and cost; requirin Some 
+My disseration takes an alternative approach - emerging ToF technologies - envision future ecosystem.\\
+Contributions span fundmantal and applied.\\
+On fundamental - no systematic approach - IPIN, computational geometry
+IPSN
+Orientation
+SLAM
+Ultrasonic localization - cite papers, demo - startup - won competition.\\
+Most precise phone-based localization system.\\
+RF - Apple - earliest prorotype.\\
+TI - BLE SLAM
+UWB - NIST, won competition.\\
+
+
+\section{Indoor Localization}
+
+\section{Research in other areas in CPS}
+Prior, worked on energy metering, NILM, demo.\\
+Abstracted appliance state to on-off --> based on correlating mag fld to energy metering data\\
+EMF for time-sync
+TI - PLC-WiFi. Then looked at lights as an end-point for data tx
+VLC - built one of the earliest works systems. Abstracted channel between light and camera. Hybrid system. Demoed. 
+
+\section{Future Work}
+
+
+% CPS end-end design is application specific. 
+% CPS - application-specific. I have worked on applications, on communication; 
+% VLC - imapct.\\
+% Indoor localization.\\
+
+
+
+
+
+%As a result, we either have either theory that is geneasystems that work well in lab environments and do not scale, or theory  %This makes it hard to design CPS in a principled manner. %A principled approach to sensing and estimation in CPS\\
+%My goal is to develop principled approaches that all
+
+%Physical things move - introducing complexity\\
+%dynamics of system over time\\
+%High fidelity model accurately represents the system\\
+%Physical + computing + networking
+
+
+
+
+
+%My approach is to bridge the gap between theory and practice of sensing and estimation in CPS by working at the intersection of estimation, signal processing, optimization and embedded sensing systems. 
+%Performance can be traded-off with cost by 
+%complexity and unpredictabiity of physical systems in the real-world makes it hard for these computing systems to be reliable at scale. 
+
+%Cyber-Physical Systems 
+
+%I am interested in a principled approach for sensing and estimation in cyber-physical systems (CPS) in the real-world. \\
 %I am interested in a principled approach for sensing and estimation in cyber-physical systems (CPS) in the real-world. 
 % Why CPS - goal of CPS
 % examples of CPS - swarm of robots, networked sys for indoor loc, smart grid, network of medical devices,
