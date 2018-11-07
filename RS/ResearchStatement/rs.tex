@@ -52,6 +52,106 @@
 
 \vspace{-4em}
 
+I am interested in a enabling new cyber-physical system (CPS) applications. Exciting CPS applications includes interactive experiences with mixed reality, smart and responsive infrastructure, autonomous vehicles, swarm robotics, and computing to improve healthcare.
+
+CPS have physically distributed networked sensors and actuators with the goal of monitoring and changing the state of the physical world. Realizing these systems in practice in a reliable manner is hard for several reasons. First, the real-time nature of physical world poses timing constraints on the estimation and control. Second, the physical systems have spatially-varying properties, that are difficult to model and estimation has to be performed jointly by distributed embedded devices. Third, the properties of the system vary with deployment and environment, making it hard to create models that generalize. As a result, CPS design either does not scale in terms of resources used, make assumptions that hold only in some environments or don't meet the performance demanded by these emerging applications.\\
+% Focus on limited performance metrics.
+
+%faces the conflicting objectives to  To realize these emerging applications, we require scalable systems with high peformance in any environment.\\
+\textbf{My approach:}\\
+I approach CPS challenges from a sensing and estimation point-of-view. My goal is to achieve (1) high performance, ie quality of information inferred (accuracy, reliability, timing of estimating the state of system) (2) with low resources, ie the physical infrastructure and prior information required (environment-specific, device-specific calibration). %My goal is to increase information inferred and reduce the resources used.\\
+%I approach CPS design from estimation and sensing point-of-view, with understanding of end-end system.
+The questions that guide my research are:\\
+(1) How to use sensors in a smarter way? - more data with limited resources\\
+(2) How to quantify the information available as a function of resources? - this can inform us on the resources required\\
+(3) How to intelligently integrate data from different sources? - more inference from same data using better algorithms\\
+(4) What is the underlying system model?
+
+%System constraints that are practical: resources.
+I work at the interface of signals and systems. To develop my solutions - I understand end-end system components including communication, networking, embedded hardware, sensing, control and timing; I apply tools from estimation, statistical signal processing, optimzation to embedded sensing systems. I build and deploy my solutions in the real-world. \\ 
+
+\textbf{Impact in CPS}:\\
+I designed a system and communication scheme for sending data from overhead LED lights to unmodified phones. This was one of the earliest systems in visible light communication (VLC) and light-based localization. This resulted in publications at IPSN 14 (cited 130+ times), VLCS 14 and demo-ed in IPSN 14. % and over the next four years the field has grown signifi in VLC-phone comm with multiple access and LED-based localization.  130 citations, field has grown.
+I have also contributed to other areas of CPS: time-synchronization (RTSS 14, RTAS 17) and electrical energy monitoring (ICCSP 13 + demo at ICCPS 13). My dissertation contributed to beacon-based indoor localization systems for mobile devices. This work has resulted in several publictions (SenSys 15, RTAS 15, IPIN 16, IPSN 18 + demos in Sensys 15, IPSN 18), 2 patents, 2 time winning the international-level Microsoft Indoor Localization competition, 1 best demo, 1 startup, and has been funded by NSF, SRC, NIST, and industry. This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, asset mapping applications. 
+
+\section{Contribution to Indoor Localization}
+Infrastructure-based indoor localization and the focus of my thesis:
+Solve several problems.
+
+\subsection{ Convergence on a paradigm }
+Approach: range-based localization; ultrasonic compatible with phones; Apple; TI; 
+Impact is that I abstracted the technology to ranging. Tools and methods can generalize to a number of technologies.
+
+\subsection{Reduce the amount of infrastructure}
+Location acquisition in presence of NLOS
+(3)Integrate floor plan info.
+
+\subsection{Quantify the quality of placement}
+(2,4): Coverage; GDOP; algorithms; theoretical results.
+Insights about number of beacons, first systematic approach
+
+\subsection{Orientation acquisition}
+(1,3,4): characterized orientation, fusion, crowdsourced mapping
+
+\subsection{Mapping}
+ - sensor fusion
+
+\subsection{Next steps}
+Infrastructure-free ecosystem; IoT devices acting as beacons.
+
+
+\subsection{Applications} 
+Mobile AR, firefighter localization. Invited to museum conference, practical aspects - policy, who will pay for it, etc. 
+Reiterates that not enough to design systems that give high precision, they have to be practical. 
+
+\section{Future Work}
+\subsection{Next generation spatiotemporal applications}
+Mixed reality will impact several domains - healthcare, manufacuring, entertainment, training.\\
+Location is important to mixed reality.\\
+Current approaches are using vision.\\
+Vision is not enough. Other sensing sources have to be used.
+
+\subsection{Secure sensing}
+Security affects all layers of system stack.\\
+Attack at physical layer  - of interest to me\\
+Hard because - system models assumed do not account for attack models.\\
+Potential apprpach - using other sensing sources.\\
+Preliminary work - ETH zurich, secure localization.
+
+\subsection{Semantic representation of information}
+Future CPS systems - context is important. \\
+
+Representation of information.
+
+\subsection{Information processing at edge}
+With large amount of sensor data, and timing requirements + power requirements on devices + shared communication spectrum, can we design sensor fusion approaches with local processing. Challenge is in making the decision on when to compute locally vs when to share the information. 
+
+
+
+\newpage
+%Ultimately, there is a trade-off between performance 
+%As a result, the solutions are either not scalable in terms of resources used, or make assumptions 
+
+
+% CPS design is challenging due to the real-time propoerties,
+
+% Real-time nature : timing constraints on estimation
+% Physically distributed: makes it hard to model the input, output
+% Systems are deployed in different environment: makes it hard for systematic approach.
+
+
+
+% Estimation with high performance (accuracy, timing properties, reliability) and low resources (infrastructure deployed, and any environment-specific calibration or setup)
+
+% As a result, solutions:
+% Impractical in terms of resources used, do not scale.
+% Make assumptions that hold only in some environments.
+% Focus on limited performance metrics.
+
+
+
+
+
 
 % What I am interested in
 
