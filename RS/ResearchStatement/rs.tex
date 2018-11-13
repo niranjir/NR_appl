@@ -57,40 +57,38 @@
 \end{table}
 
 
-We live in exciting times where applications of cyber-physical systems
-(CPS) that improve efficiency and safety are emerging. Examples
-include interactive experiences with mixed reality, smart and
-responsive buildings, autonomous vehicles, smart manufacturing, industrial
-internet of things, and computing to improve healthcare. These systems are large in scale, operate in unpredictable environments and have moving parts.  This disrupts classical siloed system design, where systems are broken down into components from different domains, each with their own tools and design methodology. For instance, system implementations and algorithms are often tuned to the environment or technology. 
-This makes it hard to analyze the system for properties such as reliability and
-robustness. On the other hand, if we remove properties of the real
-world and abstract systems to well-understood models, we can
-systematically analyze them and predict their functionality. But this
-analysis is far removed from practical systems. To face the challenges of modern CPS, 
-%I solves the challenges that arise when we integrate 
-%my approach is to identify and solve the challenges that arise across these layers.
-I bring to embedded sensing systems research, a systematic understanding of signal processing, system modeling, inference, state estimation and communication. %I identify and solves challenges that arise across these layers  key to building reliable systems that work in the real world. %on challenges that arise when we Sp
-I apply information processing tools from signal processing, estimation, optimization to embedded sensing systems to build reliable systems for the real-world.\\
-%To build truly reliable and scalable systems that work in the real
-%world I adopt an end-end approach spanning
-%practical system design and theoretical system analysis.\\
-
-
-Rather than the traditional siloed approach, I jointly design the sensing pipeline, system models and information processing algorithms and physical networked embedded system. Common to my methodology is (a) I work closely to the physical layer (b) I experiment and deploy systems in the real-world to understand the interaction between signals and systems from first principles (c) I develop signal, sensor and system models (d) I identify and implement the theoretical tools relevant to the estimation problem (e) I jointly determine the design parameters of the networked embedded system (sensor front-end modifications, what
-infrastructure to use? where to place them? what sensors to collect
-data from? how to schedule the devices? how to synchronize them? what communication scheme?) and design and implement the
-information processing algorithms.\\
-
-For instance, in the area of indoor localization, my first approach was to jointly design algorithms for beacon placement and location estimation. This joint design reduces the number of beacons, and makes the estimation robust. %Another example of my approach, is that I designed a novel sensing method using magnetic field for orientation acquisition. I used this to design algorithms for generating maps of magnetic field with pedestrians walking around, and an algorithm for instant orientation acquisition. % estimation algorithm and mapping algorithms and an end-end approach for automatically generating magnetic maps and instantly acquiring orientation of the phone. 
-Another example is in the design of a visible light communication system. I designed a modulation scheme for LED lights and a demodulation scheme for cameras that leveraged the properties of the communication channel and the properties of sensors, and use this communication scheme to design the firmware on the LEDs and the phone.
+We live in exciting times where new applications of cyber-physical systems
+(CPS) are emerging to improve efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems, and the focus of my work is - making an inference about the physical world. I design the sensing and inference pipeline end-end by joint design of sensor front-end, system models, the networked embedded system and the information processing algorithms. 
 
 
 
-\paragraph{Impact:}  In 2013, when LED lights were phasing out
+Classical system design is split into components that are designed independently : (1) the embedded platform that can produce and sense signals (2) the distributed network (3) the information processing algorithms. This works when we have well defined models and interfaces for the interaction of real world with signals. However, emerging CPS have distributed heterogeneous components and have to make inferences that go beyond simple sensors and systems. As a result, on one hand we have siloed system implementations that use custom sensors and devices and work in some environments but don't generalize and cannot be systematically analyzed. On the other hand we have tools for information processing and analysis that is far removed from practice. To face the challenges of modern CPS, I build reliable networked embedded sensing systems by (1) designing novel sensing methods that are practical and generalize to the sensor type; this gives us more information with available sensors. (2) designing new system models that are simple; they can be systematically analyzed and help us design tools for achieving high performance with low resources; they work in practice (3) designing information processing algorithms; I draw tools from signal processing, estimation, optimization based on the problem at hand. My methodology is to work close to the physical layer, understand signals and systems from first principles. I experiment and deploy systems in the real-world. \\
+
+My dissertation focuses on location estimation of mobile devices inside a building. Location estimation is a fundamental piece of several CPS applications. Though there are a million papers on indoor localization, yet we get lost indoors. Indoor location estimation faces the challenges of heterogeneous infrastructure indoors 
+
+%However, emerging CPS are large in scale, operate in unpredictable environments, and have heterogeneous and mobile parts.
+
+
+%Our goal is to get reliable performance with resource constraints. % (sensors on device, number of devices, network bandwidth, etc). %In order to get reliable performance and systematically allocate resources for sensing %The information processing relies on models of the sensors, signals and systems. %This works when we have well-defined models of the physical world. 
+ %This works for simple sensing systems where we have well defined models for the physical systems. 
+% However, the emerging CPS are hard to model. 
+% They are large in scale, operate in unpredictable environments, and have heterogeneous and mobile parts. As a result, we either have real-world implementations that are hard to analyze;  or we have theoretical analysis that is far from removed from practice. %The siloed approach fails because we cannot well defined models of the world. 
+% %As a result, the design of these systems becomes challenging. 
+% To face the challenges of modern CPS, I (1) design novel sensing methods to get more information with available sensors (2) design system models that are simple enough to systematically analyze and work in practice (3) design the information processing algorithms by drawing tools from signal processing, estimation, optimization.
+% %As a result, we either have real-world implementations that are hard to analyze for performance and resource allocation;  or we have theoretical analysis that is far from removed from practice. My approach is to My goal is to build systems that are re To solve this, my appraoch is to 
+% %Hence there is a gap between systems built for the real-world system design which cannot  
+% More broadly, I bring to embedded sensing systems research, a systematic understanding of signal processing, system modeling, inference, state estimation and communication. 
+% I work close to the physical layer. I experiment and deploy systems in the real-world.
+%I apply information processing tools from signal processing, estimation, optimization to embedded sensing systems, and design novel sensing methods to build reliable systems for the real-world.\\
+
+\paragraph{Summary and Impact of Work}
+In 2013, when LED lights were phasing out
 incandescent lights, I designed one of the earliest visible light
 communication (VLC) systems to send data from overhead LED lights and
-for light-based localization. This work was published in IPSN'14\cite{rajagopal2014visual}
-(cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  My
+for light-based localization. Here, I solved the This work was published in IPSN'14\cite{rajagopal2014visual}
+(cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  
+
+
 dissertation contributed to beacon-based indoor localization systems
 for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
 RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
@@ -99,9 +97,70 @@ Microsoft Indoor Localization competition twice, received a best demo
 award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
 industry. This work is being applied to indoor navigation, mobile
 persistent augmented reality, firefighter localization, and asset
-mapping applications.  I have also contributed to other areas of CPS:
+mapping applications.  
+
+I have also contributed to other areas of CPS:
 time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
 monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+% and operate in unpredictable environments. As a result, we cannot
+%large in scale, operate in unpredictable environments, have heterogeneous parts and are resource constrained. As a result, we no longer have well-defined models for t
+
+%For building systems that can reliably estimate the state of the real-world, we 
+
+% siloed into different parts with well defined interface, each of which is independently designed: (1) the embedded sensor platform (2) the deployment and network (3) the information processing algorithm to make an inference. However, this 
+
+%However, these systems are large in scale, operate in unpredictable environments, have heterogeneous parts and can be resource constrained. As a result, this siloed design no longer holds. 
+
+
+% is broken into components in different domains - embedded sensor platform, 
+
+%  (2) the physical and information layer of the distributed embedded sensors (3) information processing algorithms
+
+ 
+
+% Traditionally the design of This disrupts the classical siloed system design which is broken into different domains . For instance, consider the typical IoT paradigm where devices are
+
+% The classical design does not hold since the information
+% %are performed with 
+
+
+% This disrupts classical siloed system design, where systems are broken down into components from different domains, each with their own tools and design methodology. For instance, system implementations and algorithms are often tuned to the environment or technology. 
+% This makes it hard to analyze the system for properties such as reliability and
+% robustness. On the other hand, if we remove properties of the real
+% world and abstract systems to well-understood models, we can
+% systematically analyze them and predict their functionality. But this
+% analysis is far removed from practical systems. To face the challenges of modern CPS, 
+% I bring to embedded sensing systems research, a systematic understanding of signal processing, system modeling, inference, state estimation and communication. 
+% I apply information processing tools from signal processing, estimation, optimization to embedded sensing systems to build reliable systems for the real-world.\\
+
+
+% Rather than the traditional siloed approach, I jointly design the sensing pipeline, system models and information processing algorithms and physical networked embedded system. Common to my methodology is (a) I work closely to the physical layer (b) I experiment and deploy systems in the real-world to understand the interaction between signals and systems from first principles (c) I develop signal, sensor and system models (d) I identify and implement the theoretical tools relevant to the estimation problem (e) I jointly determine the design parameters of the networked embedded system (sensor front-end modifications, what
+% infrastructure to use? where to place them? what sensors to collect
+% data from? how to schedule the devices? how to synchronize them? what communication scheme?) and design and implement the
+% information processing algorithms.\\
+
+% For instance, in the area of indoor localization, my first approach was to jointly design algorithms for beacon placement and location estimation. This joint design reduces the number of beacons, and makes the estimation robust. 
+% Another example is in the design of a visible light communication system. I designed a modulation scheme for LED lights and a demodulation scheme for cameras that leveraged the properties of the communication channel and the properties of sensors, and use this communication scheme to design the firmware on the LEDs and the phone.
+
+
+
+% \paragraph{Impact:}  In 2013, when LED lights were phasing out
+% incandescent lights, I designed one of the earliest visible light
+% communication (VLC) systems to send data from overhead LED lights and
+% for light-based localization. This work was published in IPSN'14\cite{rajagopal2014visual}
+% (cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  My
+% dissertation contributed to beacon-based indoor localization systems
+% for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
+% RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
+% Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
+% Microsoft Indoor Localization competition twice, received a best demo
+% award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% industry. This work is being applied to indoor navigation, mobile
+% persistent augmented reality, firefighter localization, and asset
+% mapping applications.  I have also contributed to other areas of CPS:
+% time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
 
 \section{Current Research}
 
