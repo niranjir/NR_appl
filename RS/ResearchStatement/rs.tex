@@ -56,12 +56,15 @@
 
 \end{table}
 
+We live in exciting times where new applications of cyber-physical systems
+(CPS) are emerging to improve efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems, and the focus of my work is - making an inference about the physical world. I design the sensing and inference pipeline end-end by joint design of sensor front-end, system models, the networked embedded system and the information processing algorithms. 
 
-We live in exciting times where applications of cyber-physical systems
-(CPS) that improve efficiency and safety are emerging. Examples
-include interactive experiences with mixed reality, smart and
-responsive buildings, autonomous vehicles, smart manufacturing, industrial
-internet of things, and computing to improve healthcare. These systems are large in scale, operate in unpredictable environments and have moving parts.  This disrupts classical siloed system design, where systems are broken down into components from different domains, each with their own tools and design methodology. For instance, system implementations and algorithms are often tuned to the environment or technology. 
+
+
+Classical system design is split into components that are designed independently : (1) the embedded platform that can produce and sense signals (2) the distributed network (3) the information processing algorithms. This works when we have well defined models and interfaces for the interaction of real world with signals. However, emerging CPS have distributed heterogeneous components and have to make inferences that go beyond simple sensors and systems. As a result, on one hand we have siloed system implementations that use custom sensors and devices and work in some environments but don't generalize and cannot be systematically analyzed. On the other hand we have tools for information processing and analysis that is far removed from practice. To face the challenges of modern CPS, I build reliable networked embedded sensing systems by (1) designing novel sensing methods that are practical and generalize to the sensor type; this gives us more information with available sensors. (2) designing new system models that are simple; they can be systematically analyzed and help us design tools for achieving high performance with low resources; they work in practice (3) designing information processing algorithms; I draw tools from signal processing, estimation, optimization based on the problem at hand. My methodology is to work close to the physical layer, understand signals and systems from first principles. I experiment and deploy systems in the real-world. \\
+
+\textbf{Old intro:}\\
+We live in exciting times where we are finally seeing cyber-physical systems (CPS) applications being applied to improve efficiency and safety. Examples include interactive experiences with mixed reality, smart and responsive buildings, autonomous vehicles, smart manufacturing, industrial internet of things, and computing to improve healthcare. These systems are large in scale, operate in unpredictable environments and literally have many moving parts.  This disrupts classical siloed system design, where systems are broken down into components from different domains, each with their own tools and design methodology. For instance, system implementations and algorithms are often tuned to the environment or technology. 
 This makes it hard to analyze the system for properties such as reliability and
 robustness. On the other hand, if we remove properties of the real
 world and abstract systems to well-understood models, we can
@@ -274,8 +277,8 @@ making these systems robust to attacks. %We require
 %For emerging systems, I want to add 
 
 \paragraph{Next-generation communication}
-Future localization and communication technologies will impact each other. 
-I am interested in using localization for solving challenges in next generation communication technologies. % and in exploring the problems that emerge when we consider the joint design of communication and localization. 
+Last dimension to be optimized is spatial capacity.  At higher frequencies, this requires wireless systems to become heavily location aware. 
+Channel modeling, spatial stability of channel.
 Location awareness in fifth generation (5G) wireless networks will enable resource allocation by predicting slow-varying channel characteristics and connectivity, and in dynamic spectrum management and routing. 
 For mmWave technology physically distributed location-aware devices would coordinate together for beamforming and to create large MIMO arrays. 
 Location-awareness can also enable better use of the spectrum by sensing the location of users, and by creating reconfigurable arrays with mobile agents. 
