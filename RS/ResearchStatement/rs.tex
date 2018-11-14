@@ -58,41 +58,58 @@
 
 
 We live in exciting times where new applications of cyber-physical systems
-(CPS) are emerging to improve efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems, and the focus of my work is - making an inference about the physical world. I design the sensing and inference pipeline end-end by joint design of sensor front-end, system models, the networked embedded system and the information processing algorithms. 
-
-
-Classical system design is split into the design of the embedded system and the design of the information processing algorithms. 
+(CPS) are emerging to improve efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems is making an inference about the physical world. Classical system design is split into the design of the embedded system and the design of the information processing algorithms.
 %This approach works when we can clearly express the information we are measuring as
 %This approach is effective when we can clearly define the interface between the em
 %This is effectively when  we have sensors 
 %From the information processing This approach works when we can clearly model the interface between the embedded system and the physical world.
 The design of these two parts can be decoupled when we have well defined interfaces between them. For instance, a smart home speaker can take voice inputs from the user through microphone arrays and the information processing algorithm analyzes the input audio.  However, for emerging CPS applications, it is often not clear how to design the embedded system and go from sensor data to inference. There are several degrees of freedom while designing the systems (what sensors to use, how and where to place the nodes, how to design the network). 
 As a result, on one hand we have system implementations designed for a specific purpose that are hard to analyze, and on the other hand, we have information processing algorithms on well defined models that are far removed from practice.\\
+
+
+To face the challenges of modern CPS, I design the sensing and inference pipeline end-end. I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints and understanding the theoretical tools (signal processing, estimation, optimization) relevant to the problem. 
 %However, the emerging CPS have several design parameters with distributed parts that are inferring the emerging cyber-physical systems have several degrees of freedom on designing the system.
  %and This is because (1) The information processing algorithm requires well defined models of the physical world, which 
 %\\
-
 %We have several degrees of freedom on how we design the embedded system.\\
-In order to build reliable sensing systems that work at scale in the real-world, I work across the end-end sensing stack - design of active and passive sensors, modeling the systems, and designing information processing algorithms. As a result, I build systems that are both practical and information processing algorithms that are applicable to a broad class to systems. I have implemented and deployed practical systems in the real-world.\\
+%In order to build reliable sensing systems that work at scale in the real-world, I work across the end-end sensing stack - design of active and passive sensors, modeling the systems, and designing information processing algorithms. 
+I build systems that are both practical and information processing algorithms that are applicable to a broad class to systems. I have implemented and deployed practical systems in the real-world.
 
 %Key to my approach is that I build system models that are practical and also general enough to apply tools from signal processing, estimation and optimization. My 
 %As a result of this joint design, I design embedded systems applications that make new inferences using existing sensors and can also systematically reduce the systems  based on the inference method. This approach works because I understand the interaction between signals and systems from first principles, and experiment and deploy systems. I then design models that are general enough to apply to a class of practical implementations and  \\
 
-Some examples of my approach are - I designed a system and algorithm for localizing phones using overhead LED lights. Here, I contributed to a novel sensing scheme, and a communication scheme that is general to any LED lights and phones. This work was published in IPSN'14\cite{rajagopal2014visual}
-(cited 130+ times). I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. My dissertation focuses on localization using range-based beacons. I contributed to the platform design (SenSys'15 \cite{lazik2015alps},
-RTAS'15 \cite{rtas-alps-platform}). I designed a novel way to integrate and model the floor plan information. This reduced the amount of infrastructure as compared to state-of-art. I designed the first algorithms that systematically addressed minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I used this model to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals, in a systematic manner (IPSN'18 \cite{rajagopal2018enhancing}). 
-
-My work in indoor localization has been demonstrated at
-Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), has been deployed in more than two dozen environments, received 2 patents, won the international
+\paragraph{Impact:}
+In 2013, when LED lights were phasing out
+incandescent lights, I designed one of the earliest visible light
+communication (VLC) systems to send data from overhead LED lights and
+for light-based localization. Here, I solved the This work was published in IPSN'14\cite{rajagopal2014visual}
+(cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  My dissertation contributed to beacon-based indoor localization systems
+for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
+RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
+Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
 Microsoft Indoor Localization competition twice, received a best demo
 award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
 industry. This work is being applied to indoor navigation, mobile
 persistent augmented reality, firefighter localization, and asset
-mapping applications.  
-
-I have also contributed to other areas of CPS:
+mapping applications.  I have also contributed to other areas of CPS:
 time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
 monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+% Some examples of my approach are - I designed a system and algorithm for localizing phones using overhead LED lights. Here, I contributed to a novel sensing scheme, and a communication scheme that is general to any LED lights and phones. This work was published in IPSN'14\cite{rajagopal2014visual}
+% (cited 130+ times). I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. My dissertation focuses on localization using range-based beacons. I contributed to the platform design (SenSys'15 \cite{lazik2015alps},
+% RTAS'15 \cite{rtas-alps-platform}). I designed a novel way to integrate and model the floor plan information. This reduced the amount of infrastructure as compared to state-of-art. I designed the first algorithms that systematically addressed minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I used this model to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals, in a systematic manner (IPSN'18 \cite{rajagopal2018enhancing}). 
+
+% My work in indoor localization has been demonstrated at
+% Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), has been deployed in more than two dozen environments, received 2 patents, won the international
+% Microsoft Indoor Localization competition twice, received a best demo
+% award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% industry. This work is being applied to indoor navigation, mobile
+% persistent augmented reality, firefighter localization, and asset
+% mapping applications.  
+
+% I have also contributed to other areas of CPS:
+% time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
 
 
 % dissertation contributed to beacon-based indoor localization systems
@@ -123,10 +140,14 @@ monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cit
 %Examples of my approach:
 
 \section{Dissertation Research}
-Below I describe some problems in indoor localization that I have solved. True to my approach of working across the sensing system stack, I highlight my contribution to the design of platform, models, and information processing in these problems.\\
+Below I describe some problems in indoor localization that I have solved. True to my approach of working across the sensing system stack, in these problems, I have contributed to the design of platforms, models, and information processing algorithms.\\
 
 \paragraph{Localizing phone using overhead LED lights}
-In 2013, when LED lights were phasing out incandescent lights, I designed one of the earliest schemes for sending data from overhead LED lights to unmodified phones. The lights turn on and off at a high frequency. I saw this as an opportunity to design a new communication channel. The first challenge was that the operating frequency of the lights had to be much higher than the frame rate of the camera for them to not flicker perceivably. %The second challenge was that the system had to work in realistic-conditions %The lights acted as landmarks to coarsely localize phones. %saw an opportunity to localize phones using lights. 
+In 2013, when LED lights were phasing out incandescent lights, I designed one of the earliest schemes for sending data from overhead LED lights to unmodified phones. The lights turn on and off at a high frequency. I saw this as an opportunity to design a new communication channel. But for the lights to be flicker free, they have to operate at a much higher frequency (greater than 2000Hz) than the camera frame capture rate (30-120Hz). The challenge was to sense this signal without a photodiode. To solve this, I exploited the low level rolling shutter effect of the camera sensor. Though the camera frame rate is low, at the low-level there is a high speed sensor that acquires the pixels in each row sequentially by scanning one row at a time. I used this property to capture a time-varying light signal in to a spatially varying image. 
+The idea was that we could send a unique data from each LED and coarsely localize the phone based on the LED with strongest signal. For the system to be practical for localization, we require a way to distinguish between 
+% sequentially captures light one row at a time on the camera sensor. %row-wise on the pixels by scanning row in sequence.
+
+ %challenge was that the operating frequency of the lights had to be much higher than the frame rate of the camera for them to not flicker perceivably. %The second challenge was that the system had to work in realistic-conditions %The lights acted as landmarks to coarsely localize phones. %saw an opportunity to localize phones using lights. 
 \textbf{Novel sensing and models: }
  I designed a novel sensing approach by leveraging the rolling shutter sensor and converted a time-varying light signal to a spatially varying image. In order to deal with real-world issues such as background noise and varying light conditions, I designed novel ways of using focus and camera as filters.\\
  \textbf{Information processing: } I designed a detection scheme 
