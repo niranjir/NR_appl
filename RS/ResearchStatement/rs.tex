@@ -150,10 +150,12 @@ I worked in industry for three years prior to my graduate studies and interned i
 
 Localizing things, people and devices indoors will open up new domains with increased autonomy indoors. It will change the way we interact with indoor spaces environment. Location is also critical for safety and emergency scenarios. %bring autonomy indoors and open up new applications domains. 
  %Location gives information on where resources, things, people and devices are, and is an important service for other CPS applications. There are more than a million papers on indoor localization. 
-We have made tremendous progress towards indoor localization in the past decade, yet we get lost indoors today. My dissertation focuses on indoor localization and makes strides towards making indoor localization a reality. Across the existing localization solutions, 
+We have made tremendous progress towards indoor localization in the past decade, yet we get lost indoors today.  %Across the existing localization solutions, 
 %there are trade-offs between performance and cost. Per
 %The reason is --- 
-we don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). Existing solutions that use signals from WiFi, and on-board sensors (camera, inertial sensors) are free. However, are either not accuracy, or do not acquire location instantly (require user to walk around) or require environment-specific calibration. Solutions that deploy infrastructure can be accurate and instant if sufficient infrastructure (beacons or anchors) are in line-of-sight. A device localizes itself with respect to beacons using a range-based measurement technique (time-of-flight, time-difference-of-arrival, angle-of-arrival). However, this system is not free since we have to install beacons densely across buildings, and setup and map them. \\
+We don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). Solutions that use environemental signals and on-board sensors are free. However, they are either not accurate, do not acquire location instantly (require user to walk around) or require environment-specific calibration. Solutions that deploy infrastructure (beacons or anchors) can be accurate and instant if sufficient infrastructure  are in line-of-sight. A device localizes itself with respect to beacons using a range-based measurement technique. % (time-of-flight, time-difference-of-arrival, angle-of-arrival). 
+However, this system is not free since we have to install beacons densely across buildings, and setup and map them. My dissertation focuses on indoor localization and has made %I have worked across designing systems and algorithms in making 
+strides towards making it a reality by solving the main problems associated with beacon-based indoor localization.\\
 
 \subsection{Envisioned Architecture}
 I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. 
@@ -166,10 +168,10 @@ Time-of-Flight (ToF) ranging is emerging through various wireless standards. My 
 %I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. %all devices that require localization service. 
 %Time-of-Flight (ToF) ranging is emerging through various wireless standards. % and is getting integrated into commodity devices, WiFi access points, and IoT devices. I believe that in future,  
 On the platform side I contributed to building an ultrasonic platform that localizes unmodified mobile devices. The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices
-\cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. The emerging technologies include mmWave, ultra-wideband (including emerging 802.18.4z), WiF 802.11mc and BLE5.  I worked with Apple's earliest versions of WiFi ToF, during an internship, and subsequently this had product impact. I am also collaborating with Texas Instruments on BLE5 ToF ranging. 
+\cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. The emerging technologies include mmWave, ultra-wideband (including emerging 802.15.4z), WiFi 802.11mc and BLE5.  I worked with Apple's earliest versions of WiFi ToF, during an internship, and subsequently this had product impact. I am also collaborating with Texas Instruments on BLE5 ToF ranging. 
 
 \subsection{Location processing algorithms: }
-While several algorithms exist for localizing a user when the user is moving, acquiring instant location and orientation in realistic conditions still remains a problem. I present new techniques that solve these problems. 
+While several algorithms exist for localizing a user, many require the user to walk around for some distance before it converges. Acquiring instant location and orientation in realistic conditions still remains a problem. I present new techniques that solve these problems. 
 %While there exist we the area of localization algorithms using various sources of information is mature, one of the main practical problems is that current 
 %While solving for location is well understood when suff
 %While most of the research in localization is on improving the precision and using n
