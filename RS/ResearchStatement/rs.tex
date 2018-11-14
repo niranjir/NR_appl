@@ -145,64 +145,52 @@ monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cit
 \section{Research in Indoor Localization}
 %Below I describe some problems in indoor localization that I have solved. \\
 
+Localizing things, people and devices indoors will open up new domains with increased autonomy indoors. It will change the way we interact with indoor spaces environment. Location is also critical for safety and emergency scenarios. %bring autonomy indoors and open up new applications domains. 
+ %Location gives information on where resources, things, people and devices are, and is an important service for other CPS applications. There are more than a million papers on indoor localization. 
+We have made tremendous progress towards indoor localization in the past decade, yet we get lost indoors today. My dissertation focuses on indoor localization and makes strides towards making indoor localization a reality. Across the existing localization solutions, 
+%there are trade-offs between performance and cost. Per
+%The reason is --- 
+we don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). Existing solutions that use signals from WiFi, and on-board sensors (camera, inertial sensors) are free. However, are either not accuracy, or do not acquire location instantly (require user to walk around) or require environment-specific calibration. Solutions that deploy infrastructure can be accurate and instant if sufficient infrastructure (beacons or anchors) are in line-of-sight. A device localizes itself with respect to beacons using a range-based measurement technique (time-of-flight, time-difference-of-arrival, angle-of-arrival). However, this system is not free since we have to install beacons densely across buildings, and setup and map them. \\
 
-My dissertation is on indoor localization - an instance of a CPS problem. Location gives information on where resources, things, people and devices are, and is an important service for other CPS applications. There are more than a million papers on indoor localization. Yet we get lost indoors today. The reason is --- we don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). Existing solutions that use signals from WiFi, and on-board sensors such as camera and inertial sensors are free but depending on the implementation they have trade offs between accuracy, time-to-first-estimate and require environment-specific calibration. Solutions that deploy infrastructure can be accurate and instant if sufficient infrastructure (beacons or anchors) are in line-of-sight. A device localizes itself with respect to beacons by using a range-based measurement technique (time-of-flight, time-difference-of-arrival, angle-of-arrival). However, this system is not free since we have to install beacons densely across buildings, and setup and map them. \\
+\subsection{Envisioned Architecture}
+I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. 
+Time-of-Flight (ToF) ranging is emerging through various wireless standards. My strategy to solve the indoor localization problem is to adopt time-of-flight ranging paradigm and built the tools required to make ToF localization accurate and instant with low beacon density; and create tools for automatic beacon placement and mapping. True to my approach of working across the sensing system stack, I have contributed to the design of platforms, models, and information processing algorithms, and design of system setup in these problems.\\
 
 
 %jointly designed a method for both mapping beacons, as well as generating maps that enable instant orientation acquisition subsequently when  which   algorithm for  the system an information processing algorithms is 
 
-\textbf{Platform and ranging technologies:} I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. %all devices that require localization service. 
-Time-of-Flight (ToF) ranging is emerging through various wireless standards. % and is getting integrated into commodity devices, WiFi access points, and IoT devices. I believe that in future,  
-The emerging technologies include mmWave, ultra-wideband (including emerging 802.18.4z), WiF 802.11mc and BLE5. On the platform side I contributed to building an ultrasonic platform that localizes unmodified mobile devices. The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices
-\cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. I worked with Apple's earliest versions of WiFi ToF, during an internship, and subsequently this had product impact. I am also collaborating with Texas Instruments on BLE5 ToF ranging. 
+\subsection{Platform} 
+%I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. %all devices that require localization service. 
+%Time-of-Flight (ToF) ranging is emerging through various wireless standards. % and is getting integrated into commodity devices, WiFi access points, and IoT devices. I believe that in future,  
+On the platform side I contributed to building an ultrasonic platform that localizes unmodified mobile devices. The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices
+\cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. The emerging technologies include mmWave, ultra-wideband (including emerging 802.18.4z), WiF 802.11mc and BLE5.  I worked with Apple's earliest versions of WiFi ToF, during an internship, and subsequently this had product impact. I am also collaborating with Texas Instruments on BLE5 ToF ranging. 
 
-My strategy to solve the indoor localization problem is to adopt time-of-flight ranging paradigm and built the tools required to make ToF localization accurate and instant with low beacon density; and create tools for automatic beacon placement and mapping. True to my approach of working across the sensing system stack, I have contributed to the design of platforms, models, and information processing algorithms in these problems.
+\subsection{Location processing algorithms: }
+While several algorithms exist for localizing a user when the user is moving, acquiring instant location and orientation in realistic conditions still remains a problem. I present new techniques that solve these problems. 
+%While there exist we the area of localization algorithms using various sources of information is mature, one of the main practical problems is that current 
+%While solving for location is well understood when suff
+%While most of the research in localization is on improving the precision and using n
+%While most of the research in the area of localization localization algorithms is on improving the technologies and accuracies, the main practical problem is that these systems do not acquire an instant estimate %and require the user to walk around. While we can ignore this in lab scenarious, this is a hindrance 
 
-\paragraph{A robust location-solving algorithm: }
-ToF systems require high density beacon coverage and suffer when they receive incorrect measurements due to
+%the problem of estimating location using sufficient good measurements is well understood, the practical problems of acquiring location in realistic scnearios and acquiring orientation are not  
+\paragraph{Location acquisition in the real-world: }
+Solving for location using distance measurements to beacons has for the longest time been done using trilateration. However, it is impractical to cover indoor spaces with a high density of beacons in all regions. Another major practical problem is that ToF systems suffer from receiving incorrect measurements due to 
 non-line-of-sight (NLOS) signals. 
-% that reflect off surfaces where there isn't a direct path between the beacon and the device being localized. 
-In realistic conditions, the user has walk around for the system to gather more measurements and converge. After facing this problem in several real-world deployments, I wanted to create a robust solver that localized instantly and accurately, with minimal LOS measurements and was robust to NLOS measurements. 
+%A major problem with 
+%ToF systems require high density beacon coverage and suffer when they receive incorrect measurements due to
+%non-line-of-sight (NLOS) signals. 
+Prior work to detect NLOS either require low-level signal statistics, or channel information, or assume knowledge of the path of the NLOS signal. None of these are practical unless tuned to the device or deployment. Practical solutions require the user to walk around to compute an estimate over time. This defeats the purpose of instant location acquistion.  %or use low-level signal statistics (which may not be available, and require ) or temporal information of the signal (both require the user to walk around or wait, and are far removed from practical use), or assume knowledge of NLOS signal path (also infeasible in practice).
+%Prior work either deploy too many beacons or require the user has walk around or wait while the system gathers more measurements and converge. 
 
-I solved this problem with a new idea that is simple and effective in practice \cite{rajagopal2018enhancing}. 
-I compute the LOS coverage region for each beacon by using the floor plan geometry and a ray tracing model for beacon coverage. Rather than using low-level signal statistics or temporal information (both defeat the purpose of the instant solver), or assume knowledge of NLOS signal path (infeasible in practice), I assume that the NLOS signal travels a longer path than the LOS signal (which is true for all ranging technologies). The key innovation in the solver is that I also use the absence of measurement from certain beacons as useful information. I designed a hypothesis-testing floor-plan aware solver that checks for consistency between the received and absent measurements and the beacon coverage model.
+After facing this problem in several real-world deployments, I wanted to create a robust solver that localized instantly and accurately, with minimal LOS measurements and was robust to NLOS measurements and generalized to any deployment. I solved this problem with a novel model that leverages the floor plan information. This model is simple and effective in practice \cite{rajagopal2018enhancing}. The model computes the LOS coverage of beacons using the floor plan and a ray tracing model for beacon coverage. 
+%I compute the LOS coverage region for each beacon by using the floor plan geometry and a ray tracing model for beacon coverage. 
+%In contrast to prior work that makes unrealistic assumptions on the signal for detecting on the Rather than using low-level signal statistics or temporal information (both defeat the purpose of the instant solver), or assume knowledge of NLOS signal path (infeasible in practice), I assume that the NLOS signal travels a longer path than the LOS signal (which is true for all ranging technologies). T
+The key innovation in the solver is that I also use the absence of measurement from certain beacons as useful information. I designed a hypothesis-testing floor-plan aware solver that checks for consistency between the received and absent measurements and the beacon coverage model.
 
 This solver is the first that localizes with just two LOS beacons, rather than three (for 2D localization), and maintains the same performance even when several NLOS signals are present. Across several real
-world environments, this solver detected and removed NLOS with 91\% accuracy and maintained 1m accuracy as compared to 4-8m by traditional approaches. We implemented this
-method in our system that won the Microsoft Indoor
-Localization Competition in 2015. 
+world deployments, this solver detected and removed NLOS with 91\% accuracy and maintained 1m accuracy as compared to 4-8m by traditional approaches. I proved this method by implementing it in our system that won the Microsoft Indoor Localization Competition in 2015. 
 
-\paragraph{Beacon placement algorithms: }
-Anyone who has deployed a localization system at building-scale with a limited budget for beacons faces the challenge of not knowing where to place them. % and how to optimize the placement. 
-Hence, more beacons than necessary are deployed and some amount of domain expertise is required for placing beacons. 
-
-%The localization performance depends on where we placed the beacons. So 
-I designed beacon placement algorithms in a
-MATLAB-based toolchain available on GitHub, where users can draw or provide real world floor plans. They can
-then try out different beacon placements and compare them quantitatively \cite{rajagopal2016beacon}. 
-
-I used the insights from the floor-plan aware solver to design the placement algorithms. 
-I define a location to be uniquely localizable if the location is covered by three or more beacons, or if it is covered by two beacons and the other location with the exact same distances from the two beacons has a different beacon set coverage. I designed a greedy beacon placement algorithm that optimizes for area that is uniquely localizable.  The algorithm reduced the number of beacons by $33\%$ compared to minimal placement with 3-beacon coverage across real-world and simulated floor plans. 
-To account for accuracy in addition to coverage, I adopted the Cramer-Rao lower bound on the location estimate. This depends on the geometric dilution-of-precision (GDOP) - an analytical function of the angles between the beacons and the location; and standard deviation assuming additive Gaussian noise model for ranging error. I use the GDOP and the unique localization function over all regions to generate an expected CDF from any deployment, and design a second greedy beacon placement algorithm that optimizes for expected accuracy.  
-
-I extended this work in collaboration with
-Prof. Jie Gao from Stony Brook and her student. We mathematically
-formulated the beacon placement problem for unique localization and proposed placement
-algorithms with provable guarantees \cite{beaconplacementtheory}. Such systematic approaches and automated tools for beacon
-placement are necessary while scaling up these systems from labs to
-building-scale. 
-
-Through these two works, my approach was to understand the interaction between ranging signals and real-world environments from first principles, design models of signals (LOS, NLOS), and systems (floor plan, beacon coverage) that were close to practical and general enough to systematically analyze. I used these principles to design the deployment of the system. 
-
-
-% \paragraph{Tracking and mapping algorithms}
-% I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
-
-\paragraph{Orientation acquisition, tracking and mapping algorithms}
-
-
-To support continuous location updates, I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
-
+\paragraph{Orientation acquisition: }
 While most indoor localization work focuses on location
 estimation, orientation is necessary for applications like mobile
 augmented reality. %Existing approaches either rely on visual features
@@ -218,10 +206,56 @@ for instant orientation acquisition. %We also automatically map the beacon
 %infrastructure as the pedestrian walks around with a phone.  
 We used
 this system to build and end-end multi-user persistent augmented
-reality system that works in any environment without requiring the
+reality (AR) system that works in any environment without requiring the
 sharing of large and often fragile point-cloud maps \cite{mobileAR}. 
 
-This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. The approach of mobile AR using beacons is implemented on our ultrasonic localization system that spawned into a startup. It has been deployed for AR-based product finding in retail. 
+This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. The persistent mobile AR application with beacons and magnetic field is implemented on our ultrasonic localization system that spawned into a startup. A pilot has been deployed for AR-based product finding in a retail store. 
+
+\paragraph{Tracking:} To support continuous location updates, I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons.
+
+\subsection{System Setup Algorithms}
+Anyone who has deployed a localization system at building-scale faces the challenge of not knowing where to place them. % and how to optimize the placement. 
+As a result, more beacons than necessary are deployed and some amount of domain expertise is required while placing. An alternate approach is to deploy beacons and then survey them manually. Surveying beacons is expensive and time-consuming. Further, current system setup beacons as a one-time process and cannot detect and adapt to beacons appearing, moving and disappearing. %beacons accidentally moving or disappearing. if these beacons are moved accidentally, there is no way to In these ways setting up beacons, managing them is often the main hindrance to for realzing these systems in practice.
+\paragraph{Beacon Placement: }
+
+
+%The localization performance depends on where we placed the beacons. So 
+My main insight from the floor-plan aware solver was that we could place beacons in a smart manner in order to 
+
+%we could jointly design the beacon placement and the solver, in order to placement of beacons in a smart manner, and place the beacons in a smart manner in order to maintain the same performance with fewer beacons, if we use this knowledge for solving, rather than use traditional trlateration solvers. I used this 
+I wanted to solve the problem of placing minimal number of beacons required 
+The question I designed the first systematic approach to beacon placement for ToF systems indoors. 
+
+I designed beacon placement algorithms %in a
+%MATLAB-based toolchain available on GitHub, 
+where users can draw or provide real world floor plans. They can
+then try out different beacon placements and compare them quantitatively \cite{rajagopal2016beacon}. 
+
+I used the insights from the floor-plan aware solver to design the placement algorithms. 
+I define a location to be uniquely localizable if the location is covered by three or more beacons, or if it is covered by two beacons and the other location with the exact same distances from the two beacons has a different beacon set coverage. I designed a greedy beacon placement algorithm that optimizes for area that is uniquely localizable.  The algorithm reduced the number of beacons by $33\%$ compared to minimal placement with 3-beacon coverage across real-world and simulated floor plans. 
+To account for accuracy in addition to coverage, I adopted the Cramer-Rao lower bound on the location estimate. This depends on the geometric dilution-of-precision (GDOP) - an analytical function of the angles between the beacons and the location; and standard deviation assuming additive Gaussian noise model for ranging error. I use the GDOP and the unique localization function over all regions to generate an expected CDF from any deployment, and design a second greedy beacon placement algorithm that optimizes for expected accuracy.  
+
+I extended this work in collaboration with
+Prof. Jie Gao from Stony Brook and her student. We mathematically
+formulated the beacon placement problem for unique localization and proposed placement
+algorithms with provable guarantees \cite{beaconplacementtheory}. Such systematic approaches and automated tools for beacon
+placement are necessary while scaling up these systems from labs to
+building-scale. 
+
+Through these two works, my approach was to understand the interaction between ranging signals and real-world environments from first principles, design models of signals (LOS, NLOS), and systems (floor plan, beacon coverage) that were close to practical and general enough to systematically analyze. I used these principles to design the deployment of the system. 
+
+\paragraph{Beacon Mapping: }
+
+\section{End-to-End System}
+% \paragraph{Tracking and mapping algorithms}
+% I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
+
+\paragraph{Orientation acquisition, tracking and mapping algorithms}
+
+
+To support continuous location updates, I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
+
+
 
 %In these two works, I analyzed the magnetic field spatial and temporal variation at the physical layer, created models and designed algorithms for location acquisition, tracking and mapping algorithms, and used these to build an end-end mobile AR application. 
 
