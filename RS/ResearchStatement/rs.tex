@@ -251,12 +251,12 @@ The algorithm reduced the number of beacons by $33\%$ compared to minimal placem
 I then adopted the Cramer-Rao lower bound on the location estimate as a measure of the localization accuracy. This depends on the geometric dilution-of-precision (GDOP). % - an analytical function of the angles between the beacons and the location; and standard deviation assuming additive Gaussian noise model for ranging error. 
 I use the GDOP and the unique localization function over all regions to generate the an expected CDF from any deployment, in the same manner than practitioners evaluate the localization performance. I then design a second greedy beacon placement algorithm that optimizes for expected accuracy \cite{rajagopal2016beacon}.  
 
-I extended this work in collaboration with
+\textcolor{red}{I extended this work in collaboration with
 Prof. Jie Gao from Stony Brook and her student. We mathematically
 formulated the problem for unique localization and proposed beacon placement
 algorithms with provable guarantees \cite{beaconplacementtheory}. I believe that such systematic approaches and automated tools for beacon
 placement are necessary while scaling up these systems from labs to
-building-scale. 
+building-scale. }
 
 %Through these two works, my approach was to understand the interaction between ranging signals and real-world environments from first principles, design models of signals (LOS, NLOS), and systems (floor plan, beacon coverage) that were close to practical and general enough to systematically analyze. I used these principles to design the deployment of the system. 
 
