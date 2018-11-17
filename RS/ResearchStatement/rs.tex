@@ -56,42 +56,25 @@
 
 \end{table}
 
+My research focuses on sensing and inference in modern cyber-physical systems (CPS). I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I believe my strong interest in systematic, rather than ad-hoc approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from signal processing to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing practical, cost-effective, yet reliable and efficient CPS. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.\\
 
-We live in exciting times where new applications of cyber-physical systems
-(CPS) are emerging to improve productivity, efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems is making an inference about the physical world. Classical system design is split into the design of the embedded system and the design of the information processing algorithms.
-The design of these two parts can be decoupled when we have well defined interfaces between them. For instance, a smart home speaker can take voice commands from the user through microphone arrays and the information processing algorithm analyzes the input audio.  However, for emerging CPS applications, there is no clear boundary between the design of systems and the algorithms.  
-As a result, on one hand we have system implementations designed for a specific purpose that are hard to analyze, and on the other hand, we have information processing algorithms on well defined models that are far removed from practice.\\
+% My research focuses on sensing and inference in modern cyber-physical systems (CPS). I jointly design sensing front-ends, networked embedded systems, system models and the information processing algorithms. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. 
+% I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems.  Cross-layer design has the potential to provide better algorithms and reduced resource requirements. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.\\
 
-\paragraph{My Approach: }
-I design the sensing and inference pipeline end-to-end to address the challenges of modern CPS. I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. 
-I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems, with focus on indoor localization. I have deployed and proven several indoor localization systems in the real-world.
-
-%Key to my approach is that I build system models that are practical and also general enough to apply tools from signal processing, estimation and optimization. My 
-%As a result of this joint design, I design embedded systems applications that make new inferences using existing sensors and can also systematically reduce the systems  based on the inference method. This approach works because I understand the interaction between signals and systems from first principles, and experiment and deploy systems. I then design models that are general enough to apply to a class of practical implementations and  \\
-
-% \paragraph{Impact:}
-% In 2013, when LED lights were phasing out
-% incandescent lights, I designed one of the earliest visible light
-% communication (VLC) systems to send data from overhead LED lights and
-% for light-based localization. This work was published in IPSN'14\cite{rajagopal2014visual}
-% (cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  My dissertation contributed to beacon-based indoor localization systems
-% for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
-% RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
-% Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
-% Microsoft Indoor Localization competition twice, received a best demo
-% award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
-% industry. This work is being applied to indoor navigation, mobile
-% persistent augmented reality, firefighter localization, and asset
-% mapping applications.  I have also contributed to other areas of CPS:
-% time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
-% monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+% We live in exciting times where new applications of cyber-physical systems
+% (CPS) are emerging to improve productivity, efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems is making an inference about the physical world. Classical system design is split into the design of the embedded system and the design of the information processing algorithms.
+% The design of these two parts can be decoupled when we have well defined interfaces between them. For instance, a smart home speaker can take voice commands from the user through microphone arrays and the information processing algorithm analyzes the input audio.  However, for emerging CPS applications, there is no clear boundary between the design of systems and the algorithms.  
+% As a result, on one hand we have system implementations designed for a specific purpose that are hard to analyze, and on the other hand, we have information processing algorithms on well defined models that are far removed from practice.\\
 
 
-\paragraph{Overview and Impact: }
-One instance of my approach is that I designed a novel sensing and communication system to localize phones using overhead LED lights. This generalizes to any LED lights and phones. This work was published in IPSN'14 \cite{rajagopal2014visual} and has been
-cited 130+ times. I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. My dissertation focuses on localization using range-based beacons. I contributed to the design and implementation of a novel platform design that localizes phones using ultrasonic signals (SenSys'15 \cite{lazik2015alps},
-RTAS'15 \cite{rtas-alps-platform}). I also contributed to an early prototype of Apple's WiFi ranging technology during an internship, and am working with Texas Instruments's emerging BLE5 ranging technology. % to and have worked with emerging ranging technoogies with  . 
-I designed a novel way to integrate and model the floor plan information. This reduced the amount of infrastructure as compared to state-of-art. I designed the first algorithms that systematically addressed minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I built on this to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals, in a systematic manner (IPSN'18 \cite{rajagopal2018enhancing}). Finally, I designed an algorithm for acquiring orientation on mobile phones using a novel magnetic field approach \cite{mobileAR}.  
+\paragraph{Impact: }
+One instance of my approach is that I designed a novel sensing and communication system to send data from overhead LED lights to phones, 
+% for phones using overhead LED lights. 
+The approach is applicable to any LED lights and phones. This work was published in IPSN'14 \cite{rajagopal2014visual} and has been cited 130+ times. I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. My dissertation focuses on localization using range-based beacons. I contributed to the design and implementation of a novel platform design that localizes phones using ultrasonic signals (SenSys'15 \cite{lazik2015alps},
+RTAS'15 \cite{rtas-alps-platform}) and have worked with Apple and Texas Instruments on emerging ranging technologies. % I also contributed to an early prototype of Apple's WiFi ranging technology during an internship, and am working with Texas Instruments's emerging BLE5 ranging technology. % to and have worked with emerging ranging technoogies with  . 
+On the modeling side, I designed a novel way to integrate the floor plan information in a manner that is practical, yet general. %This reduced the amount of infrastructure as compared to state-of-art. 
+I used this to design the first algorithms that systematically address minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I further built on this to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals (IPSN'18 \cite{rajagopal2018enhancing}). This systematic approach generalizes to any deployment and ranging technology. %in a systematic manner
+Finally, I designed an algorithm for acquiring orientation on mobile phones using a novel magnetic field approach \cite{mobileAR}.  
 
 My work in indoor localization has been demonstrated at
 Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), has been deployed in more than two dozen environments, received 2 patents, won the international
@@ -103,7 +86,19 @@ mapping applications.  I have also contributed to other areas of CPS:
 time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
 monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
 
-I worked in industry for three years prior to my graduate studies and interned in industry for two summers during my PhD. This exposure has shaped my approach to research, which is grounded in solving real-world problems in a systematic manner that is scalable.
+%I worked in industry for three years prior to my graduate studies. % and interned in industry for two summers during my PhD. 
+My approach to research is grounded in solving real-world problems in a systematic manner that is scalable.  \\
+
+\paragraph{My approach to CPS: }
+We live in exciting times where new applications of cyber-physical systems
+(CPS) are emerging in areas like smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. %These large-scale networked embedded systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation.  
+For emerging CPS applications, there is no clear boundary between the design of systems and the algorithms. %Central to these systems is making an inference about the physical world. 
+My approach to sensing and estimation in CPS spans theory and practice... %and improves both the design of 
+
+% Classical system design is split into the design of the embedded system and the design of the information processing algorithms.
+% The design of these two parts can be decoupled when we have well defined interfaces between them. For instance, a smart home speaker can take voice commands from the user through microphone arrays and the information processing algorithm analyzes the input audio.  However, for emerging CPS applications, there is no clear boundary between the design of systems and the algorithms.  
+% As a result, on one hand we have system implementations designed for a specific purpose that are hard to analyze, and on the other hand, we have information processing algorithms on well defined models that are far removed from practice.\\
+
 
 
 
@@ -141,8 +136,8 @@ Localizing things, people and devices indoors will open up new domains with incr
 %We have made tremendous progress towards indoor localization in the past decade, yet we get lost indoors today. 
 Numerous localization solutions have emerged in the past decade, yet we get lost indoors today. 
 %We don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). 
-Solutions that are free-of-cost without additional infrastructure are not accurate and require the user to walk around, while the system gathers more measurements, before getting a good location fix. %However, they trade-off accuracy and time-to-first-estimate, and require environment-specific calibration. Solutions that deploy infrastructure (beacons or anchors) can be accurate and instant (time-to-first-estimate) if sufficient beacons are in line-of-sight. %A device localizes itself with respect to beacons using a range-based measurement technique. 
-Solutions that deploy beacons for localization can be accurate with instant time-to-first-fix but require dense beacons to be deployed across buildings.\\
+Solutions that are free-of-cost without additional infrastructure are not accurate and require the user to walk around (while the system gathers more measurements) before getting a good location fix. %However, they trade-off accuracy and time-to-first-estimate, and require environment-specific calibration. Solutions that deploy infrastructure (beacons or anchors) can be accurate and instant (time-to-first-estimate) if sufficient beacons are in line-of-sight. %A device localizes itself with respect to beacons using a range-based measurement technique. 
+On the other hand, solutions with range-based beacons (time-of-flight, time-difference-of-arrival, angle-of-arrival) for localization can be accurate with instant time-to-first-fix but require dense beacons to be deployed across buildings.\\
 %However, this system is not free since we have to install beacons densely across buildings, and setup and map them. 
 %My dissertation solves the main problems associated with beacon-based indoor localization systems in order .\\
 
@@ -158,7 +153,7 @@ In my dissertation, I adopt the time-of-flight ranging paradigm and design syste
 %I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. %all devices that require localization service. 
 %Time-of-Flight (ToF) ranging is emerging through various wireless standards. % and is getting integrated into commodity devices, WiFi access points, and IoT devices. I believe that in future,  
 On the platform side I contributed to building an ultrasonic platform that localizes unmodified mobile devices. The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices
-\cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}.
+\cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. 
 
 \paragraph{Location processing algorithms: }
 
@@ -730,3 +725,819 @@ For instance wireless energy harvesting localizable tags can be charged by a con
 \bibliography{references}  % sigproc.bib is the name of the Bibliography in this case
 
 \end{document}
+
+% \documentclass[10pt]{article}
+
+% %\usepackage{fancyhdr}
+ 
+% %\pagestyle{headings}
+% %\markright{John Smith}
+
+% \date{}
+
+% \usepackage{amsmath}    % need for subequations
+% \usepackage{graphicx}   % need for figures
+% \usepackage{verbatim}   % useful for program listings
+% \usepackage{color}      % use if color is used in text
+% \usepackage{subfigure}  % use for side-by-side figures
+% \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
+% \usepackage{lipsum}
+% \usepackage{url}
+
+% \usepackage[margin=1in]{geometry}
+
+% \usepackage{graphicx}
+% \usepackage{balance}
+% \usepackage{comment}
+% \usepackage{amssymb,amsmath}
+% \usepackage{caption}
+% \DeclareCaptionType{copyrightbox}
+% \usepackage{subfigure}
+% \usepackage{enumerate}
+% \usepackage{color}
+% \usepackage{titling}
+% %\usepackage{subcaption}
+% \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+% \newcommand{\tableref}[1]{Table~\ref{tab:#1}}
+
+% \newcommand{\compactimg}{\vspace{-12pt}}
+
+% \clubpenalty=10000 
+% \widowpenalty=10000
+% \setlength{\parindent}{0cm}
+
+
+
+% \begin{document}
+% \pagenumbering{gobble}
+
+% \begin{table}
+% \color{blue}
+% %\color{Emerald}
+% \begin{tabular*}{\textwidth}{l r}
+% \large\textbf{RESEARCH STATEMENT} & 
+% \hfill \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+% \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+% \large\textbf{NIRANJINI RAJAGOPAL}\\
+% \hline
+% \end{tabular*}
+
+% \end{table}
+
+
+% We live in exciting times where new applications of cyber-physical systems
+% (CPS) are emerging to improve efficiency and safety. Examples include smart buildings, industrial internet of things, smart manufacturing, mixed reality, autonomous vehicles, and healthcare technology. These systems have embedded platforms with sensors and actuators connected over a network and integrated with real-time computation. Central to these systems is making an inference about the physical world. Classical system design is split into the design of the embedded system and the design of the information processing algorithms.
+% %This approach works when we can clearly express the information we are measuring as
+% %This approach is effective when we can clearly define the interface between the em
+% %This is effectively when  we have sensors 
+% %From the information processing This approach works when we can clearly model the interface between the embedded system and the physical world.
+% The design of these two parts can be decoupled when we have well defined interfaces between them. For instance, a smart home speaker can take voice inputs from the user through microphone arrays and the information processing algorithm analyzes the input audio.  However, for emerging CPS applications, there is no clear boundary between the design of the systems and the algorithms. 
+% %often not clear how to design the embedded system and go from sensor data to inference. 
+% %There are several degrees of freedom while designing the systems (what sensors to use, how and where to place the nodes, how to design the network). 
+% As a result, on one hand we have system implementations designed for a specific purpose that are hard to analyze, and on the other hand, we have information processing algorithms on well defined models that are far removed from practice.\\
+
+% \paragraph{My Approach: }
+% I design the sensing and inference pipeline end-to-end to address the challenges of modern CPS. I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. 
+% %However, the emerging CPS have several design parameters with distributed parts that are inferring the emerging cyber-physical systems have several degrees of freedom on designing the system.
+%  %and This is because (1) The information processing algorithm requires well defined models of the physical world, which 
+% %\\
+% %We have several degrees of freedom on how we design the embedded system.\\
+% %In order to build reliable sensing systems that work at scale in the real-world, I work across the end-end sensing stack - design of active and passive sensors, modeling the systems, and designing information processing algorithms. 
+% I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems, with focus on indoor localization. I have deployed and proven several indoor localization systems in the real-world.
+
+% %Key to my approach is that I build system models that are practical and also general enough to apply tools from signal processing, estimation and optimization. My 
+% %As a result of this joint design, I design embedded systems applications that make new inferences using existing sensors and can also systematically reduce the systems  based on the inference method. This approach works because I understand the interaction between signals and systems from first principles, and experiment and deploy systems. I then design models that are general enough to apply to a class of practical implementations and  \\
+
+% % \paragraph{Impact:}
+% % In 2013, when LED lights were phasing out
+% % incandescent lights, I designed one of the earliest visible light
+% % communication (VLC) systems to send data from overhead LED lights and
+% % for light-based localization. This work was published in IPSN'14\cite{rajagopal2014visual}
+% % (cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  My dissertation contributed to beacon-based indoor localization systems
+% % for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
+% % RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
+% % Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
+% % Microsoft Indoor Localization competition twice, received a best demo
+% % award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% % industry. This work is being applied to indoor navigation, mobile
+% % persistent augmented reality, firefighter localization, and asset
+% % mapping applications.  I have also contributed to other areas of CPS:
+% % time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% % monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+
+% \paragraph{Overview and Impact: }
+% One instance of my approach is that I designed a novel sensing and communication system to localize phones using overhead LED lights. This generalizes to any LED lights and phones. This work was published in IPSN'14 \cite{rajagopal2014visual} and has been
+% cited 130+ times. I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. My dissertation focuses on localization using range-based beacons. I contributed to the design and implementation of a novel platform design that localizes phones using ultrasonic signals (SenSys'15 \cite{lazik2015alps},
+% RTAS'15 \cite{rtas-alps-platform}). I also contributed to an early prototype of Apple's WiFi ranging technology during an internship, and am working with Texas Instruments's emerging BLE5 ranging technology. % to and have worked with emerging ranging technoogies with  . 
+% I designed a novel way to integrate and model the floor plan information. This reduced the amount of infrastructure as compared to state-of-art. I designed the first algorithms that systematically addressed minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I built on this to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals, in a systematic manner (IPSN'18 \cite{rajagopal2018enhancing}). Finally, I designed an algorithm for acquiring orientation on mobile phones using a novel magnetic field approach \cite{mobileAR}.  
+
+% My work in indoor localization has been demonstrated at
+% Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), has been deployed in more than two dozen environments, received 2 patents, won the international
+% Microsoft Indoor Localization competition twice, received a best demo
+% award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% industry. This work is being applied to indoor navigation, mobile
+% persistent augmented reality, firefighter localization, and asset
+% mapping applications.  I have also contributed to other areas of CPS:
+% time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+% \textcolor{red}{I worked in industry for three years prior to my graduate studies and interned in industry for two summers during my PhD. This exposure has shaped my approach to research, which is grounded in solving real-world problems in a systematic manner that is scalable.}  
+
+
+
+% % dissertation contributed to beacon-based indoor localization systems
+% % for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
+% % RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
+% % Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
+% % Microsoft Indoor Localization competition twice, received a best demo
+% % award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% % industry. This work is being applied to indoor navigation, mobile
+% % persistent augmented reality, firefighter localization, and asset
+% % mapping applications.  
+
+% % I have also contributed to other areas of CPS:
+% % time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% % monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+
+%  % and design the sensing system as well as the information processing algorithms.
+% %Ideally we want best performance from the algorithms, and low resources on the practical side.\\
+% %So, I understand systems end-end from practical to theoretical - experimentation, first principles, practical constraints and theoretical algorithms\\
+% %Determine how to design the system and how to process the data.\\
+
+% %On the systems side, I design novel use of sensors
+% %(1) systems side: Novel use of sensors - get more information with same resources\\
+% %(2) spanning both: Quantify relation between system design and result of est - use that to systematically design\\
+% %(3) algo side: Design better info processing for real-world  \\
+
+% %Examples of my approach:
+
+% \section{Research in Indoor Localization}
+% %Below I describe some problems in indoor localization that I have solved. \\
+
+% Localizing things, people and devices indoors will open up new domains with increased autonomy indoors. %It will change the way we interact with indoor spaces environment. 
+% Location is also critical for safety and emergency scenarios. %bring autonomy indoors and open up new applications domains. 
+%  %Location gives information on where resources, things, people and devices are, and is an important service for other CPS applications. There are more than a million papers on indoor localization. 
+% We have made tremendous progress towards indoor localization in the past decade, yet we get lost indoors today.  %Across the existing localization solutions, 
+% %there are trade-offs between performance and cost. Per
+% %The reason is --- 
+% We don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). Solutions that use environmental signals and on-board sensors are free. However, they are either not accurate, do not acquire location instantly or require environment-specific calibration. Solutions that deploy infrastructure (beacons or anchors) can be accurate and instant if sufficient infrastructure  are in line-of-sight. A device localizes itself with respect to beacons using a range-based measurement technique. % (time-of-flight, time-difference-of-arrival, angle-of-arrival). 
+% However, this system is not free since we have to install beacons densely across buildings, and setup and map them. My dissertation focuses on indoor localization and has made %I have worked across designing systems and algorithms in making 
+% strides towards making it a reality by solving the main problems associated with beacon-based indoor localization systems.\\
+
+% \subsection{Envisioned Architecture}
+% I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. 
+% Time-of-Flight (ToF) ranging is emerging through various wireless standards. My strategy to solve the indoor localization problem is to adopt time-of-flight ranging paradigm and built the tools required to make ToF localization accurate and instant with low beacon density; and create tools for automatic beacon placement and mapping. True to my approach of working across the sensing system stack, I have contributed to the design of platforms, models, and information processing algorithms, and design of system setup in these problems.\\
+
+
+% %jointly designed a method for both mapping beacons, as well as generating maps that enable instant orientation acquisition subsequently when  which   algorithm for  the system an information processing algorithms is 
+
+% \subsection{Platform} 
+% %I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. %all devices that require localization service. 
+% %Time-of-Flight (ToF) ranging is emerging through various wireless standards. % and is getting integrated into commodity devices, WiFi access points, and IoT devices. I believe that in future,  
+% On the platform side I contributed to building an ultrasonic platform that localizes unmodified mobile devices. The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices
+% \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. The emerging technologies include mmWave, ultra-wideband (including emerging 802.15.4z), WiFi 802.11mc and BLE5.  I worked with Apple's earliest versions of WiFi ToF, during an internship, and subsequently this had product impact. I am also collaborating with Texas Instruments on BLE5 ToF ranging. 
+
+% \subsection{Location processing algorithms: }
+% While several algorithms exist for localizing a user, many require the user to walk around for some distance before they converge on a location.  Acquiring instant location and orientation in realistic conditions still remains a problem. I present new techniques that solve these problems. 
+% %While there exist we the area of localization algorithms using various sources of information is mature, one of the main practical problems is that current 
+% %While solving for location is well understood when suff
+% %While most of the research in localization is on improving the precision and using n
+% %While most of the research in the area of localization localization algorithms is on improving the technologies and accuracies, the main practical problem is that these systems do not acquire an instant estimate %and require the user to walk around. While we can ignore this in lab scenarious, this is a hindrance 
+
+% %the problem of estimating location using sufficient good measurements is well understood, the practical problems of acquiring location in realistic scnearios and acquiring orientation are not  
+% \paragraph{Location acquisition in the real-world: }
+% Solving for location using distance measurements to beacons has for the longest time been done using trilateration. However, it is impractical to cover indoor spaces with a high density of beacons in all regions. %Another major practical problem is that 
+% ToF systems suffer from receiving incorrect measurements due to 
+% non-line-of-sight (NLOS) signals. 
+% %A major problem with 
+% %ToF systems require high density beacon coverage and suffer when they receive incorrect measurements due to
+% %non-line-of-sight (NLOS) signals. 
+% %Prior work to detect NLOS instantly require low-level signal statistics or %either required low-level signal statistics or environmental information. %, or channel information, or assume knowledge of the path of the NLOS signal. 
+% %are not practical unless tuned to the device or deployment. Practical solutions require the user to walk around to compute an estimate over time. This defeats the purpose of instant location acquistion.  %or use low-level signal statistics (which may not be available, and require ) or temporal information of the signal (both require the user to walk around or wait, and are far removed from practical use), or assume knowledge of NLOS signal path (also infeasible in practice).
+% %Prior work either deploy too many beacons or require the user has walk around or wait while the system gathers more measurements and converge. 
+
+% Practical solutions either rely on low-level signal statistics or require the user to walk around. %After facing this problem in several real-world deployments, 
+% I wanted to create a robust solver that localized instantly and accurately, with minimal LOS measurements and was robust to NLOS measurements and generalized to any deployment. I solved this problem with a novel model that leverages the floor plan information. This model is simple and effective in practice \cite{rajagopal2018enhancing}. The model computes the LOS coverage of beacons using the floor plan and a ray tracing model for beacon coverage. 
+% %I compute the LOS coverage region for each beacon by using the floor plan geometry and a ray tracing model for beacon coverage. 
+% %In contrast to prior work that makes unrealistic assumptions on the signal for detecting on the Rather than using low-level signal statistics or temporal information (both defeat the purpose of the instant solver), or assume knowledge of NLOS signal path (infeasible in practice), I assume that the NLOS signal travels a longer path than the LOS signal (which is true for all ranging technologies). T
+% The key innovation in the solver is that I also use the absence of measurement from certain beacons as useful information. I designed a hypothesis-testing floor-plan aware solver that checks for consistency between the received and absent measurements and the beacon coverage model.
+
+% This solver is the first that localizes with just two LOS beacons, rather than three (for 2D localization), and maintains the same performance even when several NLOS signals are present. Across real
+% world deployments, this solver detected and removed NLOS with 91\% accuracy and maintained 1m accuracy as compared to 4-8m by traditional approaches. I proved this method by implementing it in our system that won the Microsoft Indoor Localization Competition in 2015. 
+
+% \paragraph{Orientation acquisition: }
+% While most indoor localization work focuses on location
+% estimation, orientation is necessary for applications like mobile
+% augmented reality. %Existing approaches either rely on visual features
+% %or require the user to walk around for some distance before the
+% %orientation can be acquired.
+% I designed a novel approach to crowd-source a dense magnetic field
+% map with pedestrian-held phones. Subsequently, future users use this map at startup to calibrate
+% their compass in order to instantly estimate orientation. %Though
+% %magnetic field has been shown to be promising for localization, 
+% This is the first phone-based system that shows the feasibility of using magnetic field for instant orientation acquisition. %We also automatically map the beacon
+% %infrastructure as the pedestrian walks around with a phone.  
+% We used
+% this system to build and end-end multi-user persistent augmented
+% reality (AR) system that works in any environment without requiring the
+% sharing of large and often fragile point-cloud maps \cite{mobileAR}. 
+
+% This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. The persistent mobile AR application with beacons and magnetic field is implemented on our ultrasonic localization system that spawned into a startup. A pilot has been deployed for AR-based product finding in a retail store. 
+
+% \paragraph{Tracking:} To support continuous location updates, I designed a particle filter based algorithm for fusing beacon ranges and visual-inertial odometry. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons.
+
+% \subsection{System Setup Algorithms}
+% The main practical problem faced by beacon-based systems is setup of the beacons. Current methodology is to place beacons manually and then survey them. Setup lacks a systematic method, is laborious, time-consuming, and does not adapt the map to beacons failing, accidentally moving and new beacons appearing. In order to truly enable indoor localization at scale I built tools to solve to solve the deployment problems.
+% %setting them up and mapping beacons. %localization at building-scale is setting up beacons. Though this is straightforward in single-room deployments, 
+% %First, one faces the challenge of not knowing where to place them. 
+% %Anyone who has deployed a localization system at building-scale faces the pains of system deployment. First, one does not know where to place beacons. challenge of not knowing where to place them. % and how to optimize the placement. 
+% %As a result, more beacons than necessary are deployed and some amount of domain expertise is required while placing. An alternate approach is to deploy beacons and then survey them manually. Surveying beacons is expensive and time-consuming. Further, manual surveying methods cannot adapt the map to beacons failing, accidentally moving and new beacons appearing. I solved these two problems by first designing systematic algorithms for beacon placement when the user has control on where to place beacons, and then designed a pedestrian-based beacon mapping algorithms that can automatically map beacons with unknown locations. %detect and adapt to beacons appearing, moving and disappearing. %beacons accidentally moving or disappearing. if these beacons are moved accidentally, there is no way to In these ways setting up beacons, managing them is often the main hindrance to for realzing these systems in practice.
+% \paragraph{Beacon Placement: }
+
+% Though placing beacons in a single room is straightforward, there is no systematic method to place minimal number of beacons at a building scale. 
+% %As a result, in practice either more beacons than required are deployed, or some regions are left with too few beacons.  %it is not straighfrward to  placement at building-scale is non-trivial. 
+% %One does not know where to place beacons, and cannot quantitatively evaluate two potential placements. As a result, more beacons than n
+% %The localization performance depends on where we placed the beacons. So 
+% %My main insight from the floor-plan aware solver was that we could place beacons in a smart manner in order to 
+
+% %we could jointly design the beacon placement and the solver, in order to placement of beacons in a smart manner, and place the beacons in a smart manner in order to maintain the same performance with fewer beacons, if we use this knowledge for solving, rather than use traditional trlateration solvers. I used this 
+% %I wanted to solve the problem of determining the minimal beacon placement that meet the localization accuracy requirement for a building floor plan. 
+% %The question I designed the first systematic approach to beacon placement for ToF systems indoors. 
+
+% %I designed beacon placement algorithms %in a
+% %MATLAB-based toolchain available on GitHub, 
+% %where users can draw or provide real world floor plans. They can
+% %then try out different beacon placements and compare them quantitatively \cite{rajagopal2016beacon}. 
+
+% To solve this, I used the insight that we could leverage the floor plan geometry and the beacon coverage in a clever way to localize with two beacons rather than three. %to from the floor-plan aware solver to design the placement algorithms. 
+% I defined a new metric, that captured if a location could be uniquely localized. % given the beacons in line-of-sight. %to be uniquely localizable if the location is covered by three or more beacons, or if it is covered by two beacons and the other location with the exact same distances from the two beacons has a different beacon set coverage. 
+% and designed a greedy beacon placement algorithm. % that optimizes for area that is uniquely localizable.  
+% The algorithm reduced the number of beacons by $33\%$ compared to minimal placement with conventional placement. 
+% %To make this more realistic, we have to account for accuracy, in addition to coverage. 
+% I then adopted the Cramer-Rao lower bound on the location estimate as a measure of the localization accuracy. This depends on the geometric dilution-of-precision (GDOP). % - an analytical function of the angles between the beacons and the location; and standard deviation assuming additive Gaussian noise model for ranging error. 
+% I use the GDOP and the unique localization function over all regions to generate the an expected CDF from any deployment, in the same manner than practitioners evaluate the localization performance. I then design a second greedy beacon placement algorithm that optimizes for expected accuracy \cite{rajagopal2016beacon}.  
+
+% I extended this work in collaboration with
+% Prof. Jie Gao from Stony Brook and her student. We mathematically
+% formulated the problem for unique localization and proposed beacon placement
+% algorithms with provable guarantees \cite{beaconplacementtheory}. I believe that such systematic approaches and automated tools for beacon
+% placement are necessary while scaling up these systems from labs to
+% building-scale. 
+
+% %Through these two works, my approach was to understand the interaction between ranging signals and real-world environments from first principles, design models of signals (LOS, NLOS), and systems (floor plan, beacon coverage) that were close to practical and general enough to systematically analyze. I used these principles to design the deployment of the system. 
+
+% \paragraph{Beacon Mapping: }
+% The next problem I solved was automatically inferring location of beacons. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. %Beacon mapping is also applicable for applications like asset mapping. 
+% I designed and implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. We evaluated this is real-world settings with ultra-wideband beacons and are using it with BLE5 ToF beacons for asset tracking. 
+
+% %\section{End-to-End System}
+% % \paragraph{Tracking and mapping algorithms}
+% % I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
+
+% %\paragraph{Orientation acquisition, tracking and mapping algorithms}
+
+
+% %To support continuous location updates, I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. 
+
+
+
+% %In these two works, I analyzed the magnetic field spatial and temporal variation at the physical layer, created models and designed algorithms for location acquisition, tracking and mapping algorithms, and used these to build an end-end mobile AR application. 
+
+
+
+% % \paragraph{Location Acquisition with Beacons: }
+% % \textcolor{blue}{
+% % Location acquisition using ToF beacons, long standing, always done the same way.\\
+% % Practical constraints: NLOS, limited number of beacons\\
+% % Traditional info processing: trilateration 
+% % Solution:
+% % Sensors: Novelty in using the floor plan + beacon coverage;\\
+% % Model: model the FP
+% % Platform: ultrasonic, time-sync, BLE, omnidirectional. Other platforms\\
+% % Info processing: Two key innovations: Beacon placement algorithm, estimation with NLOS\\
+% % Broader impact:
+% % New method for est with NLOS;
+% % First systematic algo 
+% % Demos, competition, deployments, first systematic approach.
+% % }
+% % \paragraph{Orientation Acquisition with Magnetic Field}
+% % \textcolor{blue}{
+% % Orientation acquisition using magnetic field and beacons for re-localization.\\
+% % Practical constraints: phone can be held in any direction. Vision has problem but tracking accurate\\
+% % Real-world: magnetic field changes with space, time
+% % Solution:
+% % Novel sensor fusion: Accurate pose estimation with VIO + mag to build mag maps that we use.\\
+% % Model: continuously build the mag field map
+% % Platform: with UWB, ultrasonic
+% % Info processing: 
+% % Particle filter fusion
+% % Broader impact: 
+% % able to improve performance (instant time) with same amount of sensors
+% % Slam, competition
+% % }
+
+% \section{Research in Other CPS Applications}
+% \paragraph{Visible Light Communication: }
+
+% Though not the focus of my dissertation, my first approach to indoor localization was using overhead LED lights as landmarks. In 2013, LED lights were phasing out incandescent lights. 
+% %To make this happen, I built an end-end visible light communication system.  
+% LED lights turn on and off at a high frequency. I saw this as an opportunity to use them as a communication channel to send data to mobile devices. The main challenge is that the lights operate at a much higher frequency than the camera frame capture rate. %But the lights
+% I designed a novel sensing approach to exploit the low-level rolling-shutter effect of camera sensors on phones to capture a time-varying light signal as a spatially varying image \cite{rajagopal2014visual, rajagopal2014demonstration}. %detect a high frequency light signal and used this to
+% I designed a binary frequency shift keying modulation scheme to support multiple lights.  
+% %A
+% %practical challenge was in maintaining performance when the user holds
+% %the phone normally, rather than pointing at the light. To overcome
+% %this, 
+% %Another novelty on the sensing side was that I exploited the exposure and focus control of the cameras as filters to make the system robust to real-world applications. 
+% Another novelty on the sensing side was that I modeled the exposure and focus control of the camera as
+% filters that respond differently to the light signal and the scene
+% captured to improve the signal-to-noise ratio.
+%  %This
+% %was one of the earliest systems for LED camera communication using the rolling shutter effect
+
+% I implemented and demonstrated this system in the real-world \cite{rajagopal2014demonstration}. I extended the work to design a hybrid communication scheme %that %extended the work
+% % to design a hybrid communication scheme
+% for simultaneously sending independent data stream to phones and photo-diodes \cite{rajagopal2014hybrid}. 
+% %I
+% %presented this in the first Visible Light Communication
+% %(VLC) workshop.%I learnt there that lights driving localization was a 
+
+% The sensing methods, models for converting the time-varying light signal to a spatial varying image, and communication schemes generalize for any LED-camera communication system. This was one of the earliest works in LED-camera communication and in LED-based localization. Subsequently, the field of VLC has grown significantly with several rolling-shutter based
+% approaches for communication and localization, in both academia and
+% start-ups.
+
+% \paragraph{Energy Metering: }
+% Prior to joining CMU, I worked for two years in industry designing energy metering products that were deployed in substations and used by the utilities to calibrate energy meters.
+% %, including reference energy meters used by utilities for calibrating individual meters, and multi-function transducers deployed in substations to monitor aggregated energy from a group of houses/industries. 
+% However, we did not have ways to monitor energy within homes at appliance-level. One of the earliest problems I worked on at CMU was dis-aggregating individual loads from a whole house energy meter. %Prior work had solved this problem by adding intrusive plug-in meters for individual loads or performing device and installation-specific calibration on the whole house meter. 
+% %The question we asked is - Can we dis-aggregate loads in a non-intrusive manner without requiring
+% %In contrast, we solved this problem using a novel sensing approach and a generalized model for home appliances. 
+% We designed a wireless sensor network consisting of contactless battery-operated electromagnetic field (EMF) sensors deployed near each appliance which detected appliance state transitions based on magnetic and electric field fluctuations. I modeled each appliance as a two-state device %appliance model I designed was that each appliance has two states on and off. 
+% and designed an estimation algorithm that used the EMF state transitions along with the whole-house power meter data to detect appliance state transitions \cite{rajagopal2013magnetic} to dis-aggregate individual load energy consumption. Here, the key was to joinly design the sensing platform, system models and the estimation algorithms. I built and demonstrated this system \cite{rajagopal2013demo}. 
+
+% %\paragraph{Time-synchronization and medium access protocols: } Time-synchornization and medium access are central to the design of networked wireless systems. I have contributed to problems in time-synchronization in several ways, cite{} and 
+% %Working with energy metering and the electrical infrastructure of homes, a question that emerged was can we use the power lines as a communication channel indoors? Though there were standards for power line communication (PLC), the interesting question there was is it possible to design a communication scheme for PLC that could use the WiFi communication stack?  To explore this question, I interned at Texas Instruments Communications and Systems Lab and designed a hybrid communication scheme in simulation at the MAC and PHY layer. 
+% %I worked in industry for two works building emebdded energy metering products that were deployed in substations and used by the utilities for calibrate energy meters. After I realized that the bigger challenge was dis-aggregating 
+
+
+% % \paragraph{Non-Intrusive Load Disaggregation}
+% % \textcolor{blue}{
+% % Mag field appl metering.\\
+% % Practical const: cannot add intrusive meters\\
+% % Solution: Novel sensing
+% % Model: appl as two-state
+% % Platform: EMF sensor, whole house energy meter
+% % Info processing: algorithm based on both.
+% % Impact: followed up with ML based load-disaggregation.\\
+% % Microgrid in Haiti
+% % Worked with other sensors:\\
+% % Time-sync, mac protocols.\\
+% % Collaboration with outside:}
+
+% \section{Future Work}
+% My longer term vision is to enable large-scale cyber-physical systems with capabilities for intelligent perception, control, and augmenting the real-word. My goal is for them to interface with humans and have societal impact. They should be mobile and operate in dynamic environments with mobile entities. This is a long-term endeavor spanning several domains. I believe my approach of working across the system stack and solving problems that emerge when we think of systems holistically is suitable to tackle problems towards this. In my dissertation, I have taken the first step step towards this - by building systems, algorithms and tools for taking indoor localization towards a reality. Location is fundamental to systems that interface with the physical world.  I describe some of my next steps below. 
+% Building mixed reality systems and the supporting information processing pipeline is my next step towards this vision. Mixed reality enables humans to interact in real-time with the environment. 
+% Sensing systems necessarily have to be secure and we have to start designing for security from first principles of system design, rather than building systems and then patching them as new threats are discovered. I want to address problems spanning the co-design of security with the embedded sensing system stack. Finally these real-time applications demand high bandwidth low-latency communication. I envision that the future applications will demand tight co-design of communication with the application. %there will not be a . 
+% I am also interested in solving problems that emerge when location and communication technologies of the future will work together to mutually benefit each other.
+
+% \paragraph{Making Indoor Localization a Reality: }
+% I will build on my expertise in indoor localization, and my collaborations with industry and government organizations to make indoor localization a scalable reality. Though a lot of focus is on localization for commodity devices, safety-critical applications offer new challenges. I led the proposal of a project for firefighter localization, which is funded by National Institute of Standards and Technologies (NIST). %The challenge here is to localize firefighters during a firefighting operation. %We are working with National Institute of Standards and Technologies (NIST) on the challenging problem of localizing firefighters during an operation. Here, the challenge is that we cannot rely on any existing beacons inside the building. 
+% Our solution has a combination of fixed beacons on firetrucks; firefighters with wearable devices; and estimation algorithms based on mobile network localization. We are exploring the possibility of the exit signs on buildings becoming potential locations for low-power beacons that operate in emergencies. The system design has to adapt to the use case. In future, I would integrate a network of ad-hoc drones with this architecture to make the communication and localization more resilient. I am also interested in problems of location representation and semantics.  Another direction I will pursue would be integration of localization services with internet-of-things  that have heterogeneous sensing capabilities. %
+
+% In order to develop a deeper understanding on the adoption of localization by users, I participated in a conference on mobile positioning for museums. %My goal was to deep dive into one use-case segment in depth. 
+% I learnt that some of the concerns were about  who will pay for the service and who owns and maintains the location infrastructure, security and privacy risks, quantifying the value addition based on the grades of service, integration into existing technologies deployed in the museums, dependence on the device coming in way of the museum experience, etc. This gave me some insight into practical problems that localization and emerging CPS face for user adoption.
+% %some problems that several emerging CPS will face, especially when different entities are involved in owning the physical space, developing the cyber systems, designing the services, and consuming the services. %physical components of a networked system become present in spaces owned by one entity, providing services created by other entities, that are consumed by another entity (users). 
+
+% %I proposed an architecture with a combination of wearable devices with inertial sensors and 
+% %I was invited to give a talk on the state-of-art in mobile positions at 
+%  % Location and communication  %real-time 
+
+% \paragraph{Emerging Applications: }
+
+% Mixed reality (MR) is exciting and has applications in several domains such as healthcare, manufacturing, entertainment and training.
+% Both timing and location are fundamental to MR. State-of-art augmented reality (AR) devices rely on high quality visual features. As a result, they take time to initialize the pose and they cannot interact with objects that 
+% %Though state-of-art augmented reality (AR) devices have made strides in achieving accurate pose estimation, they rely on high quality visual features. As a result, they take time to initialize the pose and they cannot interact with objects that 
+% are not identified uniquely visually.  %The challenge for MR is State-of-art augmented reality (AR) devices are limited when visual features are poor. They 
+% I want to develop design principles for fusing multiple sources of information (vision, emerging localization technologies, communication from overhead LEDs) at the low-level to create robust mixed reality systems. % for seamless interaction with the physical world.  
+% I have shown how we can enhance mobile AR using beacons and magnetic field to improve the pose acquisition \cite{mobileAR}. As a first step, I am currently working on enabling AR interaction with objects by tagging them with tiny LEDs and designing a visible light communication scheme. In future, I want to explore tag-less localization using wireless signals. In addition to localization, another challenge in MR that I am interested in solving is managing the real-time updates to virtual content associated with physical objects. %
+
+
+
+% \paragraph{Security: }
+
+% Cyber-physical systems are prone to attacks on the physical layer via
+% access to the environment where the devices are located.  The challenge in detecting attacks at the physical layer signals is that %Since the
+% %real-world signals are noisy, 
+% the estimation algorithms allow for
+% outliers and the signal models often don't
+% account for attacks. 
+% %This makes it hard to detect attacks at the
+% %physical layer. 
+% I am interested in understanding how we can integrate
+% data from physically distributed devices and from multiple sources of
+% information to make these systems more robust to attacks. As a start
+% in this direction, I began to analyze this problem space for
+% range-based localization. % with Prof. Sdrjan Capkun's group at ETH
+% %Zurich. 
+% %One attack model that range-based systems are susceptible to
+% %at the physical layer is distance enlargement attack. 
+% Some questions I
+% am pursuing are - how would the beacon placement in a building change
+% if we have to guarantee robustness against distance enlargement and reduction attacks; can we use
+% consistency between various sensors and beacon measurements to detect attacks? 
+% how does the device discovery and MAC layer change based on security
+% properties of the physical layer? More broadly, I want to draw on my experience of experimentally
+% working with, and modeling, physical systems to think systematically
+% about co-designing systems, models and the estimation algorithms with security properties. %We require
+% %application-specific models as well as across-the-stack approaches for
+% %making systems secure to physical layer attacks.
+
+% %For emerging systems, I want to add 
+
+% \paragraph{Next-generation communication: }
+% Future localization and communication technologies will impact each other. 
+% I am interested in using localization for solving challenges in next generation communication technologies. % and in exploring the problems that emerge when we consider the joint design of communication and localization. 
+% Location awareness in fifth generation (5G) wireless networks will enable better allocation of resources by predicting slow-varying channel characteristics and connectivity. % and in dynamic spectrum management and routing. 
+% For mmWave technology physically distributed location-aware devices would coordinate together for beamforming and to create large MIMO arrays. 
+% Location-awareness can also enable better use of the spectrum by sensing the location of users, and by creating reconfigurable arrays with mobile agents. 
+% Location-aware wireless with next generation systems can enable new services for low-power distributed tags, such as those used for asset tracking. 
+% For instance wireless energy harvesting localizable tags can be charged by a configuration of drones flying through the space by directing energy at the tags. 
+% I am also interested in using mmWave and future wireless for simultaneous localization and mapping of environment and objects. 
+% When localization and communication services mutually co-exist on a device, several design challenges emerge. For instance, determining and quantifying the relationship between the geometry and the communication capacity, trading-off allocation of resources between location estimation or communication. To solve these problems, I can draw from my experience in localization, communication and my approach of working across layers of the system stack. 
+
+% The future is exciting. I am looking forward to a research path filled with interesting and challenging problems with high societal impact. %I am looking forward to my research journey that lies ahead. %I am looking forward to working on challenging research problems and applications with high impact on society lie ahead. %I am looking forward to I am excited for the research challenges and the future ahead The future is exciting with challenging research problems to be solved and c
+
+% % We can design more efficient networked embedded sensing system by better use of sensors, new models, info processing algorithms. Systematic ways to go from 
+
+% % I have demonstrated all on real platforms.
+
+
+% % Future work: ---------------
+% % Contribute to applications, platforms, algorithms and tools. \\
+
+% % Platform: sense data
+% % Tools: model and simulate
+% % Algorithms: process the data
+
+% % Reconfigurable edge devices:
+% % In context of localization - how can the nodes organize better to capture more information?
+
+
+% % ultimate goal is to digitize the physical world.\\
+% % This means, representing the state of the physical world digitally, dynamically. This can help in prediction, potentially making decisions as one can see what happens over time.
+% % Turn data into actionable information
+
+
+% % First step: AR (location)
+
+% % Second: world-capture through vision and sensors
+
+% % Applications: manufacturing, infrastructure and predictive maintenance.
+
+% % Security:
+
+% % Communication: Sensing and communication are closely tied.
+
+
+
+% %  - be able to represent the state of the physical world. and interact with it.
+
+% % Applications:
+% % Interactive Applications: Mixed reality - interaction with physical world.\\
+% % Solution:\\
+% % multi-modal sensing.\\
+% % Harder problem: capturing physical objects. \\
+% % Sensing to capture properties of object.\\
+% % Digitizing physical objects.\\
+% % You want to instrument with as little as possible.\\
+% % First steps, LED markers, next - tagless localization, 
+% % If the problems are solved, what would it looks like: Digitize the physical world - not just visually but the properties of the object
+
+% % Mobility-in-the-loop:
+
+% % Predictive maintenance of infrastructure and machinery:\\
+
+% % Security:
+% % Needs to be integrated end-end.\\
+% % Attacks at the physical layer 
+% % Proximity-based authentication
+
+% % Communication:
+
+
+
+% % Analytical foundations:\\
+
+% % Applications built on interaction with physical environment 
+
+% % Sensing from mobiles 
+
+
+% % Long term vision - 
+% % Variety and types of sensors are only increasing.\\
+
+% % We are moving towards a future where sensors are going to find their way everywhere. Though they have potential, 
+% % Build platforms, infomration processing algorithms, models and toolchains for going for sensor data to inference.\\
+
+% % have a unified way to sense and make inferences from the real-world using embedded systems with minimal resources. \\
+% % Vision:
+% % Platform side: design embedded systems with minimal resources and \\
+% % Models: create models for the real-world, the models 
+% % Tools: automatic ways to quantify the relation between information. Can you quantify the data that can be available 
+% % Given the available platforms and sensors and smarts, what applications can you support? Can we have a unified way to 
+
+% % Infrastructure 
+
+% % Localization to reality:
+% % Further problems.
+% % Model: keep evolving - models of the world include maps of environments, beacons
+% % asset tracking\\
+% % Firefighter localization\\ 
+
+% % Applications:
+
+% % Tools:
+% % Too much expertise required. One of the directions, how can users of the systems select the sensors, etc based on what applications they want.  
+% % Beacon placement, range based.
+
+% % Imaging using wireless signals:
+% % UWB, CIR - learn 
+
+% % Mixed reality:
+% % Sense in real-time where devices are, objects are, etc.\\
+% % Challenges: each technology own limitations, don't have ways to track objects, resource constrained\\
+% % Novel sensing: multimodal, \\
+
+% % Industrial, manufacturing, training:\\
+
+% % Security:
+% % how to re-design systems account for attacks.
+% % attacks on the physical layer.
+% % Localization and proximity - device pairing and device-device interaction.
+
+% % Close-the-loop:
+% % Looked at joint design of embedded and inf processing.\\
+% % CPS applicationsb
+
+% % Future communication:
+% % Low-level physical layer. Sense the state of the channel. \\
+% % Forming networks, 
+
+% % Edge-cloud partitioning of processing:
+% % Rather than all sensors collect and are on all the time, how can be determined
+
+
+
+
+
+
+% % time-synchronization:\\
+
+
+
+
+% % However, this siloed approach breaks down for complex applications in the real-world, and the design of the embedded platform and the information processing algorithms impact each other. For instance, on the practical side, we can select from a variety of sensors, design varied signaling schemes, vary the number of placement of devices, and vary how we allocate shared resources such as communication bandwidth and computation. On the algorithms side, we can no longer assume that we have well defined models that represent the practical systems. As a result, 
+% % %Classical system design is split into components that are designed independently : (1) the embedded platform that can produce and sense signals (2) the distributed network (3) the information processing algorithms. This works when we have well defined models and interfaces for the interaction of real world with signals. However, emerging CPS have distributed heterogeneous components and have to make inferences that go beyond simple sensors and systems. As a result, on one hand we have siloed system implementations that use custom sensors and devices and work in some environments but don't generalize and cannot be systematically analyzed. On the other hand we have tools for information processing and analysis that is far removed from practice. To face the challenges of modern CPS, I build reliable networked embedded sensing systems by (1) designing novel sensing methods that are practical and generalize to the sensor type; this gives us more information with available sensors. (2) designing new system models that are simple; they can be systematically analyzed and help us design tools for achieving high performance with low resources; they work in practice (3) designing information processing algorithms; I draw tools from signal processing, estimation, optimization based on the problem at hand. My methodology is to work close to the physical layer, understand signals and systems from first principles. I experiment and deploy systems in the real-world. \\
+
+% % My dissertation focuses on location estimation of mobile devices inside a building. Location estimation is a fundamental piece of several CPS applications. Though there are a million papers on indoor localization, yet we get lost indoors. Indoor location estimation faces the challenges of heterogeneous infrastructure indoors 
+
+% % %However, emerging CPS are large in scale, operate in unpredictable environments, and have heterogeneous and mobile parts.
+
+
+% % %Our goal is to get reliable performance with resource constraints. % (sensors on device, number of devices, network bandwidth, etc). %In order to get reliable performance and systematically allocate resources for sensing %The information processing relies on models of the sensors, signals and systems. %This works when we have well-defined models of the physical world. 
+% %  %This works for simple sensing systems where we have well defined models for the physical systems. 
+% % % However, the emerging CPS are hard to model. 
+% % % They are large in scale, operate in unpredictable environments, and have heterogeneous and mobile parts. As a result, we either have real-world implementations that are hard to analyze;  or we have theoretical analysis that is far from removed from practice. %The siloed approach fails because we cannot well defined models of the world. 
+% % % %As a result, the design of these systems becomes challenging. 
+% % % To face the challenges of modern CPS, I (1) design novel sensing methods to get more information with available sensors (2) design system models that are simple enough to systematically analyze and work in practice (3) design the information processing algorithms by drawing tools from signal processing, estimation, optimization.
+% % % %As a result, we either have real-world implementations that are hard to analyze for performance and resource allocation;  or we have theoretical analysis that is far from removed from practice. My approach is to My goal is to build systems that are re To solve this, my appraoch is to 
+% % % %Hence there is a gap between systems built for the real-world system design which cannot  
+% % % More broadly, I bring to embedded sensing systems research, a systematic understanding of signal processing, system modeling, inference, state estimation and communication. 
+% % % I work close to the physical layer. I experiment and deploy systems in the real-world.
+% % %I apply information processing tools from signal processing, estimation, optimization to embedded sensing systems, and design novel sensing methods to build reliable systems for the real-world.\\
+
+% % \paragraph{Summary and Impact of Work}
+% % In 2013, when LED lights were phasing out
+% % incandescent lights, I designed one of the earliest visible light
+% % communication (VLC) systems to send data from overhead LED lights and
+% % for light-based localization. Here, I solved the This work was published in IPSN'14\cite{rajagopal2014visual}
+% % (cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  
+
+
+% % dissertation contributed to beacon-based indoor localization systems
+% % for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
+% % RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
+% % Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
+% % Microsoft Indoor Localization competition twice, received a best demo
+% % award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% % industry. This work is being applied to indoor navigation, mobile
+% % persistent augmented reality, firefighter localization, and asset
+% % mapping applications.  
+
+% % I have also contributed to other areas of CPS:
+% % time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% % monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+% % % and operate in unpredictable environments. As a result, we cannot
+% % %large in scale, operate in unpredictable environments, have heterogeneous parts and are resource constrained. As a result, we no longer have well-defined models for t
+
+% % %For building systems that can reliably estimate the state of the real-world, we 
+
+% % % siloed into different parts with well defined interface, each of which is independently designed: (1) the embedded sensor platform (2) the deployment and network (3) the information processing algorithm to make an inference. However, this 
+
+% % %However, these systems are large in scale, operate in unpredictable environments, have heterogeneous parts and can be resource constrained. As a result, this siloed design no longer holds. 
+
+
+% % % is broken into components in different domains - embedded sensor platform, 
+
+% % %  (2) the physical and information layer of the distributed embedded sensors (3) information processing algorithms
+
+ 
+
+% % % Traditionally the design of This disrupts the classical siloed system design which is broken into different domains . For instance, consider the typical IoT paradigm where devices are
+
+% % % The classical design does not hold since the information
+% % % %are performed with 
+
+
+% % % This disrupts classical siloed system design, where systems are broken down into components from different domains, each with their own tools and design methodology. For instance, system implementations and algorithms are often tuned to the environment or technology. 
+% % % This makes it hard to analyze the system for properties such as reliability and
+% % % robustness. On the other hand, if we remove properties of the real
+% % % world and abstract systems to well-understood models, we can
+% % % systematically analyze them and predict their functionality. But this
+% % % analysis is far removed from practical systems. To face the challenges of modern CPS, 
+% % % I bring to embedded sensing systems research, a systematic understanding of signal processing, system modeling, inference, state estimation and communication. 
+% % % I apply information processing tools from signal processing, estimation, optimization to embedded sensing systems to build reliable systems for the real-world.\\
+
+
+% % % Rather than the traditional siloed approach, I jointly design the sensing pipeline, system models and information processing algorithms and physical networked embedded system. Common to my methodology is (a) I work closely to the physical layer (b) I experiment and deploy systems in the real-world to understand the interaction between signals and systems from first principles (c) I develop signal, sensor and system models (d) I identify and implement the theoretical tools relevant to the estimation problem (e) I jointly determine the design parameters of the networked embedded system (sensor front-end modifications, what
+% % % infrastructure to use? where to place them? what sensors to collect
+% % % data from? how to schedule the devices? how to synchronize them? what communication scheme?) and design and implement the
+% % % information processing algorithms.\\
+
+% % % For instance, in the area of indoor localization, my first approach was to jointly design algorithms for beacon placement and location estimation. This joint design reduces the number of beacons, and makes the estimation robust. 
+% % % Another example is in the design of a visible light communication system. I designed a modulation scheme for LED lights and a demodulation scheme for cameras that leveraged the properties of the communication channel and the properties of sensors, and use this communication scheme to design the firmware on the LEDs and the phone.
+
+
+
+% % % \paragraph{Impact:}  In 2013, when LED lights were phasing out
+% % % incandescent lights, I designed one of the earliest visible light
+% % % communication (VLC) systems to send data from overhead LED lights and
+% % % for light-based localization. This work was published in IPSN'14\cite{rajagopal2014visual}
+% % % (cited 130+ times), VLCS'14 \cite{rajagopal2014hybrid} and demonstrated in IPSN'14 \cite{rajagopal2014demonstration}.  My
+% % % dissertation contributed to beacon-based indoor localization systems
+% % % for mobile devices, and resulted in several publications (SenSys'15 \cite{lazik2015alps},
+% % % RTAS'15 \cite{rtas-alps-platform}, IPIN'16 \cite{rajagopal2016beacon}, IPSN'18 \cite{rajagopal2018enhancing}, two under submission \cite{mobileAR, beaconplacementtheory}, demonstrations at
+% % % Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), received 2 patents, won the international
+% % % Microsoft Indoor Localization competition twice, received a best demo
+% % % award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% % % industry. This work is being applied to indoor navigation, mobile
+% % % persistent augmented reality, firefighter localization, and asset
+% % % mapping applications.  I have also contributed to other areas of CPS:
+% % % time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% % % monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+% % \section{Current Research}
+
+% % My dissertation is on indoor localization - an instance of a CPS problem. Location gives information on where resources, things, people and devices are, and is an important service for other CPS applications
+
+% % There are more than a million papers on indoor localization. Yet we get lost indoors today. The reason is --- we don't have solutions that are free-of-cost, do not require any environment-specific calibration, are accurate, robust and instant (do not require the user to walk around some distance). Existing solutions that use signals from WiFi, and on-board sensors such as camera and inertial sensors are free but depending on the implementation they have trade offs between accuracy, time-to-first-estimate and require environment-specific calibration. Solutions that deploy infrastructure can be accurate and instant if sufficient infrastructure (beacons or anchors) are in line-of-sight. A device localizes itself with respect to beacons by using a range-based measurement technique (time-of-flight, time-difference-of-arrival, angle-of-arrival). However, this system is not free since we have to install beacons densely across buildings, and setup and map them. \\
+
+
+% % %jointly designed a method for both mapping beacons, as well as generating maps that enable instant orientation acquisition subsequently when  which   algorithm for  the system an information processing algorithms is 
+
+% % \textbf{Platform and ranging technologies:} I argue that in the future, ranging capability will be available on commodity devices, WiFi access points, IoT devices and possibly smart appliances. %all devices that require localization service. 
+% % Time-of-Flight (ToF) ranging is emerging through various wireless standards. % and is getting integrated into commodity devices, WiFi access points, and IoT devices. I believe that in future,  
+% % The emerging technologies include mmWave, ultra-wideband (including emerging 802.18.4z), WiF 802.11mc and BLE5. On the platform side I contributed to building an ultrasonic platform that localizes unmodified mobile devices. The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices
+% % \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. I worked with Apple's earliest versions of WiFi ToF, during an internship, and subsequently this had product impact. I am also collaborating with Texas Instruments on BLE5 ToF ranging. 
+
+% % My strategy to solve the indoor localization problem is to adopt time-of-flight ranging paradigm and built the tools required to make ToF localization accurate and instant with low beacon density; and create tools for automatic beacon placement and mapping. 
+
+% % \paragraph{A robust location-solving algorithm: }
+% % ToF systems require high density beacon coverage and suffer when they receive incorrect measurements due to
+% % non-line-of-sight (NLOS) signals. 
+% % % that reflect off surfaces where there isn't a direct path between the beacon and the device being localized. 
+% % In realistic conditions, the user has walk around for the system to gather more measurements and converge. After facing this problem in several real-world deployments, I wanted to create a robust solver that localized instantly and accurately, with minimal LOS measurements and was robust to NLOS measurements. 
+
+% % I solved this problem with a new idea that is simple and effective in practice \cite{rajagopal2018enhancing}. 
+% % I compute the LOS coverage region for each beacon by using the floor plan geometry and a ray tracing model for beacon coverage. Rather than using low-level signal statistics or temporal information (both defeat the purpose of the instant solver), or assume knowledge of NLOS signal path (infeasible in practice), I assume that the NLOS signal travels a longer path than the LOS signal (which is true for all ranging technologies). The key innovation in the solver is that I also use the absence of measurement from certain beacons as useful information. I designed a hypothesis-testing floor-plan aware solver that checks for consistency between the received and absent measurements and the beacon coverage model.
+
+% % This solver is the first that localizes with just two LOS beacons, rather than three (for 2D localization), and maintains the same performance even when several NLOS signals are present. Across several real
+% % world environments, this solver detected and removed NLOS with 91\% accuracy and maintained 1m accuracy as compared to 4-8m by traditional approaches. We implemented this
+% % method in our system that won the Microsoft Indoor
+% % Localization Competition in 2015. 
+
+% % \paragraph{Beacon placement algorithms: }
+% % Anyone who has deployed a localization system at building-scale with a limited budget for beacons faces the challenge of not knowing where to place them. % and how to optimize the placement. 
+% % Hence, more beacons than necessary are deployed and some amount of domain expertise is required for placing beacons. 
+
+% % %The localization performance depends on where we placed the beacons. So 
+% % I designed beacon placement algorithms in a
+% % MATLAB-based toolchain available on GitHub, where users can draw or provide real world floor plans. They can
+% % then try out different beacon placements and compare them quantitatively \cite{rajagopal2016beacon}. 
+
+% % I used the insights from the floor-plan aware solver to design the placement algorithms. 
+% % I define a location to be uniquely localizable if the location is covered by three or more beacons, or if it is covered by two beacons and the other location with the exact same distances from the two beacons has a different beacon set coverage. I designed a greedy beacon placement algorithm that optimizes for area that is uniquely localizable.  The algorithm reduced the number of beacons by $33\%$ compared to minimal placement with 3-beacon coverage across real-world and simulated floor plans. 
+% % To account for accuracy in addition to coverage, I adopted the Cramer-Rao lower bound on the location estimate. This depends on the geometric dilution-of-precision (GDOP) - an analytical function of the angles between the beacons and the location; and standard deviation assuming additive Gaussian noise model for ranging error. I use the GDOP and the unique localization function over all regions to generate an expected CDF from any deployment, and design a second greedy beacon placement algorithm that optimizes for expected accuracy.  
+
+% % I extended this work in collaboration with
+% % Prof. Jie Gao from Stony Brook and her student. We mathematically
+% % formulated the beacon placement problem for unique localization and proposed placement
+% % algorithms with provable guarantees \cite{beaconplacementtheory}. Such systematic approaches and automated tools for beacon
+% % placement are necessary while scaling up these systems from labs to
+% % building-scale. 
+
+% % Through these two works, my approach was to understand the interaction between ranging signals and real-world environments from first principles, design models of signals (LOS, NLOS), and systems (floor plan, beacon coverage) that were close to practical and general enough to systematically analyze. I used these principles to design the deployment of the system. 
+
+
+% % % \paragraph{Tracking and mapping algorithms}
+% % % I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
+
+% % \paragraph{Orientation acquisition, tracking and mapping algorithms}
+
+
+% % To support continuous location updates, I fused beacon ranges with visual-inertial odometry on phones with a Particle Filter approach. This implementation won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. The next problem we solved was automatic beacon mapping. In future, when WiFi access points, IoT devices and mobile devices have ranging capabilities, devices that are stationary can begin to act as beacons, and have to be mapped in real-time. Beacon mapping is also applicable for applications like asset mapping. I implemented a Rao Blackwellized-based Range-only Simultaneous Localization and Mapping algorithm to perform automatic beacon mapping by a pedestrian simply walking around holding a phone. 
+
+% % While most indoor localization work focuses on location
+% % estimation, orientation is necessary for applications like mobile
+% % augmented reality. %Existing approaches either rely on visual features
+% % %or require the user to walk around for some distance before the
+% % %orientation can be acquired.
+% % I designed a novel approach where we fused Visual
+% % Inertial Odometry and beacons to crowd-source a dense magnetic field
+% % map with pedestrian-held phones. Subsequently, future users use this map at startup to calibrate
+% % their compass in order to instantly estimate orientation. %Though
+% % %magnetic field has been shown to be promising for localization, 
+% % This is the first phone-based system that shows the feasibility of using magnetic field for
+% % for instant orientation acquisition. %We also automatically map the beacon
+% % %infrastructure as the pedestrian walks around with a phone.  
+% % We used
+% % this system to build and end-end multi-user persistent augmented
+% % reality system that works in any environment without requiring the
+% % sharing of large and often fragile point-cloud maps \cite{mobileAR}. 
+
+% % This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. The approach of mobile AR using beacons is implemented on our ultrasonic localization system that spawned into a startup. It has been deployed for AR-based product finding in retail. 
+
+% % %In these two works, I analyzed the magnetic field spatial and temporal variation at the physical layer, created models and designed algorithms for location acquisition, tracking and mapping algorithms, and used these to build an end-end mobile AR application. 
+
+
+
+% % %\subsection{Other CPS areas}
+% % \paragraph{Localizing using the lighting infrastructure}
+% % Though not the focus of my dissertation, my first approach to indoor localization to leverage existing infrastructure, was to localize using the overhead LED lights. To make this happen, I built an end-end visible light communication system.  LED lights turn on and off at a high frequency, offering an opportunity to use them as a communication channel to send data to mobile devices. The main challenge is that the lights operate at a much higher frequency than the camera frame rate.%But the lights
+% % To communicate data despite this limitation, I designed a novel sensing approach to exploit the low-level rolling-shutter effect of camera sensors on phones to capture a time-varying light signal as a spatially varying image \cite{rajagopal2014visual, rajagopal2014demonstration}. %detect a high frequency light signal and used this to
+% % I designed a modulation scheme that supported multiple lights.  
+% % %A
+% % %practical challenge was in maintaining performance when the user holds
+% % %the phone normally, rather than pointing at the light. To overcome
+% % %this, 
+% % To make the system robust to real-world applications, I modeled the exposure and focus control of the camera as
+% % filters that respond differently to the light signal and the scene
+% % captured to improve the signal-to-noise ratio. %This
+% % %was one of the earliest systems for LED camera communication using the rolling shutter effect
+% % We extended the work
+% % \cite{rajagopal2014hybrid} to design a hybrid communication scheme
+% % where a single light transmits two independent data streams at
+% % different data rates simultaneously to a phone and a photo-diode. I
+% % presented this in the first Visible Light Communication
+% % (VLC) workshop. %I learnt there that lights driving localization was a 
+
+% % Subsequently, the field of
+% % VLC has grown significantly with several rolling-shutter based
+% % approaches for communication and localization, in both academia and
+% % start-ups. Our work was one of the earliest works in LED-camera communication and using VLC for
+% % localization. 
+
+
+% % \paragraph{Effect of use case on system design} 
+% % %There is no silver bullet for a localization architecture. % localization architecture 
+% % We are working with National Institute of Standards and Technologies (NIST) on the challenging problem of localizing firefighters during an operation. Here, the challenge is that we cannot rely on any existing beacons inside the building. Our solution has a combination of fixed beacons on firetrucks; firefighters with wearable devices; and estimation algorithms based on mobile network localization. We are exploring the possibility of the exit signs on buildings becoming potential locations for low-power beacons that operate in emergencies. The system design has to adapt to the use case. In future, I would integrate a network of drones with this architecture to make the communication and localization more resilient.%It is likely that in future we would have different grades of reliabiity in localization technologies, some for emergency\\
+
+% % I recently participated in a conference on mobile positioning for museums. My goal was to deep dive into one use-case segment in depth. I learnt that the concerns were not about the accuracy but other problems such as reasoning with who will pay for and who owns the location infrastructure, service and associated data; security and privacy risks, quantifying the value addition, integration into their existing services, supporting various grades of service, etc. This gave me some insight into some problems that several emerging CPS will face, especially when physical components of a networked system become present in spaces owned by one entity, providing services created by other entities, that are consumed by another entity (users). 
+
+
+
+% % \section{Additional points}
+% % \textcolor{blue}{Show-off points potentially to add:}\\
+% % Number of alps deployments, size of deployments - several deployments on campus.\\
+% % Worked with Samsung - sensor fusion\\
+% % Samsung fellowship for IoT\\
+% % Mention Terraswarm, CONIX\\
+% % Future automatic mapping of all sensors, devices - best poster at Terraswarm annual meet\\
+% % In MR future work - attended MR workshop at USC\\
+% % Energy meter - worked with EarthSpark in their early days - Haiti deployment\\
+% % NSF BIC project - convention center\\
+% % Industry experience in energy metering embedded back in India?\\
+% % TI internship : PLC WiFi hybrid
+
+
+
+% %\newpage
+% \small
+% \bibliographystyle{abbrv}
+
+% \bibliography{references}  % sigproc.bib is the name of the Bibliography in this case
+
+% \end{document}
