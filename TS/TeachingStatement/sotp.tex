@@ -12,7 +12,7 @@
 \usepackage{verbatim}   % useful for program listings
 \usepackage{color}      % use if color is used in text
 \usepackage{subfigure}  % use for side-by-side figures
-\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
 \usepackage{lipsum}
 \usepackage{url}
 
@@ -43,33 +43,34 @@
 \begin{document}
 \pagenumbering{gobble}
 
-%\setlength{\droptitle}{-5em}
+\begin{table}
+\color{blue}
+%\color{Emerald}
+\begin{tabular*}{\textwidth}{l r}
+\large\textbf{RESEARCH STATEMENT} & 
+\hfill \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\large\textbf{NIRANJINI RAJAGOPAL}\\
+\hline
+\end{tabular*}
 
-\title{{\Large Teaching Statement}}
-\vspace{-1em}
-%\author{\textit{Niranjini Rajagopal}}
-\maketitle
-
-\vspace{-6em}
+\end{table}
 
 %My philosophy to education is that education is the growth of an individual along several dimensions. As a teacher and mentorAs an advisor, teacher, and mentor and all coupled. I am passionate about education. As a teacher, mentor and advisor, I will strive to facilitate both the personal and professional growth of students. \\
-I enjoy teaching and mentoring students. \\
+I am passionate about teaching and mentoring students... %Throughout my teaching experiences, I try to understan 
 
 \paragraph{Teaching Experience:}
-At Carnegie Mellon University (CMU), I was a teaching assistant for signals and systems (undergraduate course) two semesters, wireless networks and applications (undergraduate, masters and PhD course), and a guest lecturer for embedded systems (undergraduate and masters course). I have assisted with ECE labs for high school students, and with science, maths and robotics classes for K-12 students through outreach initiatives. I have mentored undergraduate, masters and early PhD students on research projects.  \\
+At Carnegie Mellon University (CMU), I was a teaching assistant for signals and systems (undergraduate course) two semesters, wireless networks and applications (undergraduate, masters and PhD course), and a guest lecturer for embedded systems (undergraduate and masters course). I have assisted with ECE labs for high school students, and with science, maths and robotics classes for K-12 students through outreach initiatives. I have mentored undergraduate, masters and early PhD students on research projects.  
 
 \paragraph{Teaching Plan:}
-The courses I am most prepared to teach are signals and systems; digital communication; digital signal processing; statistical signal processing; inference, estimation and detection; probability and random processes; wireless networks and applications; linear systems. \\
-
-The seminar courses I can teach are: Mobile sensing theory and applications (will include augmented reality); localization and mapping; internet-of-things; cyber-physical-systems; \\%These courses would include paper readings, labs and a project in addition to covering concepts.\\
-
-The other courses I can teach given some time to prepare the materials are embedded systems; control systems\\%; information theory.\\
-
-I plan to have a project component in all my classes. Given time, I would design labs for all classes. I would introduce paper readings for graduate classes.\\
+The courses I am most prepared to teach are signals and systems; digital communication; digital signal processing; statistical signal processing; inference, estimation and detection; probability and random processes; wireless networks and applications; linear systems. 
+The seminar courses I can teach are: Mobile sensing theory and applications (will include augmented reality); localization and mapping; internet-of-things; cyber-physical-systems; %These courses would include paper readings, labs and a project in addition to covering concepts.\\
+The other courses I can teach given some time to prepare the materials are embedded systems; control systems%; information theory.\\
+I plan to have a project component in all my classes. Given time, I would design labs for all classes. I would introduce paper readings for graduate classes.
 
 \paragraph{Teaching Philosophy: }
 %In my role as a teacher in electrical and computer engineering, m
-Through my teaching in ECE, I strive for students to develop the skills to think critically about both fundamental aspects and system level design of real-world engineering problems. Towards this, first, they should develop a strong foundation from first principles. Second, they should develop a framework to connect various concepts to each other. This includes connecting theory to practice, connect concepts across courses, connecting concepts to other domains and to the real-world. Third, they should develop the ability to approach a new problem. I give some examples from my teaching.\\ %This includes developing a strong foundation, 
+Through my teaching in ECE, I strive for students to develop the skills to think critically about both fundamental aspects and system level design of real-world engineering problems. First, they should develop a strong foundation from first principles. Second, they should develop a framework to connect various concepts to each other. This includes connecting theory to practice, connecting concepts across courses, connecting concepts to other domains and to the real-world. Third, they should develop the ability to approach a system-level problem. I give some examples of my methods towards this from my teaching.\\ %This includes developing a strong foundation, 
 
 %Towards this, first, they should develop a strong foundation from first principles. 
 
@@ -77,13 +78,45 @@ Through my teaching in ECE, I strive for students to develop the skills to think
 
 %First, students should develop a strong foundation from first principles.
 While teaching signals and systems, %and the first mathematically rigorous core ECE course at CMU. In this course, 
-my goal was for students to develop an intuition and understanding of the mathematical techniques and learn to implement them. I found that some while some students understood the concepts easier through illustrations, others found it easier with a purely mathematical approach. I included both approaches in my recidations and office hours. When students found equations confusing and wrote them incorrectly, rather than correcting them, I spent time with them one-on-one and helped them step-through the process of interpreting what their equations meant intuitively and in the real-world. This approach helped them understand the concepts better. %In my recitations and office hours I explained concepts 
+my goal was for students to develop an intuition and understanding of the mathematical techniques and learn to implement them. I found that some while some students understood the concepts easier through illustrations, others found it easier with a purely mathematical approach. I included both approaches in my recitations and office hours. When students found equations confusing and wrote them incorrectly, rather than correcting them, I spent time with them one-on-one and helped them step-through the process of interpreting what their equations meant intuitively and in the real-world. This approach helped them understand the concepts better. %In my recitations and office hours I explained concepts 
 %Students learnt the concepts through practice by solving problems, and through implementing them in labs. 
 I often designed homework problems by breaking them down into smaller problems. Students said they was helpful since they were able to know how to connect the concepts to solve the problem. Sometimes I provided the solution and asked them to solve the problem. This gave them quick feedback on their technique.
-Several students found convolution confusing. I conducted frequent quizes that tested students on important concepts, gave them immediate written feedback. This informed me on what to emphasize in recitations and office hours.  I had a special convolution session where we went into a deep dive the topic. I also tried an activity in the classroom where students first solved a convolution problem, then worked in pairs and discussed their appraoch then solved another problem individually. We saw an improvement in the class performance in the second problem. One assessment of these methods was that the midterm exam performance on all convolution problems including theretical and applied, was significantly better than the performance over the past years. 
+I conducted frequent quizes that tested students on important concepts, gave them immediate written feedback. This informed me on what to emphasize in recitations and office hours.  Several students found convolution confusing. I had a special convolution session where we went into a deep dive the topic. I also tried an activity in the classroom where students first solved a convolution problem, then worked in pairs and discussed their appraoch then solved another problem individually. We saw an improvement in the class performance in the second problem. One assessment of these methods was that the midterm exam performance on all convolution problems including theretical and applied, was significantly better than the performance over the past years. \\
 
-Students are more motivated to learn when they know how the content applies beyond the course. %Being able to connect the content to the real-world motivated the students since it gave them an idea of what they could do with these tools. 
-Previously the course was largely theory-based. The second year I taught the course, we introduced applied problems, and we invited faculty from different areas to talk about their research. I also gave a presentation about how my research connects to the class. These lectures have continued since then.  I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the signals and systems course. Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. When I taught the wireless networks class, 
+In order to help students make connections between theory and practice in signals and systems,  %Students are more motivated to learn when they know how the content applies beyond the course. %Being able to connect the content to the real-world motivated the students since it gave them an idea of what they could do with these tools. 
+%Previously the course was largely theory-based. The second year I taught the course, 
+I introduced applied problems, and we invited faculty from different areas to talk about their research. I also gave a presentation about how my research connects to the class. These lectures have continued since then.  I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the signals and systems course. Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. When I taught the wireless networks class, I designed new labs for students to experiment with the physical layer channel characteristics, before instroducing the medium access and networking layer. %and learn about the challenges of the real-world wireless channels. %The students had to design their own experiments, predict the 
+%In contrast to Signals and Systems, the Wireless Networks and Applications course was practical in nature.  
+%One of my goal for students was to understand the challenges of wireless channels from first principles. I designed new labs for students to experiment with the physical layer signals. Students first had to design their own experiments. 
+For one of the labs, I asked students to design their own experiments, hypothesis, predict the output with justification, then perform the experiment and explain any differences between their hypothesis and the real-world experiments. 
+%and some students opted to experiment with the change in signal with distance, some wanted to test the change in packet reception with crowds, and some wanted to test for variation in data rate across devices and environments. Then students had to describe their hypothesis on the effect of real-world on the signals and sketch out graphs of what they expected to see from the experiments. After conducting the expereiment, they had to think about and explain the differences between their hypothesis and the real-world experiments. 
+I designed another lab based on CSI monitoring where students learnt about the short-term variations in the channel and had to write and share their own observations by experimenting. Through these experiments early on in the course, students demonstrated their understanding of how the real-world nature of wireless signals affects system design. I mentored students on their research survey, where they identified a research area related to the class and dived deeper into it, read papers and presented their findings. In the process, students learnt to connect concepts from the class to other applications.\\
+
+While mentoring students for research and course projects where they approach a system-level problem, one of my goals is for them to understand that there can be several ways to solve the problem.... \\
+%I spend time 
+
+%Another goal is for them to have the 
+
+
+Other skills and student motivation also play a role in student learning. When I have flexibility in working with students individually, I first ask them what their goals are and discuss various options for moving ahead.
+%I start with giving students problems they can complete and then challenge them with hard problems. 
+I led an outreach program where we introduced ECE to high school girls. I felt it was important that they develop confidence with their first ECE experience. For this, I made sure the labs were designed such that all students could complete certain tasks, and were asked to reflect on what new skills they learnt. While mentoring masters students, I start by giving them concrete research problem, where they can clearly measure their progress. I also challenge students with hard problems. In the outreach program, we introduced bonus lab assignments. While working with masters students, at some point I transition them to work on problems where they start working independently and teach me. This makes them more confident to try out new directions.  Finally, students have to communicate what they have learnt, in ways other than implementation. When possible, I also give students feedback on other aspects such as their writing, presentation skills or clarity in explaining concepts on a whiteboard. 
+
+\paragraph{Learning Science: }To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at CMU. I am among a select group (around 8 students across CMU) of graduate teaching fellows at the Eberly Center for Teaching Excellence and Educational Innovation. Being a part of a team of graduate teaching fellows and interacting with students across various departments in CMU has exposed me to teaching styles and approaches very different from what I am exposed to in engineering. I also attended an HCI course on the design of large scale peer-learning systems to learn about ways to engage students through peer-based learning in large classes. For my future classes, I am eager to try out different approaches for teaching and engaging students in the classroom.\\
+
+
+% they could improve, sometimes their presentation and communication skills.   
+%Other skills are necessary. For instance, confidence to try something new.
+%Designed labs that could be completed, reflect. \\
+
+%Often start with giving them something they can complete.\\
+%Also provide more challenges.\\
+%Research, harder problems where they teach me something\\
+%Communication is another skill. One-one. In undergraduate and graduate classes, I will include these.\\
+%I ask the students why they are here and what they are looking for.  
+
+
+
 
 %I Second, they should develop a framework to connect various concepts to each other. This includes connecting theory to practice, connect concepts across courses, connecting concepts to other domains and to the real-world.
 
@@ -99,11 +132,11 @@ Previously the course was largely theory-based. The second year I taught the cou
 %We also introduced guest lectures where faculty presented their research in context of this class (which has continued since then), and I gave a lecture as well about how the theory applies in my research, and continue to give it every year in this course. This helped students connect the course to the broader ECE. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the Signals and Systems course.
 %Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. \\ 
 
-Second, they should develop a framework to connect various concepts to each other. This includes connecting theory to practice, connect concepts across courses, connecting concepts to other domains and to the real-world.
+% Second, they should develop a framework to connect various concepts to each other. This includes connecting theory to practice, connect concepts across courses, connecting concepts to other domains and to the real-world.
 
-Previously the course was largely theory-based. The second year I taught the course, we introduced applied problems, and we invited faculty from different areas to talk about their research. I also gave a presentation about how my research connects to the class. These lectures has continued since then. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the signals and systems course. Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend.\\
+% Previously the course was largely theory-based. The second year I taught the course, we introduced applied problems, and we invited faculty from different areas to talk about their research. I also gave a presentation about how my research connects to the class. These lectures has continued since then. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the signals and systems course. Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend.\\
 
-Third, they should develop the ability to approach a new problem. This includes developing the skills to know how to break down the problem, thinking about trade-offs between different approaches, and connecting this to the fundamental concepts and think about limits and constrains on the problem.
+% Third, they should develop the ability to approach a new problem. This includes developing the skills to know how to break down the problem, thinking about trade-offs between different approaches, and connecting this to the fundamental concepts and think about limits and constrains on the problem.
 
 
 %I enjoy teaching and mentoring students. 
@@ -111,55 +144,55 @@ Third, they should develop the ability to approach a new problem. This includes 
 
 
 
-I believe 
+% I believe 
 
- teaching
-mentoring students. I This is one of my reasons in addition to research that draws me to an academic path. 
+%  teaching
+% mentoring students. I This is one of my reasons in addition to research that draws me to an academic path. 
 
-My teaching experience at CMU is from being a teaching assistant twice for signals and systems, an undergraduate level course; the teaching assistant for wireless networks and applications, a mix of undergraduate and graduate level course; guest lecturer in embedded systems course; and through my involvement in various K-12 outreach initiatives.
+% My teaching experience at CMU is from being a teaching assistant twice for signals and systems, an undergraduate level course; the teaching assistant for wireless networks and applications, a mix of undergraduate and graduate level course; guest lecturer in embedded systems course; and through my involvement in various K-12 outreach initiatives.
 
-A common theme in my teaching 
+% A common theme in my teaching 
 
 
-Good technology is built on strong foundations, requires an understanding of the connections between theory and practice, and a broader understanding of how to approach a new problem.  Through my interaction with students, I strive to facilitate this learning process.
+% Good technology is built on strong foundations, requires an understanding of the connections between theory and practice, and a broader understanding of how to approach a new problem.  Through my interaction with students, I strive to facilitate this learning process.
  % understanding of the connections between the various components. 
  % in students.
 
 
 
-Students learning should be built on strong foundations. % across the courses that I teach. 
-When I was teaching the signals and systems course, the biggest challenge was to address the disparity in the mathematical background and learning styles of students. When I taught this class for the second time, I conducted a quiz in the first class to assess the mathematical preparedness of the students. Subsequently, I covered the necessary background material through working with students one-on-one in office hours, recitations and assessing and providing feedback through homeworks. Where possible, I designed the problems to be self-correcting. During recitations and office hours, I asked students what they found most confusing, and went ove that content. I broke down problems into smaller%Another approach I tried was providing them the final solution and ask them to arrive at the solution. This helped them develop their technique to solve the problem. 
-Consistently, students struggle when the topic of convolution is introduced in the course. While talking to students, they said that they convolution equation is non-intuitive and confusing. 
-My goal was for students to understand the equation and the implications, rather than memorize it. 
-One approach I tried was that I held a special recitation just for this topic and 
-%I tried a few different techniques to tackle this. I introduced a think-pair share activity, where the students first solved a convolution problem, and then discussed their solutions with their neighbors and then solved another problem individually. I 
-%went over what all the incorrect formulae that we came across in their quizzes and homeworks and 
-made them think about and interpret what each of them meant mathematically and practically. In the mid-term exams, only 4 out of the 70 students got the convolution equation wrong, and around 55 students solved the problems without major errors - a vast improvement from previous years. 
+% Students learning should be built on strong foundations. % across the courses that I teach. 
+% When I was teaching the signals and systems course, the biggest challenge was to address the disparity in the mathematical background and learning styles of students. When I taught this class for the second time, I conducted a quiz in the first class to assess the mathematical preparedness of the students. Subsequently, I covered the necessary background material through working with students one-on-one in office hours, recitations and assessing and providing feedback through homeworks. Where possible, I designed the problems to be self-correcting. During recitations and office hours, I asked students what they found most confusing, and went ove that content. I broke down problems into smaller%Another approach I tried was providing them the final solution and ask them to arrive at the solution. This helped them develop their technique to solve the problem. 
+% Consistently, students struggle when the topic of convolution is introduced in the course. While talking to students, they said that they convolution equation is non-intuitive and confusing. 
+% My goal was for students to understand the equation and the implications, rather than memorize it. 
+% One approach I tried was that I held a special recitation just for this topic and 
+% %I tried a few different techniques to tackle this. I introduced a think-pair share activity, where the students first solved a convolution problem, and then discussed their solutions with their neighbors and then solved another problem individually. I 
+% %went over what all the incorrect formulae that we came across in their quizzes and homeworks and 
+% made them think about and interpret what each of them meant mathematically and practically. In the mid-term exams, only 4 out of the 70 students got the convolution equation wrong, and around 55 students solved the problems without major errors - a vast improvement from previous years. 
 
 
 
-Students should be able to connect theory and practice. I introduced applied problems from areas of communications, image and speech processing and sensor signals. We also introduced guest lectures where faculty presented their research in context of this class (which has continued since then), and I gave a lecture as well about how the theory applies in my research, and continue to give it every year in this course. This helped students connect the course to the broader ECE. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the Signals and Systems course.
-Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. While guest lecturing and introducing control systems in the embedded systems course, I first ask students 
+% Students should be able to connect theory and practice. I introduced applied problems from areas of communications, image and speech processing and sensor signals. We also introduced guest lectures where faculty presented their research in context of this class (which has continued since then), and I gave a lecture as well about how the theory applies in my research, and continue to give it every year in this course. This helped students connect the course to the broader ECE. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the Signals and Systems course.
+% Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. While guest lecturing and introducing control systems in the embedded systems course, I first ask students 
 
-Should should be able to learn how to approach a problem. 
-Wireless course, I mentored studns on their coarse project. Define their own problem,
-In office hours, I interacted one-one with students, and would help them arrive at solutions - 
-Recitations - different examples - 
+% Should should be able to learn how to approach a problem. 
+% Wireless course, I mentored studns on their coarse project. Define their own problem,
+% In office hours, I interacted one-one with students, and would help them arrive at solutions - 
+% Recitations - different examples - 
 
-Localization course:
-Goals: Underlying physics and limits of what is possible. 
-Learn the tools 
-Learn how to approach a problem - design space is broad.
-Learn what components skills they require to solve a problem. 
-For instance, in digital comm course, theoretical limits, signal noise model, to learning that there are many ways to design the system and then understand the design factors that play a role.
-
-
-Learn the tools, mathematics - learn the contraints
+% Localization course:
+% Goals: Underlying physics and limits of what is possible. 
+% Learn the tools 
+% Learn how to approach a problem - design space is broad.
+% Learn what components skills they require to solve a problem. 
+% For instance, in digital comm course, theoretical limits, signal noise model, to learning that there are many ways to design the system and then understand the design factors that play a role.
 
 
-While teaching the wireless course, I designed new labs for students to experiment with the physical layer wireless channels and One of my goal for students was to understand the challenges of wireless channels from first principles. I designed new labs for students to experiment with the physical layer signals. 
+% Learn the tools, mathematics - learn the contraints
 
-I asked students to design their own experiments. Design questions they wanted to answer. Make hypothesis and then exprimentally validate. Able to connect the theoretical to practice - think about how to approach a problem.
+
+% While teaching the wireless course, I designed new labs for students to experiment with the physical layer wireless channels and One of my goal for students was to understand the challenges of wireless channels from first principles. I designed new labs for students to experiment with the physical layer signals. 
+
+% I asked students to design their own experiments. Design questions they wanted to answer. Make hypothesis and then exprimentally validate. Able to connect the theoretical to practice - think about how to approach a problem.
 
 
 %Through my teaching, I strive to achieve three goals for students. The first is for them to develop strong foundations and an understanding from first principles. The second learning goal is for them for understand connectons between various components - including theory and practice, and  the ability to break down a problem into smaller components. A related goal is for them to learn that there can be different ways to solve the same problem.
@@ -171,34 +204,34 @@ I asked students to design their own experiments. Design questions they wanted t
 
 %At CMU, I was a Teaching Assistant for the Signals and Systems course two semesters; I conducted recitations, office hours, designed assignments and exams, and the Wireless Networks and Applications course for a semester; I created new labs, held office hours, designed assignments and exams, guided students on course projects and deep dive survey project.\\
 
-In the Signals and Systems course, my goal was for student to develop the mathematical foundation and framework for analyzing signals and systems and then apply the theory to solve problems in different domains. 
-%This is the first mathematically intensive core course that undergradautes in CMU ECE take. %As a result, 
-%One of the main challenges is that students have varied mathematical backgrounds prior to this course. 
-When I was a TA for this course for the first time, I learnt that the biggest challenge was to address the disparity in the mathematical background and learning styles of students. When I taught this class for the second time, I conducted a quiz in the first class to assess the mathematical preparedness of the students. Subsequently, I covered the necessary background material through office hours, recitations and assessing and providing feedback through homeworks. I broke down problems into smaller parts so students could realize where they get stuck. Several students gave feedback that this approach was helpful. Where possible, I designed the problems to be self-correcting. For example, I would provide them the final solution and ask them to arrive at the solution. This helped them develop their technique to solve the problem. %During the term of the course, another approach I attempted to make the mathematical parts more accessible was adopting visual representations of signals. For instance while introducing the the concept of periodic signals in two-dimensions, students were asked to infer the differences in the frequency representation between images with horizontal and vertical stripes of varying widths. 
-Consistently, students struggle when the topic of convolution is introduced in the course. %While talking to students, they said that they convolution formula is non-intuitive and confusing. 
-My goal was for students to understand the equation and the implications, rather than memorize it. 
-I tried a few different techniques to tackle this. I introduced a think-pair share activity, where the students first solved a convolution problem, and then discussed their solutions with their neighbors and then solved another problem individually. I went over what all the incorrect formulae that we came across in their quizzes and homeworks and made them think about and interpret what each of them meant mathematically and practically. In the mid-term exams, only 4 out of the 70 students got the convolution equation wrong, and around 55 students solved the problems without major errors - a vast improvement from previous years. To enable students to make connections between the theory and practice, I introduced applied problems from areas of communications, image and speech processing and sensor signals. We also introduced guest lectures where faculty presented their research in context of this class (which has continued since then), and I gave a lecture as well about how the theory applies in my research, and continue to give it every year in this course. This helped students connect the course to the broader ECE. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the Signals and Systems course.
-Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. \\ 
+% In the Signals and Systems course, my goal was for student to develop the mathematical foundation and framework for analyzing signals and systems and then apply the theory to solve problems in different domains. 
+% %This is the first mathematically intensive core course that undergradautes in CMU ECE take. %As a result, 
+% %One of the main challenges is that students have varied mathematical backgrounds prior to this course. 
+% When I was a TA for this course for the first time, I learnt that the biggest challenge was to address the disparity in the mathematical background and learning styles of students. When I taught this class for the second time, I conducted a quiz in the first class to assess the mathematical preparedness of the students. Subsequently, I covered the necessary background material through office hours, recitations and assessing and providing feedback through homeworks. I broke down problems into smaller parts so students could realize where they get stuck. Several students gave feedback that this approach was helpful. Where possible, I designed the problems to be self-correcting. For example, I would provide them the final solution and ask them to arrive at the solution. This helped them develop their technique to solve the problem. %During the term of the course, another approach I attempted to make the mathematical parts more accessible was adopting visual representations of signals. For instance while introducing the the concept of periodic signals in two-dimensions, students were asked to infer the differences in the frequency representation between images with horizontal and vertical stripes of varying widths. 
+% Consistently, students struggle when the topic of convolution is introduced in the course. %While talking to students, they said that they convolution formula is non-intuitive and confusing. 
+% My goal was for students to understand the equation and the implications, rather than memorize it. 
+% I tried a few different techniques to tackle this. I introduced a think-pair share activity, where the students first solved a convolution problem, and then discussed their solutions with their neighbors and then solved another problem individually. I went over what all the incorrect formulae that we came across in their quizzes and homeworks and made them think about and interpret what each of them meant mathematically and practically. In the mid-term exams, only 4 out of the 70 students got the convolution equation wrong, and around 55 students solved the problems without major errors - a vast improvement from previous years. To enable students to make connections between the theory and practice, I introduced applied problems from areas of communications, image and speech processing and sensor signals. We also introduced guest lectures where faculty presented their research in context of this class (which has continued since then), and I gave a lecture as well about how the theory applies in my research, and continue to give it every year in this course. This helped students connect the course to the broader ECE. I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking signals courses such as DSP, due to enjoying the Signals and Systems course.
+% Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. \\ 
 
-In contrast to Signals and Systems, the Wireless Networks and Applications course was practical in nature.  %spanning from design of MAC layer protocols, to network traffic to applications of networks in sensing and localization. 
-One of my goal for students was to understand the challenges of wireless channels from first principles. I designed new labs for students to experiment with the physical layer signals. Students first had to design their own experiments. For instance, some students opted to experiment with the change in signal with distance, some wanted to test the change in packet reception with crowds, and some wanted to test for variation in data rate across devices and environments. Then students had to describe their hypothesis on the effect of real-world on the signals and sketch out graphs of what they expected to see from the experiments. They then performed the experiments, and presented their observations as well as had to think about and explain the differences between their hypothesis and the real-world experiments. I designed another lab based on CSI monitoring where students learnt about the short-term variations in the channel. Through these experiments early on in the course, students learnt about the fundamental challenges of wireless channels.
+% In contrast to Signals and Systems, the Wireless Networks and Applications course was practical in nature.  %spanning from design of MAC layer protocols, to network traffic to applications of networks in sensing and localization. 
+% One of my goal for students was to understand the challenges of wireless channels from first principles. I designed new labs for students to experiment with the physical layer signals. Students first had to design their own experiments. For instance, some students opted to experiment with the change in signal with distance, some wanted to test the change in packet reception with crowds, and some wanted to test for variation in data rate across devices and environments. Then students had to describe their hypothesis on the effect of real-world on the signals and sketch out graphs of what they expected to see from the experiments. They then performed the experiments, and presented their observations as well as had to think about and explain the differences between their hypothesis and the real-world experiments. I designed another lab based on CSI monitoring where students learnt about the short-term variations in the channel. Through these experiments early on in the course, students learnt about the fundamental challenges of wireless channels.
 
-%Curiosity and having fun is the first step for a student to get interested in a new domain. However, when students have pre-conceived notions about their abilities to be effective in a new domain, curiosity alone is not enough. 
-Over the years, I have worked with several outreach groups. My goal for students in these avenues here has been to inculcate curiosity and the confidence to venture out into a new domain. At CMU, I co-piloted a Mobile Labs outreach program, where we introduced ECE to high school girls in a school where almost none of the girls went to STEM fields. We introduced students to several different areas of ECE with hands-on labs in energy harvesting, LEDs on micro-controllers, audio processing and programming. Here they approached their learning from an applied perspective, and then began to think about how things worked, and the underlying principles. My goal was to design the sessions such that all students complete the lab and could be challenged with harder problems as well. All students were asked to reflect on what new concepts they learnt. After the first year of the program, one of the students enrolled in CMU ECE's summer school. I also worked on a project to teach physics purely with experiments to middle school students in rural India. Here, my big challenge was to design instructor manuals for instructors who would conduct the labs, %who did not have the skills to design the experiment for making students think critically, and the 
-and the students did not have the component skills required for middle school physics. Another learning experience for me for to teach robotics and science to primary school students in a hands-on manner. Through these varied experiences, I learnt that the teaching methodology has to be adapted with the background of teachers and students, and the available resources and objectives that are feasible. \\
+% %Curiosity and having fun is the first step for a student to get interested in a new domain. However, when students have pre-conceived notions about their abilities to be effective in a new domain, curiosity alone is not enough. 
+% Over the years, I have worked with several outreach groups. My goal for students in these avenues here has been to inculcate curiosity and the confidence to venture out into a new domain. At CMU, I co-piloted a Mobile Labs outreach program, where we introduced ECE to high school girls in a school where almost none of the girls went to STEM fields. We introduced students to several different areas of ECE with hands-on labs in energy harvesting, LEDs on micro-controllers, audio processing and programming. Here they approached their learning from an applied perspective, and then began to think about how things worked, and the underlying principles. My goal was to design the sessions such that all students complete the lab and could be challenged with harder problems as well. All students were asked to reflect on what new concepts they learnt. After the first year of the program, one of the students enrolled in CMU ECE's summer school. I also worked on a project to teach physics purely with experiments to middle school students in rural India. Here, my big challenge was to design instructor manuals for instructors who would conduct the labs, %who did not have the skills to design the experiment for making students think critically, and the 
+% and the students did not have the component skills required for middle school physics. Another learning experience for me for to teach robotics and science to primary school students in a hands-on manner. Through these varied experiences, I learnt that the teaching methodology has to be adapted with the background of teachers and students, and the available resources and objectives that are feasible. \\
 
-To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at CMU. I have been with the Eberly Center for Teaching Excellence and Educational Innovation in a role of a Graduate Teaching Fellow. Being a part of a team of graduate teaching fellows and interacting with students across various departments in CMU has exposed me to teaching styles and approaches very different from what I am exposed to in engineering.\\
+% To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at CMU. I have been with the Eberly Center for Teaching Excellence and Educational Innovation in a role of a Graduate Teaching Fellow. Being a part of a team of graduate teaching fellows and interacting with students across various departments in CMU has exposed me to teaching styles and approaches very different from what I am exposed to in engineering.\\
 
-Good technology is built on strong theoretical foundations, requires application of the theory to practice and an understanding of the connections between the various components. I hope that through my interaction with students, I can facilitate this process in students.
+% Good technology is built on strong theoretical foundations, requires application of the theory to practice and an understanding of the connections between the various components. I hope that through my interaction with students, I can facilitate this process in students.
 
-\section{Teaching Plan}
-most prepared to teach:
+% \section{Teaching Plan}
+% most prepared to teach:
 
-I can teach courses in various areas related to signals, communication and embedded systems. The courses I am most prepared to teach are They include mathematical foundations for elctrical engineering, signals and systems, digital communication, wireless communication, digital signal processing, statistical signal processing, probability and random processes, linear systems, embedded systems, estimation and detection theory, random processes in systems. 
+% I can teach courses in various areas related to signals, communication and embedded systems. The courses I am most prepared to teach are They include mathematical foundations for elctrical engineering, signals and systems, digital communication, wireless communication, digital signal processing, statistical signal processing, probability and random processes, linear systems, embedded systems, estimation and detection theory, random processes in systems. 
 
-Cour
-Lab courses, project courses;
-seminars;
+% Cour
+% Lab courses, project courses;
+% seminars;
 
 % and asked the students to infer the differences in the frequency representation based on visual inspection of the images.
 %I realized this the first time I TA-ed this course. When I TA-ed this the second time, 
