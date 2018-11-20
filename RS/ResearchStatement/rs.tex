@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 %\usepackage{fancyhdr}
  
@@ -55,8 +55,132 @@
 \end{tabular*}
 
 \end{table}
+ 
+%I enjoy designing embedded sensing systems for the real-world and working with the sensors data to design inference algorithms. % algorithms to inferences about the physical world 
+I design embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS).  
+I have a strong interest in an analytical approach to design from first principles and I appreciate the complexities of system-level implementation. 
+I enjoy working across a breadth of areas ranging from signal processing and estimation to system level design of sensing, communication and computing. I believe this puts me in the perfect place to tackle the challenges of building cost-effective, practical, efficeint and reliable CPS. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. %I achieve this by understanding the physical layer 
+%I design embedded sensing systems, experiment with them in the real world and design system models and inference algorithms that convert sensor data to meaning.
+I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world. 
 
-My research focuses on sensing and inference in modern cyber-physical systems (CPS). I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I believe my strong interest in systematic, rather than ad-hoc approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from signal processing to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing practical, cost-effective, yet reliable and efficient CPS. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.\\
+\paragraph{Impact: }
+My work has resulted in publications at IPSN, SenSys, RTAS, RTSS, ICCPS and VLCS. I have demonstrated my work in IPSN, SenSys and ICCPS. My work has been deployed in more than two dozen environments, received 2 patents, won the international
+Microsoft Indoor Localization competition twice, received a best demo
+award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+industry. This work is being applied to indoor navigation, mobile
+persistent augmented reality, firefighter localization, and asset
+mapping applications.
+
+% \paragraph{Impact:}
+% One instance of my approach is that I designed a novel system to send data from overhead LED lights to phones, 
+% This work was published in IPSN'14 \cite{rajagopal2014visual} and has been cited 130+ times. I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. Another instance of my approach is with time-of-flight (ToF)-based localization with beacons. I contributed to the design and implementation of a novel platform design that localizes phones using ultrasonic signals (SenSys'15 \cite{lazik2015alps},
+% RTAS'15 \cite{rtas-alps-platform}) and have worked with Apple and Texas Instruments on emerging ToF technologies. 
+% On the modeling side, I designed a novel way to integrate the floor plan information in a manner that is practical, yet general. 
+% I used this to design the first algorithms that systematically address minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I further built on this to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals (IPSN'18 \cite{rajagopal2018enhancing}). This systematic approach generalizes to any deployment and ToF technology. 
+% Finally, I designed an algorithm for acquiring orientation on mobile phones using a novel magnetic field approach \cite{mobileAR}.  My work in indoor localization has been demonstrated at
+% Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), has been deployed in more than two dozen environments, received 2 patents, won the international
+% Microsoft Indoor Localization competition twice, received a best demo
+% award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
+% industry. This work is being applied to indoor navigation, mobile
+% persistent augmented reality, firefighter localization, and asset
+% mapping applications.  I have also contributed to other areas of CPS:
+% time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
+% monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+
+\paragraph{Dissertation Research}
+
+% My dissertation  This interest combined with my breadth of knowledge ranging from signal processing and estimation to system level design of sensing, communication and computing platforms
+
+% Modern CPS demand complex inferences.
+% State-of-art is in deployed deducated sensors, actuators for each application.
+% This is impractical and not cost-effetive.
+% My approach is to work across all.
+
+% As a result - I am able to get more information out of less sensing infrastructure. 
+
+
+Localizing things, people and devices indoors will open up new domains with increased autonomy indoors. 
+Numerous localization solutions have emerged in the past decade, yet we get lost indoors today. Existing solutions are limited by trading-off performance and reliability for the cost associated with infrastructure deployed. My dissertation explores novel methods to leverage infrastructure in a smart manner to localize mobile devices.\\
+
+%Solutions that are free-of-cost without additional infrastructure are not accurate and require the user to walk around (while the system gathers more measurements) before getting a good location fix. 
+%On the other hand, solutions with range-based beacons (time-of-flight, time-difference-of-arrival, angle-of-arrival) for localization can be accurate with instant time-to-first-fix but require dense beacons to be deployed across buildings.\\
+%Multiple solutions exist. Trade-off between infrastructure and information. 
+
+%In 2013, LED lights were phasing out incandescent lights. 
+%I saw this as an opportunity to use them as a communication channel to send data to mobile devices. The main challenge is that the lights operate at a much higher frequency than the camera frame capture rate. 
+My first insight to localize without deploying additional infrastructure was to reprogram overhead LED lights. %Lighting is a pervasive infrastructure inside buildings. 
+I designed one of the earliest visible light communication (VLC) systems coarsely localizing phones with LED lights. %This was one of the earliest systems in LED-camera communication for localizing mobile phones 
+The novelty here was to exploit the low-level rolling-shutter effect of camera sensors on phones to capture a time-varying light signal as a spatially varying image \cite{rajagopal2014visual, rajagopal2014demonstration}. 
+I designed a binary frequency shift keying modulation scheme to support multiple lights.  Another novelty on the sensing side was that I modeled the exposure and focus control of the camera as filters that respond differently to the light signal and the scene captured to improve the signal-to-noise ratio. I extended this work to design a novel hybrid communication system that simultaneously sent two different streams by leveraging the different filtering properties of camera and photodiodes \cite{rajagopal2014hybrid}. The sensing methods, models for converting the time-varying light signal to a spatial varying image, and communication schemes generalize to LED-camera communication system. Subsequently the field of VLC has grown significantly in both academia and industry. %This was one of the earliest systems in LED-camera communication and in LED-based localization.\\
+
+%My second insight to localize 
+% First contribution was VLC.
+% Insight was that we can send data from lights to phones by using the rolling-shutter camera sensor
+% Use focus and exposure as filters.
+% Used the lighting infrastructure to send data and to localize.
+% Hybrid VLC: send two different data streams. by smarter use of properties of sensors.
+
+Location acquisition with range-based beacons
+NLOS is a problem. Require more beacons.\\
+Use the floor plan geometry.
+Insight was that we can estimate using information from multiple beacons and use absense of infor as information\\
+Second insight was that we could achieve higher range. Rahter than keeping the tx power lower - lowers range and NLOS, I increase the power, higher range, higher NLOS but robust to NLOS.\\
+Insight was a smart way to integrate the floor plan infor and infor from multiple beacons. and that we can design beacon..\\
+Estimation algo;\\
+Applicable to smart home devices, etc.
+
+Toolchain for range-based.\\
+What is the minimal number and how to deployed beacons to meet certain loc accuracy.\\
+Cramer rao, GDOP\\
+Insight was that we could loca with coverage.\\
+Made the connection that we can draw from computational geometry for a systematic approach\\
+
+NIST on firefighter localization.\\
+Mobile network localization. Leverage buddy information, IMU + beacons\\
+Combined design of system architecture and algorithms.\\
+Insight was to leverage mobility\\
+Exit signs\\
+Future drone\\
+
+I attended conference on positioning in museums. User security, privacy, who owns
+I visited a security group physical layer attacks, how the problems affect the higher layers..\\
+
+My vision for localization:
+Takeaway is that localization is complex, \\
+heterogeneous devices, I believe future smart, IoT devices can run localization service. Mobile, laptop staionary.\\
+Emerging trends.\\
+
+
+My vision is that future smart infrastruture, including static nodes, mobile nodes, and new smarts created everyday, together support a variety of applications. Users should be able to query the smarts for available services and users should be able to easily create and reprogam. 
+I am interested in applications in manufacturing, industrial, training and healthcare. \\
+
+Heterogenous sensing, mobile sensing , RF sensing, imaging.\\
+Sensing to create models. Manufacturing - digital twin, accurately represent all processes. We have to sense.
+
+Mixed reality.\\
+As a way to actuation and get information from the environment.\\
+I have done preliminary work in this. \\
+mobile AR\\
+Light anchor\\
+creating content, repreograming functionality - how to author content.\\
+
+Integration with future comm: indoors \\
+
+Semantics. Going from data to meaning. 
+How much is too much?
+Localization - semantics of spaces.\\
+Human in the loop makes it harder to measure. Education - pedagogy - measure learning, can we measure the effectiveness of these systems when human in the loop.
+Manufacturing - depends on the resolution required.
+
+
+
+
+
+ I believe my strong interest in an analytical approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from signal processing and estimation to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing practical, cost-effective, yet reliable and efficient CPS.
+ %My research focuses on sensing and inference in modern cyber-physical systems (CPS). 
+ I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I believe my strong interest in systematic, rather than ad-hoc approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from signal processing to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing practical, cost-effective, yet reliable and efficient CPS. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.\\
+
+%My research focuses on sensing and inference in modern cyber-physical systems (CPS). I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I believe my strong interest in systematic, rather than ad-hoc approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from signal processing to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing practical, cost-effective, yet reliable and efficient CPS. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.\\
 
 % My research focuses on sensing and inference in modern cyber-physical systems (CPS). I jointly design sensing front-ends, networked embedded systems, system models and the information processing algorithms. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. 
 % I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems.  Cross-layer design has the potential to provide better algorithms and reduced resource requirements. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.\\
