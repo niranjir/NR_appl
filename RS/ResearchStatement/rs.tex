@@ -135,7 +135,7 @@ I designed a novel solver that localizes with just two LOS beacons, rather than 
 My main insight was that we can integrate the floor plan while solving and use the absence of measurement from beacons as useful information. 
 I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015. %A second practical problem is that beacon-based systems cannot estimate device orientation. 
 
-I then designed a novel magnetic-field sensing based approach to acquire orientation. The challenge is that the magnetic field is unreliable indoors. My insight was that we could crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, camera and inertial sensors and use this map as a reference.  Using this concept, we built an end-end multi-user persistent augmented reality (AR) system that did not rely on vision maps \cite{mobileAR}. This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. 
+I then designed a novel magnetic-field sensing based approach to acquire orientation. The challenge is that the magnetic field is unreliable indoors. My insight was that we could crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, camera and inertial sensors and use this map as a reference.  Using this concept, we built an end-end multi-user persistent augmented reality (AR) system that does not rely on vision maps \cite{mobileAR}. This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. 
 
 I extended this work to support continuous location updates. This system won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons.
 
@@ -227,25 +227,27 @@ I am interested in exploring new application domains that are moving towards `sm
 % I believe I can apply my methodology of working at the low-level interface of sensors and signals to create solutions that are practical yet general.
 
 \paragraph{Resource-Constrained Sensor Data Processing}
-With a large amount of sensor data, resources constraints on embedded devices, privacy concerns by users, and a variety of end-applciations that make inferences from the same data, we require new paradigms for %processing sensor data. %the paradigm of shipping all the sensor data to the cloud for processing cannot scale. 
+With a large amount of sensor data, resources constraints on embedded devices, privacy concerns by users, and a variety of end-applications that make varied inferences from the same data, we require new paradigms for %processing sensor data. %the paradigm of shipping all the sensor data to the cloud for processing cannot scale. 
 %In addition, we require information processing algorithms 
 sensor data processing. %They should be sensitive to a variety of end-applications. 
 %For instance, in indoor localization, an application could request high accuracy 3D position or coarse room-level information. Rather than collecting data from all sensors and always inferring high fidelity information, we could design efficient ways to make inferences with minimal sensor data. 
 I am interested in understanding how we can intelligently process sensor data at the edge by using minimal resources, and in developing embedded machine learning algorithms for sensor data processing. 
 
 
-\paragraph{Real-Time Interaction. }
-Mixed reality is a promising future direction to interact with the smart devices and to close the digital-physical loop in real-time. 
-%I am interested in closing the digital-physical loop with mixed reality applications. %
-%I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
-I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-art mobile Augmented Reality (AR) using beacons and magnetic field \cite{mobileAR}. % and am  I am collaborating on discovering AR content on objects through VLC.  
+% and am  I am collaborating on discovering AR content on objects through VLC.  
 %Looking ahead, with advancements in display technologies and reduction in form factor 
 %I see mixed reality as a powerful tool 
 %I can draw on my expertise in location and timing are key to mixed reality and I can %I can draw on 
 
 \paragraph{Next-Generation Communication. }
-%Real-time communication is key to enabling these smart systems to scale. %My exper in comm.
+%Next generation . %My exper in comm.
 New challenges and opportunities emerge when sensing, location and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such a network of drones can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization, communication and my approach of working across layers of the system stack. \\
+
+\paragraph{Real-Time Interaction. }
+Mixed reality is a promising future direction to interact with the smart devices and to close the digital-physical loop in real-time. 
+%I am interested in closing the digital-physical loop with mixed reality applications. %
+%I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
+I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-art mobile Augmented Reality (AR) using beacons and magnetic field \cite{mobileAR}. 
 
 %My future research would span several technical and application domains, and I plan to seek funding from government agencies and industry.
 
