@@ -74,101 +74,102 @@
 %I design embedded sensing systems, experiment with them in the real world and design system models and inference algorithms that convert sensor data to meaning.
 
 
-%My research lies at the intersection between theory and systems applied to modern Cyber-Physical System design.  
-%I draw from theoretical frameworks in signal processing and estimation and apply these concepts to real-world distributed sensing and communication applications. 
-My research lies at the intersection between embedded systems, estimation theory, and signal processing applied to Cyber-Physical System (CPS) applications.  From a sensing and estimation perspective, the challenge in CPS is in dealing with heterogeneity in sensing across a large number of devices and the lack of a systematic way to go from sensor data to inference. I tackle this challenge by developing an understanding of the practical constraints, the theoretical tools relevant to the problem and a first principles understanding of the interaction between sensors, signals and systems. I then apply these constraints to the design of embedded sensing systems, system models and inference algorithms. My thesis demonstrates this approach applied to several indoor localization applications ranging from extremely precise mobile phone ranging that can be used for way-finding and mobile augmented reality to more extreme systems designed for firefighting scenarios where multiple incomplete sources of data need to be opportunistically fused together.  
+My research lies at the intersection between theory and systems applied to modern Cyber-Physical System (CPS) design.  
+I draw from theoretical frameworks in signal processing and estimation and apply these concepts to real-world distributed sensing and communication applications. 
+%My research lies at the intersection between embedded systems, estimation theory, and signal processing applied to Cyber-Physical System (CPS) applications.  
+%From a sensing perspective, the challenge in CPS is the heterogeneity in sensors across a large number of devices and the lack of a systematic way to go from sensor data to inference. 
+%I tackle this by understanding the practical constraints, the theoretical tools relevant to the problem and the interaction between sensors, signals and systems.
+My approach is to understand the practical constraints, the theoretical tools relevant to the problem and the interaction between sensors, signals and systems from first principles.
+%I then apply these constraints to the design of embedded sensing systems, system models and inference algorithms. 
+I then apply these to design novel embedded sensing platforms and information processing algorithms. %embedded sensing systems, inference algorithms and tools. 
+My thesis demonstrates this approach applied to several indoor localization applications ranging from extremely precise mobile phone ranging that can be used for way-finding and mobile augmented reality to more extreme systems designed for firefighting scenarios where multiple incomplete sources of data need to be opportunistically fused together.  
+
+%I then apply these constraints to the design of embedded sensing systems, system models and inference algorithms. My thesis demonstrates this approach applied to several indoor localization applications ranging from extremely precise mobile phone ranging that can be used for way-finding and mobile augmented reality to more extreme systems designed for firefighting scenarios where multiple incomplete sources of data need to be opportunistically fused together.  
 
 %I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world. 
 
 \paragraph{Impact. }
-My research has resulted in publications at IPSN '14, IPSN '18, SenSys '17, RTAS '15, RTAS 
-17, RTSS '13, ICCPS '13, IPIN '16 and VLCS '14. My work has been demonstrated live at four conferences, deployed in more than two dozen environments, received 2 patents, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and has led to funding from NSF, SRC, NIST, and industry. This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, and asset mapping applications.
+My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '15, RTAS 
+17, RTSS '13, ICCPS '13, IPIN '16 and VLCS '14. My work has been demonstrated live at four conferences, deployed in more than two dozen environments, received 2 patents, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and has led to funding from NSF, SRC, NIST, and industry. %This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, and asset mapping applications.
 
-% \paragraph{Impact:}
-% One instance of my approach is that I designed a novel system to send data from overhead LED lights to phones, 
-% This work was published in IPSN'14 \cite{rajagopal2014visual} and has been cited 130+ times. I extended this work to show a general scheme for hybrid communication to phones and photodiodes (VLCS'14 \cite{rajagopal2014hybrid}). I deployed and demonstrated this system in IPSN'14 \cite{rajagopal2014demonstration}. Another instance of my approach is with time-of-flight (ToF)-based localization with beacons. I contributed to the design and implementation of a novel platform design that localizes phones using ultrasonic signals (SenSys'15 \cite{lazik2015alps},
-% RTAS'15 \cite{rtas-alps-platform}) and have worked with Apple and Texas Instruments on emerging ToF technologies. 
-% On the modeling side, I designed a novel way to integrate the floor plan information in a manner that is practical, yet general. 
-% I used this to design the first algorithms that systematically address minimal beacon placement for range-based localization (IPIN'16 \cite{rajagopal2016beacon}). I further built on this to design a location acquisition algorithm that solves a major real-world problem of localizing in the presence of non-line-of-sight signals (IPSN'18 \cite{rajagopal2018enhancing}). This systematic approach generalizes to any deployment and ToF technology. 
-% Finally, I designed an algorithm for acquiring orientation on mobile phones using a novel magnetic field approach \cite{mobileAR}.  My work in indoor localization has been demonstrated at
-% Sensys'15 \cite{lazik2015alpsdemo}, IPSN'18 \cite{rajagopal2018welcome}), has been deployed in more than two dozen environments, received 2 patents, won the international
-% Microsoft Indoor Localization competition twice, received a best demo
-% award, spawned a startup, and has led to funding from NSF, SRC, NIST, and
-% industry. This work is being applied to indoor navigation, mobile
-% persistent augmented reality, firefighter localization, and asset
-% mapping applications.  I have also contributed to other areas of CPS:
-% time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and electrical energy
-% monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
 
 \section{Indoor Localization Research}
 
 %Localizing things, people and devices indoors will open up new application domains. 
-Several solutions, like GPS, have emerged in the past decade for localizing mobile devices, yet there is still no pervasive and accurate system for indoors.  It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  To this end, my work has explored multiple emerging technologies in terms of estimating positions as well as the challenges of configuration and setup.
+Several solutions, like GPS, have emerged in the past decade for localizing mobile devices, yet there is still no pervasive and accurate system for indoors.  It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  %My work has explored new techologies, location estimation algorithms as well as tackled the challenges of system setup. 
+%My approach is to design emerging technologies and the location estimation algorithms and system setup tools to enable them at scale in the real-world. 
+To this end, my work has explored multiple emerging technologies in terms of estimating positions as well as the challenges of configuration and setup.
 
-%Rather than waiting for a single technology to solve the problem, my work has looked at creating platforms for testing emerging technology with their associated run-time and configuration challenges.  % and address the core problems in estimation and system setup that other emerging localization technologies face. %that are finding their way in to commodity devices, and addressing the core problems in estimation and system setup.
 
-%I build systems and tools to make current and emerging localization technologies scalable and practical. 
-%My work looks at how to jointly design systems (platform and setup methods), models and algorithms that are practical yet general enough that they scale. I have been exploring emerging localization technologies that are finding their way in to commodity devices, and addressing the core problems in estimation and system setup. 
-%Localizing things, people and devices indoors will open up new application domains. 
-%Several localization solutions have emerged in the past decade, yet we get lost indoors. 
-%I believe that rather than waiting for a single solution to emerge as the one-size-fits-all ultimate localization solution, we have to build tools and abstractions to make current and emerging localization technologies scalable and practical. 
+\paragraph{Emerging Technologies. }
 
-%Different applications and resources constraints demand different localization architectures and solutions. %I
- %, different localization architectures and paradigms would be suitable. 
-%Modern CPS applications will continue to have heterogenity in sensing and will continue to have problems in scaling up due to the infrastructure requirement. %  is no single solution will emerge as the winner. Currently, there is no The limitation with existing localization solutions is that performance and reliability are traded-off with the cost associated with infrastructure deployed. Ideally, we want scalable solutions that provide accurate and instant localization, without additional cost associated with setting up, and surveying the environment.
-%My approach is to work with emerging technologies and jointly work across system design and algorithms to design systems that give higher performance and reliability with less infrastructure.  
+I have designed and contributed to emerging localization technologies using light, ultrasonic and radio frequency signals. 
 
-%\paragraph{My Approach: } My work looks at how to jointly design systems (platform and setup methods), models and algorithms that are practical yet general enough that they scale. I have been exploring emerging localization technologies that are finding their way in to commodity devices, and addressing the core problems in estimation and system setup. 
-%Finally I consider the challenging case of firefighter localization where we cannot rely on infrastructure in a building. 
-
-\paragraph{Platforms for Emerging Technologies. }
-%Though not the focus on my dissertation, my first insight to localize without deploying additional infrastructure was to reprogram overhead LED lights. 
-I designed one of the earliest visible light communication (VLC) systems to send data from overhead LED lights to cameras on phones. The lights act as landmarks to localize phones. The challenge is that the camera frame rate is much lower than the operating frequency of lights. 
+%I designed one of the earliest visible light communication (VLC) systems to localize phone using overhead LED lights. %The lights transmit data that is received by cameras on phones. 
+% The challenge is that the lights operate at a much higher frequency than the camera frame rate. %in detecting a light signal with by that the camera frame rate is much lower than the operating frequency of lights. 
+% %I designed one of the earliest visible light communication (VLC) systems to send data from overhead LED lights to cameras on phones. The lights act as landmarks to localize phones. The challenge is that the camera frame rate is much lower than the operating frequency of lights. 
+% My insight was to exploit the low-level rolling-shutter effect of camera sensors to capture a time-varying light signal as a spatially varying image \cite{rajagopal2014visual, rajagopal2014demonstration} and to use the exposure and focus control as filters to improve the signal-to-noise ratio. I extended this to design a novel hybrid communication system for camera and photodiodes \cite{rajagopal2014hybrid}. 
+% The proposed approaches generalizes to any LED-camera communication system and have been cited 170+ times. Subsequently the field of VLC has grown significantly in both academia and industry.
+I designed one of the earliest visible light communication (VLC) systems to send data from overhead LED lights to cameras on phones. The lights act as landmarks to localize phones. The challenge is that the camera frame rate is much lower than the lights operating frequency. 
 My insight was to exploit the low-level rolling-shutter effect of camera sensors to capture a time-varying light signal as a spatially varying image \cite{rajagopal2014visual, rajagopal2014demonstration} and to use the exposure and focus control as filters to improve the signal-to-noise ratio. I extended this to design a novel hybrid communication system for camera and photodiodes \cite{rajagopal2014hybrid}. 
-The proposed approaches generalizes to any LED-camera communication system and have been cited 170+ times. Subsequently the field of VLC has grown significantly in both academia and industry.
-%I designed a binary frequency shift keying modulation scheme to support multiple lights.  
-%I modeled the exposure and focus control of the camera as filters that respond differently to the light signal and the scene captured to improve the signal-to-noise ratio. 
-%I extended this work to design a novel hybrid communication system that simultaneously sent two different streams by leveraging the different filtering properties of camera and photodiodes \cite{rajagopal2014hybrid}. 
+%The proposed approaches generalizes to any LED-camera communication system and have been cited 170+ times. Subsequently the field of VLC has grown significantly in both academia and industry.
 
-%The second technology I worked with is time-of-flight ranging between mobile devices and beacons. 
-I contributed to building an ultrasonic time-of-flight (ToF) platform that localizes unmodified mobile devices \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. %The ultrasonic beacons harvest energy from overhead lights, are synchronized using 802.15.4 and use BLE advertisement packets to synchronize mobile devices . 
-I worked with Apple on emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low Energy 5 ToF and have worked with ultra-wideband ToF systems. I envision that future smart devices would have these ranging capabilities. %prototypes of wireless ToF systems, and have worked 
-%Time-of-Flight (ToF) ranging is finding its way into mobiles, WiFi access points and smart devices through various technologies including mmWave, ultra-wideband (including emerging 802.15.4z), WiFi 802.11mc, Bluetooth Low Energy (BLE) 5 and acoustic signaling.  
-By experimenting with these ToF systems, I identified challenges in scaling them up. I then solved these challenges, as I describe below. %worked on several important problems in location processing and setup of systems, which I describe below.  
-%While ToF systems perform perfectly in a single room with high density beacons, new challenges emerge while scaling up.  %In my dissertation, I adopt the time-of-flight ranging paradigm and design location processing algorithms and tools for automating setup of beacons. 
-%I fuse data from multiple sources of information to solve these problems. %systems (beacon platform and tools for setup of beacons) and the location processing algorithms.
+I contributed to building an ultrasonic time-of-flight (ToF) platform that localizes unmodified mobile devices \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}.  I have worked with Apple on emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low Energy 5 ToF and with ultra-wideband ToF systems. I realized that ToF ranging is promising and getting integrated into future smart devices.  I identified challenges they face while scaling  up and then solved these challenges, as I describe below. 
+%I then solved these challenges.
+%While promising, they face challenges in location estimation and system setup while scaling up. %I envision that these ranging capabilities would be pervasive in future smart devices. However, they face challenges in estimation and system setup while scaling up. %% would have these ranging capabilities. 
+%By experimenting with these ToF systems, I identified challenges in scaling them up. 
+%I then solved these challenges. % as I describe below. 
 
 \paragraph{Location Processing Algorithms.  } 
-I designed a novel solver that localizes with just two LOS beacons, rather than three (for 2D localization), and maintains the same performance with high NLOS \cite{rajagopal2018enhancing}.  This tackles the practical problem at scale of having too few line-of-sight ranges and having incorrect non-line-of-light ranges. My main insight was that I integrate the floor plan while solving and use the absence of measurement from beacons as useful information. 
-I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015.
+%I designed sensor fusion methods to acquire location and orientation accurately under practical conditions. 
+Location estimation has two stages - initialization or acquisition, and location updates when we have a prior. The acquisition problem for ToF localization is hard since we have few line-of-sight ranges and several incorrect non-line-of-light ranges in realistic environments. 
 
-%A second practical problem is that beacon-based systems cannot estimate device orientation. 
-I designed a novel magnetic-field sensing based approach to acquire orientation. The challenge is that the magnetic field is unreliable indoors. My insight was that we could crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, camera and inertial sensors and use this map as a reference.  
-Using this concept, we built an end-end multi-user persistent augmented reality (AR) system that did not rely on vision maps \cite{mobileAR}. 
-This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. 
+I designed a novel solver that localizes with just two LOS beacons, rather than three (for 2D localization), and maintains the same performance with high NLOS \cite{rajagopal2018enhancing}.  %This tackles the practical problem at scale of having too few line-of-sight ranges and having incorrect non-line-of-light ranges. 
+My main insight was that I integrate the floor plan while solving and use the absence of measurement from beacons as useful information. 
+I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015. %A second practical problem is that beacon-based systems cannot estimate device orientation. 
+
+I then designed a novel magnetic-field sensing based approach to acquire orientation. The challenge is that the magnetic field is unreliable indoors. My insight was that we could crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, camera and inertial sensors and use this map as a reference.  Using this concept, we built an end-end multi-user persistent augmented reality (AR) system that did not rely on vision maps \cite{mobileAR}. This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. 
+
 I extended this work to support continuous location updates. This system won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons.
 
 
 These approaches are implemented on our ultrasonic localization system that spawned into a startup. A pilot has been deployed for AR-based product finding in a retail store. 
 
 \paragraph{Tools for Scalable Setup of Systems.  }
+Beacon setup at scale lacks a systematic method, is laborious, time-consuming, and does not adapt over time. 
 
-To bring order to the deployment chaos, I designed systematic beacon placement algorithms \cite{rajagopal2016beacon}. Currently, beacon setup at scale lacks a systematic method, is laborious, time-consuming, and does not adapt over time. 
+To bring order to the deployment chaos, I designed systematic beacon placement algorithms \cite{rajagopal2016beacon}. 
 My first insight was that I could use the floor plan geometry in a clever way to reduce the number of beacons compared to conventional placement. 
 My second insight was that I could quantify the quality of a beacon placement by adopting the Cramer-Rao lower bound on the location estimate, which is captured by the geometry of beacons. I built on these concepts and implemented beacon placement algorithms in a toolchain where system installers can specify a floor plan with accuracy or coverage requirements and obtain a beacon placement. 
 
-While working on this, I dived into the field of computation geometry as I found some of the theory there could apply to this problem. 
+While working on this, I found that we could apply theory in computation geometry to solve these problems in a systematic manner.  
 I started collaborating with Prof. Jie Gao from Stony Brook and her student. 
 We mathematically formulated the beacon placement problem and proposed algorithms with provable guarantees \cite{beaconplacementtheory}.  
 
 %A complementary problem in beacon setup is to first place them and then infer their locations.  
 To solve the complementary problem where we first place beacons and then have to map their locations, I built on algorithms in robotics and designed a pedestrian-based simultaneous localization and mapping algorithm \cite{mobileAR}. We implemented this in the real-world for mapping ultra-wideband beacons and for asset tracking with BLE tags. 
 
-I believe such tools for beacon placement and mapping are necessary to scale up these systems.
+I believe such tools for setting up systems are necessary to scale up these systems.
 
 \paragraph{Ongoing Research in Indoor Localization. }
+%My vision for mobile indoor localization is that the future we will have a variety of technologies that operate together 
+In contrast to mobile indoor localization for augmented reality, another direction I pursued was localization under challenging environments.  
 I led the proposal of a firefighter localization project, which is funded by National Institute of Standards and Technologies (NIST). Our solution is a combination of fixed beacons on firetrucks; firefighters with wearable devices; and estimation algorithms based on mobile network localization. We are exploring the possibility of exit signs as potential locations for low-power beacons in emergencies. 
 In future, I would integrate a network of drones for increasing resilience. 
+
+After working with several localization technologies, I was interested in analyzing how the localization stack I have developed would change in order to be robust to certain types of physical layer attacks on the signals.
+%re-evaluating the design of localization systems taking Another I am interested in understanding how multiple sensor feeds can make systems more robust to physical layer attacks. The intuition is that different types of sensors have different models and we can check for consistencies among them. %systems are not usable unless secure.\\
+% %After working in the area of localization, I started thinking about what are the security implications in localization. 
+I have started exploring this problem space with a security research group. % and am analyzing how the localization stack I have developed would change to be robust to certain attack models.\\
+
+% \paragraph{Security. }
+% These future smart devices necessarily have to be secure. I am interested in understanding how multiple sensor feeds can make systems more robust to physical layer attacks. The intuition is that different types of sensors have different models and we can check for consistencies among them. %systems are not usable unless secure.\\
+% %After working in the area of localization, I started thinking about what are the security implications in localization. 
+% As a start in this direction, I have started exploring this problem space with a security research group and am analyzing how the localization stack I have developed would change to be robust to certain attack models. 
+%I believe I can draw on my experience in system modeling to re-designing systems for security. 
+%Some questions I am pursuing are - how would the beacon deployment in a building change
+%to guarantee robustness against attacks? Can we use consistency between various sensors and beacon measurements to detect attacks? 
+%how does the device discovery and MAC layer change based on security properties of the physical layer? 
 
 \paragraph{Other Areas in CPS. }
 I have also contributed to other areas of CPS:
@@ -179,41 +180,226 @@ monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cit
 \section{Future Work}
 % My longer term vision is to enable large-scale intelligent cyber-physical systems with perception and control that augment the real-world and operate in dynamic environments. 
 % This is a long-term endeavor spanning several domains. I believe my approach of working across the sensing system stack and solving problems that emerge when we think of systems holistically is suitable to tackle problems towards this. In my dissertation, I have taken the first step step towards this - by building systems, algorithms and tools for taking indoor localization towards a reality. Location is fundamental to systems that interface with the physical world.  I describe some of my next steps below. 
-My long term vision is to make everything smart and deal with the complexity of devices and sensors at scale.  Mu goal is for these systems to be cost-effective, practical, efficient, reliable and eventually be useful to society. %Applications range from infrastructure healthcare, manufacturing, agriculture to training. %I am interested in enabling future embedded sensing systems to be truly useful to society with minimal resources.  
+ %Applications range from infrastructure healthcare, manufacturing, agriculture to training. %I am interested in enabling future embedded sensing systems to be truly useful to society with minimal resources.  
 %My longer-term vision is to enable large-scale intelligent cyber-physical systems with perception and control that augment the real-world. Rather than deploying devices and sensors for dedicated applications, I envision that future smart infrastructure, including static and mobile devices, and new smart things created everyday would together support a variety of CPS applications. 
 %Users would be able to query the smarts around them for available services and can seamlessly create new applications on these devices. %Intelligent algorithms would underlie this that convert sensor data to inference. %For instance, smart fabrics, mobile devices and low-power tags can together give information about %This is a long-term endeavor spanning several domains.  
 %I believe my approach of working across the sensing system stack and solving problems that emerge when we think of systems holistically is suitable to tackle problems towards this. In my dissertation, I have taken the first step step towards this - %by building systems, algorithms and tools for taking indoor localization towards a reality. 
 %location is fundamental to systems that interface with the physical world.  I describe my future directions below\\
 
-\paragraph{Mixed Reality. }
-Mixed reality is the future to interact with the environment and smart devices. I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, communication from overhead LEDs at the low-level to create robust mixed reality systems. 
-I have shown how we can improve state-of-art mobile Augmented Reality (AR) using beacons and magnetic field \cite{mobileAR}. I am collaborating on enabling AR interaction with objects through VLC. I believe a major challenge is in building tools to manage real-time updates to virtual content associated with physical objects. 
+%My longer term vision is to enable large-scale sensing systems to be cost-effective, practical, efficient and reliable. R
+%I want to bring a systematic approach to sensing in future CPS for applications ranging from healthcare, manufacturing, training, agriculture and infrastructure management. 
+In future, I would continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
+I want to enable a future where we use minimal resources to go from smart devices to meaningful applications. My approach would span several technical domains and application domains, and I would collaborate with researchers, industry and government agencies. % in a practical and reliable manner. 
 
-\paragraph{Security. }
-These future smart devices necessarily have to be secure. I am interested in understanding how multiple sensor feeds can make systems more robust to physical layer attacks. The intuition is that different types of sensors have different models and we can check for consistencies among them. %systems are not usable unless secure.\\
+%\paragraph{}
+%The challenges span new platforms, information processing algorithms, real-time interaction and communication. 
+
+%My longer term vision is to bring a systematic approach enable large-scale intelligent cyber-physical systems with perception and control that augment the real-world and operate in dynamic environments. 
+% This is a long-term endeavor spanning several domains. I believe my approach of working across the sensing system stack and solving problems that emerge when we think of systems holistically is suitable to tackle problems towards this. In my dissertation, I have taken the first step step towards this - by building systems, algorithms and tools for taking indoor localization towards a reality. Location is fundamental to systems that interface with the physical world.  I describe some of my next steps below. 
+ %Applications range from infrastructure healthcare, manufacturing, agriculture to training.
+
+
+\paragraph{New Applications. }
+%Similar to how I have 
+I am interested in exploring new application domains that are moving towards `smarts' - ranging from healthcare, manufacturing, agriculture to training. I believe, I can apply my approach of designing new sensing methods, models, tools and algorithms to these domains where there is tremendous diversity in the sensing types, devices and application requirements. %Beyond this, other problems I am interested in are:
+
+% I broadly envision three paradigms. The first is specialized applicaitons requirring dedicated inrastrucutre.
+% The second is opportunisitic applicatons, where users can scan the space aorund them and infer the applications supported based on the ocmm, net, hardware, soft capabilites.
+% the third is where users waant to create and enable new applications and have some resources, and they have tools that tell them how to put togehter or how to manufacture hardware, or physical componets for theur applications. Imagine applicatiosn ranginge from healthcare at home, to monitoring a farm, to manufcauturing to settigin up a smart classroom. 
+
+% Imagine in the future if we had ways to scan the space around us and discover CPS applications that can be supported based on the infrastructure and 
+
+% could scan the spaces around us, 
+% The future smart technologies require new sensing, imaging and estimation methods. In domains like manufacture, 
+
+%  to make inferences about physical processes in new applications. For instance low-cost scalable sensing methods can enable us to create and update digital replica of physical processes and systems. %, in order to create a digital replica of physical systems and processes, we require low-cost scalable sensing methods.  
+% As first steps, I want to explore wireless sensing and mobile sensing for predictive maintenance of industrial machinery and infrastructure. 
+% I believe I can apply my methodology of working at the low-level interface of sensors and signals to create solutions that are practical yet general.
+% designing novel sensing, imaging and estimation methods to make inferences about physical processes in new applications. For instance, in manufacturing, if we can create the if we can create accurate digital replica of physical processes, we can emulate and predict in order to create a digital replica of physical systems and processes, we require low-cost scalable sensing methods. This canenaAs first steps, I want to explore novel wireless sensing and mobile sensing methods for modeling and predicting industrial machinery and infrastructure. 
+
+% I believe I can apply my methodology of working at the low-level interface of sensors and signals to create solutions that are practical yet general.
+
+\paragraph{Resource-Constrained Sensor Data Processing}
+With a large amount of sensor data, resources constraints on embedded devices, privacy concerns by users, and a variety of end-applciations that make inferences from the same data, we require new paradigms for %processing sensor data. %the paradigm of shipping all the sensor data to the cloud for processing cannot scale. 
+%In addition, we require information processing algorithms 
+sensor data processing. %They should be sensitive to a variety of end-applications. 
+%For instance, in indoor localization, an application could request high accuracy 3D position or coarse room-level information. Rather than collecting data from all sensors and always inferring high fidelity information, we could design efficient ways to make inferences with minimal sensor data. 
+I am interested in understanding how we can intelligently process sensor data at the edge by using minimal resources, and in developing embedded machine learning algorithms for sensor data processing. 
+
+
+\paragraph{Real-Time Interaction. }
+Mixed reality is a promising future direction to interact with the smart devices and to close the digital-physical loop in real-time. 
+%I am interested in closing the digital-physical loop with mixed reality applications. %
+%I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
+I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-art mobile Augmented Reality (AR) using beacons and magnetic field \cite{mobileAR}. % and am  I am collaborating on discovering AR content on objects through VLC.  
+%Looking ahead, with advancements in display technologies and reduction in form factor 
+%I see mixed reality as a powerful tool 
+%I can draw on my expertise in location and timing are key to mixed reality and I can %I can draw on 
+
+\paragraph{Next-Generation Communication. }
+%Real-time communication is key to enabling these smart systems to scale. %My exper in comm.
+New challenges and opportunities emerge when sensing, location and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such a network of drones can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization, communication and my approach of working across layers of the system stack. \\
+
+%\paragraph{Security. }
+ %The system models assumed for sensing applications typically do not account for attacks at the physical layer. 
+ %I am interested in understanding how multiple sensor feeds can make systems more robust to physical layer attacks. The intuition is that different types of sensors have different models and we can check for consistencies among them. %systems are not usable unless secure.\\
+% %After working in the area of localization, I started thinking about what are the security implications in localization. 
+ %As a start in this direction, I have started exploring this problem space with a security research group and am analyzing how the localization stack I have developed would change to be robust to certain attack models.\\ %More broadly, I believe unless these systems are secure 
+% \paragraph{Security. }
+% The future smart devices necessarily have to be secure. Sensing and security together open up two kinds of research challenges - first I am interested in designing sensing systems that are secure as well as designing novel sensing applications to establish secure device interactions. %for security applications such as detecting %With growing interaction between heterogeneous devices, we have to design for security from first principles, rather than including it as an after-though. I am interested in two complementaty probelms, the first is using sensing systems to authentical and attest devices, 
+% designing system models and inference algorithms that take into account attack models. One direction understanding how multiple sensor feeds can make systems more robust to physical layer attacks. The intuition is that different types of sensors have different models and we can check for consistencies among them. 
+% As a start in this direction, I have started exploring this problem space with a security research group and am analyzing how the localization stack I have developed would change to be robust to certain attack models. \\
+
+I enjoy working across domains, and am looking forward to the future.
+
+
+
+%\newpage
+\footnotesize
+\bibliographystyle{abbrv}
+
+\bibliography{references}  % sigproc.bib is the name of the Bibliography in this case
+
+\end{document}
+
+% %\paragraph{Energy Metering: }
+% Prior to joining CMU, I designed embedded energy metering products that were deployed in substations and used by the utilities to calibrate energy meters. %However, we did not have ways to monitor energy within homes at appliance-level. 
+% One of the earliest problems I explored on at CMU was dis-aggregating individual loads using a whole house energy meter. 
+% We designed a wireless sensor network consisting of contactless battery-operated electromagnetic field (EMF) sensors deployed near each appliance which detected appliance state transitions based on magnetic and electric field fluctuations. I modeled each appliance as a two-state device 
+% and designed an estimation algorithm that used the EMF state transitions along with the whole-house power meter data to detect appliance state transitions \cite{rajagopal2013magnetic} to dis-aggregate individual load energy consumption.  I built and demonstrated this system \cite{rajagopal2013demo}. 
+
+% In both these systems, the key was to joinly design the sensing platform, the estimation algorithms and system models that are simple and generalize across deployment and devices.
+
+
+
+
+%The future is exciting. I am looking forward to a research path filled with collaborationsinteresting and challenging problems with high societal impact. %I am looking forward to my research journey that lies ahead. %I am looking forward to working on challenging research problems and applications with high impact on society lie ahead. %I am looking forward to I am excited for the research challenges and the future ahead The future is exciting with challenging research problems to be solved and c
+
+% We can design more efficient networked embedded sensing system by better use of sensors, new models, info processing algorithms. Systematic ways to go from 
+
+% I have demonstrated all on real platforms.
+
+
+% Future work: ---------------
+% Contribute to applications, platforms, algorithms and tools. \\
+
+% Platform: sense data
+% Tools: model and simulate
+% Algorithms: process the data
+
+% Reconfigurable edge devices:
+% In context of localization - how can the nodes organize better to capture more information?
+
+
+% ultimate goal is to digitize the physical world.\\
+% This means, representing the state of the physical world digitally, dynamically. This can help in prediction, potentially making decisions as one can see what happens over time.
+% Turn data into actionable information
+
+
+% First step: AR (location)
+
+% Second: world-capture through vision and sensors
+
+% Applications: manufacturing, infrastructure and predictive maintenance.
+
+% Security:
+
+% Communication: Sensing and communication are closely tied.
+
+
+
+%  - be able to represent the state of the physical world. and interact with it.
+
+% Applications:
+% Interactive Applications: Mixed reality - interaction with physical world.\\
+% Solution:\\
+% multi-modal sensing.\\
+% Harder problem: capturing physical objects. \\
+% Sensing to capture properties of object.\\
+% Digitizing physical objects.\\
+% You want to instrument with as little as possible.\\
+% First steps, LED markers, next - tagless localization, 
+% If the problems are solved, what would it looks like: Digitize the physical world - not just visually but the properties of the object
+
+% Mobility-in-the-loop:
+
+% Predictive maintenance of infrastructure and machinery:\\
+
+% Security:
+% Needs to be integrated end-end.\\
+% Attacks at the physical layer 
+% Proximity-based authentication
+
+% Communication:
+
+
+
+% Analytical foundations:\\
+
+% Applications built on interaction with physical environment 
+
+% Sensing from mobiles 
+
+
+% Long term vision - 
+% Variety and types of sensors are only increasing.\\
+
+% We are moving towards a future where sensors are going to find their way everywhere. Though they have potential, 
+% Build platforms, infomration processing algorithms, models and toolchains for going for sensor data to inference.\\
+
+% have a unified way to sense and make inferences from the real-world using embedded systems with minimal resources. \\
+% Vision:
+% Platform side: design embedded systems with minimal resources and \\
+% Models: create models for the real-world, the models 
+% Tools: automatic ways to quantify the relation between information. Can you quantify the data that can be available 
+% Given the available platforms and sensors and smarts, what applications can you support? Can we have a unified way to 
+
+
+ 
+
+
+% \section{Additional points}
+% \textcolor{blue}{Show-off points potentially to add:}\\
+% Number of alps deployments, size of deployments - several deployments on campus.\\
+% Worked with Samsung - sensor fusion\\
+% Samsung fellowship for IoT\\
+% Mention Terraswarm, CONIX\\
+% Future automatic mapping of all sensors, devices - best poster at Terraswarm annual meet\\
+% In MR future work - attended MR workshop at USC\\
+% Energy meter - worked with EarthSpark in their early days - Haiti deployment\\
+% NSF BIC project - convention center\\
+% Industry experience in energy metering embedded back in India?\\
+% TI internship : PLC WiFi hybrid
+
+
+
+
+%One challenge is how can be trade-off allocation of resources between sensing, location estimation and communication? 
+
+%systems are not usable unless secure.\\
 %After working in the area of localization, I started thinking about what are the security implications in localization. 
-As a start in this direction, I have started exploring this problem space with a security research group and am analyzing how the localization stack I have developed would change to be robust to certain attack models. 
-%I believe I can draw on my experience in system modeling to re-designing systems for security. 
-%Some questions I am pursuing are - how would the beacon deployment in a building change
-%to guarantee robustness against attacks? Can we use consistency between various sensors and beacon measurements to detect attacks? 
-%how does the device discovery and MAC layer change based on security properties of the physical layer? 
+%I am interested in understanding how we can intelligently process sensor data at the edge by using minimal resources. %at the edge. 
+% For instance in indoor localization, if we want room-level or proximity information, rather than getting data from all sensors, obtaining high fidelity 3D location and then downsampling it to semantics, we could design efficient ways to obtain the minimal sensor data required to directly infer semantics. %Ultimately, the goal of these systems is to provide meaningful semantic information. 
+% I am interested in designing  machine learning algorithms as the edge and 
+%Ultimately, the goal of these systems is to provide meaningful semantic information. 
+%. %Location-based processing can be of importance while determining 
 
-\paragraph{Imaging and Sensing for New Applications. }
-The future smarts require  new sensing, imaging and estimation methods to make inferences about physical processes in new applications. For instance, in the area of manufacturing, in order to create a digital replica of physical systems and processes, we require low-cost scalable sensing methods.  As first steps, I want to explore wireless sensing and mobile sensing for predictive maintenance of industrial machinery and infrastructure. I believe I can apply my methodology of working at the low-level interface of sensors and signals to create solutions that are practical yet general.
+%\paragraph{Information Processing Algorithms. }
 
-\paragraph{Sensor to Edge to Semantics. }
-Ultimately, the goal of these systems is to provide meaningful semantic information. With a large amount of sensor data, limited energy and communication resources, and privacy concerns in sharing data, I am interested in understanding how we can intelligently process sensor data at the edge. For instance in indoor localization, if we want room-level or proximity information, rather than getting data from all sensors, obtaining high fidelity 3D location and then downsampling it to semantics, we could design efficient ways to obtain the minimal sensor data required to directly infer semantics. %I am also interested in machine learning algorithms as the edge. %Location-based processing can be of importance while determining aggregation schemes.  %One question of how much data is too much
+%\paragraph{Real-Time Interaction and Communication. }
 
-\paragraph{Next-Generation Communication: }
-Finally, real-time communication is key to enabling these smart systems to scale. %My exper in comm.
-%Future location and communication technologies will will 
-I am interested in solving problems that emerge when sensing, location and communication technologies of the future co-exist and share resources. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources by predicting slow-varying channel characteristics and connectivity. Physically distributed location-aware devices can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. %One challenge is how can be trade-off allocation of resources between sensing, location estimation and communication? 
-To identity and solve research challenges in this space, I can draw from my experience in localization, communication and my approach of working across layers of the system stack. 
+% \paragraph{Imaging and Sensing for New Applications. }
+% The future smarts require  new sensing, imaging and estimation methods to make inferences about physical processes in new applications. For instance, in the area of manufacturing, in order to create a digital replica of physical systems and processes, we require low-cost scalable sensing methods.  As first steps, I want to explore wireless sensing and mobile sensing for predictive maintenance of industrial machinery and infrastructure. I believe I can apply my methodology of working at the low-level interface of sensors and signals to create solutions that are practical yet general.
 
-\paragraph{Sensing for Humans. }
-As these future smart systems start interacting with humans, it is important to consider - how much information is too much? It is challenging to quantify the quality of sensing information when human perception and human actions are in the loop. 
-For instance, sensing and augmented reality technologies are emerging for educational applications. 
-I started discussions with learning science experts at the Eberly Center for Teaching Excellence at CMU, to explore the problem of measuring the improvement in learning due to augmented reality by drawing from pedagogical research. This applies for applications in workforce training as well.\\
+% %\paragraph{Sensor to Edge to Semantics. }
+% Ultimately, the goal of these systems is to provide meaningful semantic information. With a large amount of sensor data, limited energy and communication resources, and privacy concerns in sharing data, I am interested in understanding how we can intelligently process sensor data at the edge. For instance in indoor localization, if we want room-level or proximity information, rather than getting data from all sensors, obtaining high fidelity 3D location and then downsampling it to semantics, we could design efficient ways to obtain the minimal sensor data required to directly infer semantics. %I am also interested in machine learning algorithms as the edge. %Location-based processing can be of importance while determining aggregation schemes.  %One question of how much data is too much
+
+
+
+%\paragraph{Sensing for Humans. }
+%As these future smart systems start interacting with humans, it is important to consider - how much information is too much? It is challenging to quantify the quality of sensing information when human perception and human actions are in the loop. 
+%For instance, sensing and augmented reality technologies are emerging for educational applications. 
+%I started discussions with learning science experts at the Eberly Center for Teaching Excellence at CMU, to explore the problem of measuring the improvement in learning due to augmented reality by drawing from pedagogical research. This applies for applications in workforce training as well.\\
 
 
 %I recently went to a conference on mobile positioning in museums to understand what location means from a completely new point-of-view. One of my main learnings was that is is unclear what value location adds and how much the museums or the consumers will pay for this service. 
@@ -484,131 +670,6 @@ I started discussions with learning science experts at the Eberly Center for Tea
 % The sensing methods, models for converting the time-varying light signal to a spatial varying image, and communication schemes generalize for any LED-camera communication system. This was one of the earliest systems in LED-camera communication and in LED-based localization.\\ %Subsequently, the field of VLC has grown significantly with several rolling-shutter based
 % %approaches for communication and localization, in both academia and
 % %start-ups.
-
-
-% %\paragraph{Energy Metering: }
-% Prior to joining CMU, I designed embedded energy metering products that were deployed in substations and used by the utilities to calibrate energy meters. %However, we did not have ways to monitor energy within homes at appliance-level. 
-% One of the earliest problems I explored on at CMU was dis-aggregating individual loads using a whole house energy meter. 
-% We designed a wireless sensor network consisting of contactless battery-operated electromagnetic field (EMF) sensors deployed near each appliance which detected appliance state transitions based on magnetic and electric field fluctuations. I modeled each appliance as a two-state device 
-% and designed an estimation algorithm that used the EMF state transitions along with the whole-house power meter data to detect appliance state transitions \cite{rajagopal2013magnetic} to dis-aggregate individual load energy consumption.  I built and demonstrated this system \cite{rajagopal2013demo}. 
-
-% In both these systems, the key was to joinly design the sensing platform, the estimation algorithms and system models that are simple and generalize across deployment and devices.
-
-
-
-
-%The future is exciting. I am looking forward to a research path filled with collaborationsinteresting and challenging problems with high societal impact. %I am looking forward to my research journey that lies ahead. %I am looking forward to working on challenging research problems and applications with high impact on society lie ahead. %I am looking forward to I am excited for the research challenges and the future ahead The future is exciting with challenging research problems to be solved and c
-
-% We can design more efficient networked embedded sensing system by better use of sensors, new models, info processing algorithms. Systematic ways to go from 
-
-% I have demonstrated all on real platforms.
-
-
-% Future work: ---------------
-% Contribute to applications, platforms, algorithms and tools. \\
-
-% Platform: sense data
-% Tools: model and simulate
-% Algorithms: process the data
-
-% Reconfigurable edge devices:
-% In context of localization - how can the nodes organize better to capture more information?
-
-
-% ultimate goal is to digitize the physical world.\\
-% This means, representing the state of the physical world digitally, dynamically. This can help in prediction, potentially making decisions as one can see what happens over time.
-% Turn data into actionable information
-
-
-% First step: AR (location)
-
-% Second: world-capture through vision and sensors
-
-% Applications: manufacturing, infrastructure and predictive maintenance.
-
-% Security:
-
-% Communication: Sensing and communication are closely tied.
-
-
-
-%  - be able to represent the state of the physical world. and interact with it.
-
-% Applications:
-% Interactive Applications: Mixed reality - interaction with physical world.\\
-% Solution:\\
-% multi-modal sensing.\\
-% Harder problem: capturing physical objects. \\
-% Sensing to capture properties of object.\\
-% Digitizing physical objects.\\
-% You want to instrument with as little as possible.\\
-% First steps, LED markers, next - tagless localization, 
-% If the problems are solved, what would it looks like: Digitize the physical world - not just visually but the properties of the object
-
-% Mobility-in-the-loop:
-
-% Predictive maintenance of infrastructure and machinery:\\
-
-% Security:
-% Needs to be integrated end-end.\\
-% Attacks at the physical layer 
-% Proximity-based authentication
-
-% Communication:
-
-
-
-% Analytical foundations:\\
-
-% Applications built on interaction with physical environment 
-
-% Sensing from mobiles 
-
-
-% Long term vision - 
-% Variety and types of sensors are only increasing.\\
-
-% We are moving towards a future where sensors are going to find their way everywhere. Though they have potential, 
-% Build platforms, infomration processing algorithms, models and toolchains for going for sensor data to inference.\\
-
-% have a unified way to sense and make inferences from the real-world using embedded systems with minimal resources. \\
-% Vision:
-% Platform side: design embedded systems with minimal resources and \\
-% Models: create models for the real-world, the models 
-% Tools: automatic ways to quantify the relation between information. Can you quantify the data that can be available 
-% Given the available platforms and sensors and smarts, what applications can you support? Can we have a unified way to 
-
-
- 
-
-
-% \section{Additional points}
-% \textcolor{blue}{Show-off points potentially to add:}\\
-% Number of alps deployments, size of deployments - several deployments on campus.\\
-% Worked with Samsung - sensor fusion\\
-% Samsung fellowship for IoT\\
-% Mention Terraswarm, CONIX\\
-% Future automatic mapping of all sensors, devices - best poster at Terraswarm annual meet\\
-% In MR future work - attended MR workshop at USC\\
-% Energy meter - worked with EarthSpark in their early days - Haiti deployment\\
-% NSF BIC project - convention center\\
-% Industry experience in energy metering embedded back in India?\\
-% TI internship : PLC WiFi hybrid
-
-
-
-%\newpage
-\footnotesize
-\bibliographystyle{abbrv}
-
-\bibliography{references}  % sigproc.bib is the name of the Bibliography in this case
-
-\end{document}
-
-
-
-
-
 
 
 
