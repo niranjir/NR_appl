@@ -62,7 +62,7 @@
 I am interested in designing  embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
 I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
 I work close to the physical layer, and I understand the practical constraints, the interaction between signals and systems from first principles, and the theoretical tools relevant to the problem. 
-The balance between systems and theory in my work positions me extremely well to tackle the important challenges inherent in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from extremely precise mobile phone ranging that can be used for navigation and mobile augmented reality, to more extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
+The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from extremely precise mobile phone ranging that can be used for navigation and mobile augmented reality, to more extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
 
 % \paragraph{Old Intro: }
 % My research lies at the intersection between embedded systems, estimation theory, and signal processing applied to Cyber-Physical System (CPS) applications.  From a sensing and estimation perspective, the challenge in CPS is in dealing with heterogeneity in sensing across a large number of devices and the lack of a systematic way to go from sensor data to inference. I tackle this challenge by developing an understanding of the practical constraints, the theoretical tools relevant to the problem and a first principles understanding of the interaction between sensors, signals and systems. I then apply these constraints to the design of embedded sensing systems, system models and inference algorithms. My thesis demonstrates this approach applied to several indoor localization applications ranging from extremely precise mobile phone ranging that can be used for way-finding and mobile augmented reality to more extreme systems designed for firefighting scenarios where multiple incomplete sources of data need to be opportunistically fused together.  
@@ -105,7 +105,7 @@ My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '1
 \section{Indoor Localization Research}
 
 
-Several solutions, like GPS, have emerged in the past decade for localizing mobile devices, yet there is still no pervasive and accurate system for indoor environments.  It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  Across solutions, there is a trade-off between cost due to additional infrastructure and evironment-specic configuration and setup, and performance, in terms of accuracy and time taken for the location to converge. I  take an alternate approach that cuts across the sensing, embedded sytems, and estimation stack. I jointly explore and design emerging localization technologies, the location estimation algorithms as well as tackle the challenges of system setup. 
+Several solutions, like GPS, have emerged in the past decade for localizing mobile devices, yet there is still no pervasive and accurate system for indoor environments.  It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  Across solutions, there is a trade-off between cost due to additional infrastructure and environment-specific configuration and setup, and performance, in terms of accuracy and time taken for the location to converge. I  take an alternate approach that cuts across the sensing, embedded systems, and estimation stack. I jointly explore and design emerging localization technologies, the location estimation algorithms as well as tackle the challenges of system setup. 
 %My work has explored new techologies, location estimation algorithms as well as tackled the challenges of system setup. 
 %My approach is to design emerging technologies and the location estimation algorithms and system setup tools to enable them at scale in the real-world. 
 %To this end, my work has explored multiple emerging technologies in terms of estimating location as well as the challenges of configuration and setup.
@@ -132,10 +132,13 @@ My main insight was that we can integrate the floor plan while solving and use t
 This significantly reduces the amount of infrastructure and increases robustness of the system. 
 I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015. %A second practical problem is that beacon-based systems cannot estimate device orientation. 
 
-I then designed a novel magnetic-field sensing based approach to acquire orientation. The challenge is that the magnetic field is unreliable indoors. My insight was that we could crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, and on-board camera and inertial sensors and use this map as a reference.  Using this concept, we built an end-end multi-user persistent augmented reality (AR) system that does not rely on vision maps \cite{mobileAR}. This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. 
-
-I extended this work to support continuous location updates. This system won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons.
-
+Acquiring orientation on phones indoors is hard since the magnetic field is unreliable indoors. To solve this problem, 
+%Applications like navigation and augmented reality require orientation in addition to location. 
+I designed a novel approach %using beac. % to acquire orientation. %The challenge is that the magnetic field is unreliable indoors. 
+%My insight was that 
+where we %we could 
+crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, and on-board camera and inertial sensors. 
+Subsequently, we use this map as a reference for instantly acquiring orientation without requiring the user to walk around before they can start using the application. Using this concept, we built an end-end multi-user persistent augmented reality (AR) system \cite{mobileAR}. This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. I extended this work to support continuous location updates. This system won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. 
 
 These approaches are implemented on our ultrasonic localization system that spawned into a startup. A pilot has been deployed for AR-based product finding in a retail store. 
 
@@ -146,12 +149,12 @@ To bring order to the deployment chaos, I designed systematic beacon placement a
 My first insight was to use the floor plan geometry in a clever way to reduce the number of beacons compared to conventional placement. 
 My second insight was to quantify the quality of a beacon placement by adopting the Cramer-Rao lower bound on the location estimate, which is captured by the geometry of beacons. I built on these concepts and implemented beacon placement algorithms in a toolchain where system installers can specify a floor plan with accuracy or coverage requirements and obtain a placement. 
 
-While working on this, I found that we could apply theory in computation geometry to solve these problems in a systematic manner.  
+While working on this, I found that we could apply theory in computation geometry to solve these problems in a rigorous manner.  
 I started collaborating with Prof. Jie Gao from Stony Brook University and her student. 
 We mathematically formulated the beacon placement problem and proposed algorithms with provable guarantees \cite{beaconplacementtheory}.  
 
 %A complementary problem in beacon setup is to first place them and then infer their locations.  
-To solve the complementary problem where we first place beacons and then have to map their locations, I built on algorithms in robotics and designed a pedestrian-based simultaneous localization and mapping (SLAM) algorithm \cite{mobileAR}. We implemented this in the real world for mapping ultra-wideband beacons and for asset tracking with BLE tags. 
+To solve the complementary problem where we first place beacons and then map their locations, I built on algorithms in robotics and designed a pedestrian-based simultaneous localization and mapping (SLAM) algorithm \cite{mobileAR}. We implemented this in the real world for mapping ultra-wideband beacons and for asset tracking with BLE tags. 
 
 %I believe such tools for setting up systems are necessary to scale them up in a cost-effective manner.
 
@@ -175,18 +178,19 @@ To solve the complementary problem where we first place beacons and then have to
 
 \paragraph{Other Areas in CPS. }
 I have also contributed to other areas of CPS:
-time-synchronization (RTSS'14 \cite{buevich2013hardware}, RTAS'17 \cite{dongare2017pulsar}) and non-intrusive electrical load
-monitoring (ICCSP'13 \cite{rajagopal2013magnetic}, demonstrated at ICCPS'13 \cite{rajagopal2013demo}).
+time-synchronization \cite{buevich2013hardware, dongare2017pulsar} and non-intrusive electrical load
+monitoring \cite{rajagopal2013magnetic, rajagopal2013demo}.
 
 \section{Future Work}
-In the near-term, I would apply my localization expertise to solve problems more broadly in sensing, communication and designing more secure systems. In the longer-term, I want to explore new CPS applications and new paradigms to go from sensor data to inference in resource-efficient ways.
+In the near-term, I would apply my indoor localization expertise to new areas. %solve problems more broadly in sensing, communication and designing more secure systems. 
+In the longer-term, I want to explore new paradigms to go from sensor data to inference in resource-efficient ways, for a variety of CPS applications.
 
 \paragraph{Localization in Challenging Environments. }
 %My vision for mobile indoor localization is that the future we will have a variety of technologies that operate together 
 %In contrast to mobile indoor localization for augmented reality, another direction I pursued was localization under challenging environments.  
 I led the proposal of a firefighter localization project, which is funded by National Institute of Standards and Technologies (NIST). This problem is challenging since we cannot rely on any existing infrastructure. Our proposed method uses a combination of beacons deployed on firetrucks, and wearable devices on firefighters.
 %Our proposed system is a combination of fixed beacons on firetrucks and firefighters with wearable devices. The challenge in estimation is that we have insufficient and sporadic sources of information. 
-As extension to the proposed method, we are exploring the possibility of exit signs as potential locations for low-power beacons in emergencies, and in using machine learning to train mobility models for commodity inertial sensors using higher-fidelity sensors. 
+As an extension to the proposed method, we are exploring the possibility of using exit signs as potential locations for low-power beacons in emergencies, and in training mobility models on commodity inertial sensors using higher-fidelity sensors. 
 %Our proposed system is a combination of fixed beacons on firetrucks that are automatically mapped using our SLAM algorithm; firefighters with wearable devices that range to each other; and estimation algorithms based on mobile network localization. We are exploring the possibility of exit signs as potential locations for low-power beacons in emergencies. 
 In future, I would integrate a network of drones for increasing resilience. 
 
@@ -199,20 +203,20 @@ Security and localization are siloed domains traditionally. However, there is an
 New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
 
 \paragraph{Real-Time Interaction. }
-Mixed reality is a promising future direction to interact with the smart devices and to close the digital-physical loop in real-time. However, it requires accurate localization of both the display device and the physical objects in the same frame, for which traditional vision-based methods are insufficient.
+Mixed reality is a promising future direction to interact with the smart devices and to close the digital-physical loop in real-time. However, it requires accurate representation of both the display device and the physical objects in the same reference frame, for which traditional vision-based methods are insufficient.
 %I am interested in closing the digital-physical loop with mixed reality applications. %
 %I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
-I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, and communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. 
+I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, and communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR} and I am exploring a VLC-based approach for discovering AR content. 
 
 %\paragraph{Resource-Constrained Sensor Data Processing. }
 
 \paragraph{New Applications and New Paradigms. }
 I want to enable a future where we use minimal resources to go from smart devices to meaningful applications. 
 %I will continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
-I am interested in exploring new application domains that are moving towards `smarts' - such as healthcare, manufacturing, agriculture and training. 
-With large amounts of sensor data, resource constraints on embedded devices, privacy concerns by users, and a variety of end-applications that make varied inferences from the same data, we require new paradigms for 
-sensor data processing. I am interested in understanding how we can efficiently process sensor data at the edge, and in developing embedded machine learning algorithms for sensor data processing. I will continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
-%I believe I can apply my approach of designing new sensing methods, models, tools, and algorithms to these domains where there is tremendous diversity in the sensing types, devices, and application requirements. 
+With large amounts of sensor data, resource constraints on embedded devices, privacy challenges, and a variety of end-applications that make varied inferences from the same data, we require new paradigms for 
+sensor data processing at the edge. % and sensing and system models that are suitable for edge devices. % I would explore efficient paradigms for processing sensor data at the edge, and in developing embedded machine learning algorithms for sensor data processing. 
+I am interested in tackling challenges for new application domains that are moving towards `smarts' - such as healthcare, manufacturing, agriculture and training. 
+I believe I can apply my approach of designing embedded sensing systems, system models, design tools, and estimation algorithms to these domains where there is tremendous diversity in the sensors, devices, and application requirements. I will continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
 
 
 
