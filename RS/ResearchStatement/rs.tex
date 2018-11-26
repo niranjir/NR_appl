@@ -15,6 +15,7 @@
 \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
 \usepackage{lipsum}
 \usepackage{url}
+\usepackage{soul}
 
 \usepackage[margin=1in]{geometry}
 \usepackage{lastpage}
@@ -58,10 +59,23 @@
 
 \end{table}
  
-I am interested in designing  embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
-I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
-I work close to the physical layer, and I understand the practical constraints, the interaction between signals and systems from first principles, and the theoretical tools relevant to the problem. 
-The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from extremely precise mobile phone localization that can be used for navigation and mobile augmented reality, to more extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
+I am interested in designing embedded sensing systems and inference
+algorithms for modern cyber-physical systems (CPS).  I leverage
+theoretical frameworks from signal processing and estimation and apply
+them to the complexities that arise from real-world sensing systems.
+{\bf long convoluted sentence, phrases somewhat disconnected--- } I work
+close to the physical layer, and I understand the practical
+constraints, the interaction between signals and systems from first
+principles, and the theoretical tools relevant to the problem.  The
+balance between systems and theory in my work positions me extremely
+well to tackle \st{the} important challenges in designing systems that are
+practical, cost-effective, efficient, and reliable. My thesis
+demonstrates this approach applied to several indoor localization
+applications, ranging from \st{extremely} high precision mobile phone localization
+that can be used for navigation and mobile augmented reality, to \st{more}
+extreme systems designed for firefighting scenarios wherein multiple
+incomplete sources of data need to be opportunistically fused
+together.
 
 % \paragraph{Old Intro: }
 % My research lies at the intersection between embedded systems, estimation theory, and signal processing applied to Cyber-Physical System (CPS) applications.  From a sensing and estimation perspective, the challenge in CPS is in dealing with heterogeneity in sensing across a large number of devices and the lack of a systematic way to go from sensor data to inference. I tackle this challenge by developing an understanding of the practical constraints, the theoretical tools relevant to the problem and a first principles understanding of the interaction between sensors, signals and systems. I then apply these constraints to the design of embedded sensing systems, system models and inference algorithms. My thesis demonstrates this approach applied to several indoor localization applications ranging from extremely precise mobile phone ranging that can be used for way-finding and mobile augmented reality to more extreme systems designed for firefighting scenarios where multiple incomplete sources of data need to be opportunistically fused together.  
@@ -98,7 +112,18 @@ The balance between systems and theory in my work positions me extremely well to
 %I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world. 
 
 \paragraph{Impact. }
-My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '15, RTAS '17, RTSS '13, ICCPS '13, IPIN '16 and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received two patents, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and led to funding from NSF, SRC, NIST, and industry. %This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, and asset mapping applications.
+My research has resulted in publications at IPSN '14 (cited 130+
+times), IPSN '18, SenSys '17, RTAS '15, RTAS '17, RTSS '13, ICCPS '13,
+IPIN '16 and VLCS '14. My work has been demonstrated live at four
+conferences, been deployed in more than two dozen environments,
+received two patents, won the international Microsoft Indoor
+Localization competition twice, received a best demo award, spawned a
+startup, and led to funding from NSF, SRC, NIST, and industry.
+
+{\bf Saay something about work at industry and impact at Apple and TI.}
+
+
+ %This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, and asset mapping applications.
 
 
 \section{Indoor Localization Research}
@@ -106,8 +131,16 @@ My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '1
 
 Several solutions, like GPS, have emerged in the past decade for localizing mobile devices. Yet there is still no pervasive and accurate system for indoors.  
 %It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  
-It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and indoor spaces.  
-Across solutions, there is a trade-off between cost of infrastructure and setup, and performance, in terms of accuracy and time taken for the location to converge. I take an alternate approach where I derive insights that cut across the sensing, embedded systems, and estimation stack. I jointly explore emerging localization technologies, the location estimation algorithms as well as tackle the challenges of system setup. 
+It is unclear if a single technology will emerge that can solve all
+indoor localization problems, because of the wide variability in
+application requirements and indoor spaces.  Across solutions, there
+is a trade-off between cost of infrastructure and setup, and
+performance, in terms of accuracy and time taken for the location to
+converge. I take an alternate approach where I derive insights that
+cut across the sensing, embedded systems, and estimation stack. I
+jointly explore emerging localization technologies, the location
+estimation algorithms as well as tackle the challenges of system
+setup.
 %My work has explored new techologies, location estimation algorithms as well as tackled the challenges of system setup. 
 %My approach is to design emerging technologies and the location estimation algorithms and system setup tools to enable them at scale in the real-world. 
 %To this end, my work has explored multiple emerging technologies in terms of estimating location as well as the challenges of configuration and setup.
@@ -115,12 +148,30 @@ Across solutions, there is a trade-off between cost of infrastructure and setup,
 
 \paragraph{Emerging Technologies. }
 
-I designed one of the earliest visible light communication (VLC) systems to send data from overhead LED lights to phones. The phones localize themselves to be in proximity of the lights detected. The challenge in building this communication channel is that the camera frame rate is much lower than the light's operating frequency. 
-To overcome this, my insight was to exploit the low-level rolling-shutter effect of camera sensors to capture frequencies higher than the frame rate, %a time-varying light signal as a spatially varying image 
- and to use the exposure and focus control as filters to improve the signal-to-noise ratio \cite{rajagopal2014visual, rajagopal2014demonstration}. I extended this to design a novel hybrid communication system for camera and photodiodes \cite{rajagopal2014hybrid}. 
+I designed one of the earliest visible light communication (VLC)
+systems to send data from overhead LED lights to phones. The phones
+localize themselves to be in proximity of the lights detected. The
+challenge in building this communication channel is that the camera
+frame rate is much lower than the light's operating frequency.  To
+overcome this, my insight was to exploit the low-level rolling-shutter
+effect of camera sensors to capture frequencies higher than the frame
+rate, the exposure and focus control as filters to improve the
+signal-to-noise ratio \cite{rajagopal2014visual,
+  rajagopal2014demonstration}. I extended this to design a novel
+hybrid communication system for camera and photodiodes
+\cite{rajagopal2014hybrid}.
+ %a time-varying light signal as a spatially varying image and to use
 %The proposed approaches generalizes to any LED-camera communication system and have been cited 170+ times. Subsequently the field of VLC has grown significantly in both academia and industry.
 
-I contributed to building an ultrasonic time-of-flight (ToF) platform that localizes unmodified mobile devices \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}.  I have worked with Apple on emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low Energy 5 ToF, and with commodity ultra-wideband ToF systems. I realized that ToF ranging is promising for localization and is getting integrated into future smart devices.  However, they face challenges in scaling up, with respect to location estimation and system setup. I then tackled these challenges. 
+I contributed to building an ultrasonic time-of-flight (ToF) platform
+that localizes unmodified mobile devices \cite{rtas-alps-platform,
+  lazik2015alps,lazik2015alpsdemo}.  I have worked with Apple on
+emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low
+Energy 5 ToF, and with commodity ultra-wideband ToF systems. I
+realized that ToF ranging is promising for localization and is
+\st{getting} being integrated into future smart devices.  However,
+they face challenges in scaling up, with respect to location
+estimation and system setup. I then tackled these challenges.
 
 
 \paragraph{Estimation Algorithms. } 
@@ -138,9 +189,9 @@ This solver implemented on our ultrasonic platform won the Microsoft Indoor Loca
 Acquiring orientation on phones is hard since the magnetic field is unreliable indoors. To solve this problem, 
 %Applications like navigation and augmented reality require orientation in addition to location. 
 I designed a novel approach %using beac. % to acquire orientation. %The challenge is that the magnetic field is unreliable indoors. 
-%My insight was that 
-where we %we could 
-crowd-source a dense magnetic field map with mobile pedestrians by fusing data from beacons, on-board camera and inertial sensors. 
+%My insight was that  %we could 
+\st{where we}
+that crowd-sources from a dense magnetic field map with mobile pedestrians by fusing data from beacons, on-board camera and inertial sensors. 
 Subsequently, we leverage this map as a reference for instantly acquiring orientation upon startup. %without requiring a user to walk around before they can start using the application. 
 Using this concept, we built an end-to-end multi-user persistent augmented reality (AR) system \cite{mobileAR}. This work won best demo award at IPSN 2018 \cite{rajagopal2018welcome}. I extended this work to support continuous location updates. This system won the Microsoft Indoor Localization competition in 2018 with ultra-wideband beacons. 
 
@@ -149,13 +200,23 @@ These approaches are implemented on our ultrasonic localization system that spaw
 \paragraph{Tools for Scalable Setup of Systems.  }
 Beacon setup at scale lacks a systematic method, is laborious and time-consuming, and does not adapt over time. This hinders scaling up of systems in cost-effective ways. % to scaling up. %scaling in cost-effective ways.
 
-To bring order to the deployment chaos, I designed systematic beacon placement algorithms \cite{rajagopal2016beacon}. 
-My first insight was to use the floor plan geometry in a clever way to reduce the number of beacons compared to conventional placement. 
-My second insight was to quantify the quality of a beacon placement by adopting the Cramer-Rao lower bound on the location estimate, which is captured by the geometry of beacons. I built on these concepts and implemented beacon placement algorithms in a toolchain where system installers can specify accuracy and coverage requirements for a floor plan and obtain a placement. 
+To bring order to the deployment chaos, I designed systematic beacon
+placement algorithms \cite{rajagopal2016beacon}.  My first insight was
+to use the floor plan geometry in a clever way to reduce the number of
+beacons compared to conventional placement.  My second insight was to
+quantify the quality of a beacon placement by adopting the Cramer-Rao
+lower bound on the location estimate, which is captured by the
+geometry of beacons. I built on these concepts and implemented beacon
+placement algorithms in a toolchain where system installers can
+specify accuracy and coverage requirements for a floor plan and obtain
+a placement.
 
-While working on this, I found that we could apply theory in computation geometry to solve these problems in a rigorous manner.  
-I started collaborating with Prof. Jie Gao from Stony Brook University and her student. 
-We mathematically formulated the beacon placement problem and proposed algorithms with provable guarantees \cite{beaconplacementtheory}.  
+While working on this, I found that we could apply \st{theory in}
+computation geometry theory to solve these problems in a rigorous manner.  I
+started collaborating with Prof. Jie Gao's team from Stony Brook University
+\st{and her student}.  We mathematically formulated the beacon placement
+problem and proposed algorithms with provable guarantees
+\cite{beaconplacementtheory}.
 
 %A complementary problem in beacon setup is to first place them and then infer their locations.  
 To solve the complementary problem where we first place beacons and then map their locations, I built on algorithms in robotics and designed a pedestrian-based simultaneous localization and mapping (SLAM) algorithm \cite{mobileAR}. We implemented this in the real world for mapping ultra-wideband beacons and for asset tracking with BLE tags. 
@@ -206,7 +267,11 @@ My next steps are to evaluate the feasibility of various technologies under smok
 %Our proposed system is a combination of fixed beacons on firetrucks that are automatically mapped using our SLAM algorithm; firefighters with wearable devices that range to each other; and estimation algorithms based on mobile network localization. We are exploring the possibility of exit signs as potential locations for low-power beacons in emergencies. 
 
 \paragraph{Secure Localization. }
-Indoor localization is imminent. However, current systems can easily be attacked and locations can be spoofed. It is critical to make these systems secure. Secure location-awareness is also important to enable device discovery and interaction in the internet-of-things with heterogeneous untrusted devices.
+Indoor localization is imminent. However, current systems can easily
+be attacked and locations can be spoofed. It is critical to make these
+systems secure {\bf for them to be usable}. Secure location-awareness is
+also important to enable device discovery and interaction in the
+internet-of-things with heterogeneous untrusted devices.
 %Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. 
 %To start thinking about localization from a security-point-of-view, 
 My early conversations with a security research group suggest that we have to re-think all layers of the localization stack starting from the physical layer design, to the location estimation, and infrastructure setup algorithms. %can re-design various layers of the system stack for security, ranging from the low-level signals, to the localization and beacon placement algorithms.  
@@ -237,7 +302,9 @@ Localization and imaging techniques using mmWave technology can benefit localiza
 %challenges emerge. For instance, determining and quantifying the relationship between the geometry and
 %the communication capacity, trading-off allocation of power and compute resource for location estimation or commu-
 %nication. 
-To solve problems in this space, I can draw from my experience of working across layers of the system stack and my geometry-based methods for indoor localization. \\
+To solve problems in this space, I \st{can} will draw \st{from} upon
+my experience of working across layers of the system stack and my
+geometry-based methods for indoor localization. \\
 
 % Future localization and communication technologies will impact each
 % other. I am interested in using localization for solving challenges in next generation communication tech-
@@ -263,7 +330,7 @@ To solve problems in this space, I can draw from my experience of working across
 Mixed reality is promising for interacting with future smart devices and to close the digital-physical loop in real-time. It requires accurate representation of the digital display, smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.
 %I am interested in closing the digital-physical loop with mixed reality applications. %
 %I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
-I would develop design principles for fusing multiple sensors, such as vision, emerging localization technologies, and VLC at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. % and I am collaborating on a VLC-based approach for discovering AR content. 
+I \st{would} will develop design principles for fusing multiple sensors, such as vision, emerging localization technologies, and VLC at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. % and I am collaborating on a VLC-based approach for discovering AR content. 
 
 %\paragraph{Resource-Constrained Sensor Data Processing. }
 
