@@ -130,7 +130,8 @@ Acquiring the initial location with ToF systems is challenging in the real world
 I designed a novel solver that localizes with just two LOS beacons, rather than three (for 2D localization), and maintains the same performance with high NLOS \cite{rajagopal2018enhancing}.  %This tackles the practical problem at scale of having too few line-of-sight ranges and having incorrect non-line-of-light ranges. 
 My main insight was that we can integrate the floor plan while solving and use the absence of measurements from beacons as useful information. 
 This significantly reduces the amount of infrastructure and increases robustness of the system. 
-I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015. %A second practical problem is that beacon-based systems cannot estimate device orientation. 
+%I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015.
+This solver implemented on our ultrasonic platform won the Microsoft Indoor Localization Competition in 2015. %A second practical problem is that beacon-based systems cannot estimate device orientation. 
 
 Acquiring orientation on phones is hard since the magnetic field is unreliable indoors. To solve this problem, 
 %Applications like navigation and augmented reality require orientation in addition to location. 
@@ -183,25 +184,48 @@ time-synchronization \cite{buevich2013hardware, dongare2017pulsar} and non-intru
 monitoring \cite{rajagopal2013magnetic, rajagopal2013demo}.
 
 \section{Future Work}
-In the near-term, I would apply my indoor localization expertise to new areas. %solve problems more broadly in sensing, communication and designing more secure systems. 
+%In the near-term, I would apply my indoor localization expertise to new areas. 
+In the near-term, I want to apply my expertise in localization to solve problems in other domains (re-write).   
+%solve problems more broadly in sensing, communication and designing more secure systems. 
 In the long-term, I want to explore new paradigms to go from sensor data to inference in resource-efficient ways, applied to emerging CPS.
 
-\paragraph{Localization in Challenging Environments. }
+\paragraph{Localization for First Responders . }
 %My vision for mobile indoor localization is that the future we will have a variety of technologies that operate together 
 %In contrast to mobile indoor localization for augmented reality, another direction I pursued was localization under challenging environments.  
-I led the proposal for a firefighter localization research project, which is funded by National Institute of Standards and Technologies (NIST). This problem is challenging since we cannot rely on any existing infrastructure. Our proposed method uses beacons deployed on firetrucks and wearable devices on firefighters, in combination with mobile network localization algorithms. I am exploring several research directions ahead, with challenges in sensing, system design and algorithms, in order for the approach to scale across buildings and be reliable in the worst firefighting scenarios. %For instance, we could place
+%I led the proposal for a firefighter localization research project, which is funded by National Institute of Standards and Technologies (NIST). This problem is challenging since we cannot rely on any existing infrastructure. Our proposed method uses beacons deployed on firetrucks and wearable devices on firefighters, in combination with mobile network localization algorithms. I am exploring several research directions ahead, with challenges in sensing, system design and algorithms, in order for the approach to scale across buildings and be reliable in the worst firefighting scenarios. 
+%In addition, a future direction is to integrate a network of drones for increasing resilience. 
+I led the proposal for a firefighter localization project, which is funded by National Institute of Standards and Technologies (NIST). My vision is to design a robust system for localizing first responders and building occupants in the worst fires without any relying on existing infrastructure. % by opportunistic use of available sensors. % This problem is challenging since we cannot rely on any existing infrastructure. 
+As a first step, our proposed method uses beacons on firetrucks, wearable devices on firefighters, a long-range low-power wireless network, and mobile network localization and mapping algorithms. 
+My next steps are to evaluate the feasibility of various technologies under smoke, develop methods to train low-accuracy inertial sensors using vision-based high accuracy inertial sensors, integrate infrared sensors and integrate a network of drones for increasing resilience. %mobile network localization algorithms. As next steps, I %I am exploring several research directions ahead, with challenges in sensing, system design and algorithms, in order for the approach to scale across buildings and be reliable in the worst firefighting scenarios. 
+%In addition, a future direction is to integrate a network of drones for increasing resilience. 
+
+%For instance, we could place
 %Our proposed system is a combination of fixed beacons on firetrucks and firefighters with wearable devices. The challenge in estimation is that we have insufficient and sporadic sources of information. 
 %As an extension to the proposed method, on the system side we are exploring the possibility of placing low-power beacons within exit signs in buildings, and on the algorithms side we are exploring using visual-inertial odometry to train  training modelscommodity inertial sensors using higher-fidelity sensors. 
 %Our proposed system is a combination of fixed beacons on firetrucks that are automatically mapped using our SLAM algorithm; firefighters with wearable devices that range to each other; and estimation algorithms based on mobile network localization. We are exploring the possibility of exit signs as potential locations for low-power beacons in emergencies. 
-In addition, a future direction is to integrate a network of drones for increasing resilience. 
 
 \paragraph{Security and Localization. }
-Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. As a start, I visited a security research group in another university for a week and started looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. One promising direction is that we could use multiple sensors and check for consistency among them, since each has different physical layer properties. %, since each sensor type has differe.%the problem space with a security research group.
+Indoor localization is imminent. However, current systems can easily be attacked and locations can be spoofed. It is critical to make these systems secure at all layers of the stack. Secure location awareness will be key to enable device discovery and device-to-device interaction in the internet-of-things with heterogeneous untrusted devices.
+%Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. 
+%To start thinking about localization from a security-point-of-view, 
+I have started working on problems in secure localization with a security research group. % 
+%n order to  started collaborating As a start, I visited a security research group for a week and started 
+%re-designing looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. 
+I am analyzing how to de-design the location estimation algorithms and the beacon placement algorithms for robustness to certain physical layer attacks. Preliminary thoughts are to use multiple sensor sources and check for consistency among them since they have different physical layer properties. More broadly, I want to design future sensing systems by accounting for possible attack models from first principles. %A preliminary direction is that we can check for consistency among different sensors physical layer properties. 
+
+% Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. As a start, I visited a security research group in another university for a week and started looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. One promising direction is that we could use multiple sensors and check for consistency among them, since each has different physical layer properties. 
+
+%Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. As a start, I visited a security research group in another university for a week and started looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. One promising direction is that we could use multiple sensors and check for consistency among them, since each has different physical layer properties. 
+
+%, since each sensor type has differe.%the problem space with a security research group.
 %After working with several localization technologies, I was interested in analyzing how the localization stack I have developed would change if we have to re-design these systems to be robust to certain types of physical layer attacks on the ranging signals.
  %I would also explore new location-based techniques for secure device discovery and interaction. % and am analyzing how the localization stack I have developed would change to be robust to certain attack models.\\
 
 \paragraph{Next-Generation Communication and Localization. }
-New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
+(re-writing this) Location awareness will be critical for efficient allocation of resources in next generation communication. 
+%New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, l
+Location awareness in fifth generation (5G) wireless networks can predict channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
+% New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
 
 \paragraph{Mixed Reality. }
 Mixed reality is a promising future direction to interact with future smart devices and to close the digital-physical loop in real-time. However, it requires accurate representation of both the display device and the physical objects in the same reference frame, for which traditional vision-based methods are insufficient.
