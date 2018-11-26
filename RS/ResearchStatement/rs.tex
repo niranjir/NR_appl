@@ -185,11 +185,11 @@ monitoring \cite{rajagopal2013magnetic, rajagopal2013demo}.
 
 \section{Future Work}
 %In the near-term, I would apply my indoor localization expertise to new areas. 
-In the near-term, I want to apply my expertise in localization to solve problems in other domains (re-write).   
+In the long-term, I want to design resource-efficient systems and paradigms to go from sensor data to inference for new CPS.
+In the near-term, I want to build theoretical and practical frameworks for secure, reliable, end-to-end location aware systems that are integrated with next generation communication systems and support seamless interaction with objects and smart devices indoors. 
 %solve problems more broadly in sensing, communication and designing more secure systems. 
-In the long-term, I want to explore new paradigms to go from sensor data to inference in resource-efficient ways, applied to emerging CPS.
 
-\paragraph{Localization for First Responders . }
+\paragraph{Localization for First Responders. }
 %My vision for mobile indoor localization is that the future we will have a variety of technologies that operate together 
 %In contrast to mobile indoor localization for augmented reality, another direction I pursued was localization under challenging environments.  
 %I led the proposal for a firefighter localization research project, which is funded by National Institute of Standards and Technologies (NIST). This problem is challenging since we cannot rely on any existing infrastructure. Our proposed method uses beacons deployed on firetrucks and wearable devices on firefighters, in combination with mobile network localization algorithms. I am exploring several research directions ahead, with challenges in sensing, system design and algorithms, in order for the approach to scale across buildings and be reliable in the worst firefighting scenarios. 
@@ -211,7 +211,7 @@ Indoor localization is imminent. However, current systems can easily be attacked
 I have started working on problems in secure localization with a security research group. % 
 %n order to  started collaborating As a start, I visited a security research group for a week and started 
 %re-designing looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. 
-I am analyzing how to de-design the location estimation algorithms and the beacon placement algorithms for robustness to certain physical layer attacks. Preliminary thoughts are to use multiple sensor sources and check for consistency among them since they have different physical layer properties. More broadly, I want to design future sensing systems by accounting for possible attack models from first principles. %A preliminary direction is that we can check for consistency among different sensors physical layer properties. 
+I am analyzing how to re-design the location estimation algorithms and the beacon placement algorithms for robustness to certain physical layer attacks. Preliminary thoughts are to use multiple sensor sources and check for consistency among them since they have different physical layer properties. More broadly, I want to design future sensing systems to be secure. %A preliminary direction is that we can check for consistency among different sensors physical layer properties. 
 
 % Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. As a start, I visited a security research group in another university for a week and started looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. One promising direction is that we could use multiple sensors and check for consistency among them, since each has different physical layer properties. 
 
@@ -222,16 +222,26 @@ I am analyzing how to de-design the location estimation algorithms and the beaco
  %I would also explore new location-based techniques for secure device discovery and interaction. % and am analyzing how the localization stack I have developed would change to be robust to certain attack models.\\
 
 \paragraph{Next-Generation Communication and Localization. }
-(re-writing this) Location awareness will be critical for efficient allocation of resources in next generation communication. 
+I am interested in developing localization and imaging techniques using next generation 5G and mmWave communication technologies.  I am also interested in algorithms for accurate localization and tracking of mobile devices to improve resource allocation and channel prediction for communication systems.  %For instance, location tracking and mobility models can predict channel characteristics and enable beam tracking. %At larger scales, 
+%mmWave signals provide high spatial resolution, and require accurate tracking of mobile devices for beam tracking from fixed access points. % To solve these problems, I can draw from  
+%(re-writing this) Location awareness will be critical for efficient allocation of resources in next generation communication. 
 %New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, l
-Location awareness in fifth generation (5G) wireless networks can predict channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
-% New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
+%Location awareness in fifth generation (5G) wireless networks can predict channel characteristics and connectivity. 
+%location-aware distributed mobile devices can coordinate together to create large MIMO arrays. 
+To solve research challenges in this space, I can draw from my experience in localization and communication, my approach of working across layers of the system stack, and my approaches of leveraging geometrical approaches for indoor localization. \\
+
+
+% \paragraph{Next-Generation Communication and Localization. }
+% (re-writing this) Location awareness will be critical for efficient allocation of resources in next generation communication. 
+% %New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, l
+% Location awareness in fifth generation (5G) wireless networks can predict channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
+% % New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
 
 \paragraph{Mixed Reality. }
-Mixed reality is a promising future direction to interact with future smart devices and to close the digital-physical loop in real-time. However, it requires accurate representation of both the display device and the physical objects in the same reference frame, for which traditional vision-based methods are insufficient.
+Mixed reality is a promising future direction to interact with future smart devices and to close the digital-physical loop in real-time. It requires accurate representation of the display, smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.
 %I am interested in closing the digital-physical loop with mixed reality applications. %
 %I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
-I want to develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, and communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR} and I am exploring a VLC-based approach for discovering AR content. 
+I would develop design principles for fusing multiple sources of information, such as vision, emerging localization technologies, and communication from overhead LEDs at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. % and I am collaborating on a VLC-based approach for discovering AR content. 
 
 %\paragraph{Resource-Constrained Sensor Data Processing. }
 
