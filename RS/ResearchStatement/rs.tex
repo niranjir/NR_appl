@@ -58,9 +58,11 @@
 
 \end{table}
  
-I am interested in designing  embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
+%I am interested in designing  embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
+My research focuses on embedded sensing systems and information processing for modern cyber-physical systems (CPS). 
 I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
-I work close to the physical layer, and I understand the practical constraints, the interaction between signals and systems from first principles, and the theoretical tools relevant to the problem. 
+%I work close to the physical layer, and I understand the practical constraints, the interaction between signals and systems from first principles, and the theoretical tools relevant to the problem. 
+I work close to the physical layer while striving to understand the practical constraints, the interaction between signals and systems from first principles, and the relevant theoretical tools to the problem. 
 The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from extremely precise mobile phone localization that can be used for navigation and mobile augmented reality, to more extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
 
 % \paragraph{Old Intro: }
@@ -104,7 +106,7 @@ My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '1
 \section{Indoor Localization Research}
 
 
-Several solutions, like GPS, have emerged in the past decade for localizing mobile devices. Yet there is still no pervasive and accurate system for indoors.  
+Several solutions, like GPS, have emerged in the past decade for localizing mobile devices. Yet there is still no pervasive and accurate system for indoor environments.  
 %It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  
 It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and indoor spaces.  
 Across solutions, there is a trade-off between cost of infrastructure and setup, and performance, in terms of accuracy and time taken for the location to converge. I take an alternate approach where I derive insights that cut across the sensing, embedded systems, and estimation stack. I jointly explore emerging localization technologies, the location estimation algorithms as well as tackle the challenges of system setup. 
@@ -115,21 +117,21 @@ Across solutions, there is a trade-off between cost of infrastructure and setup,
 
 \paragraph{Emerging Technologies. }
 
-I designed one of the earliest visible light communication (VLC) systems to send data from overhead LED lights to phones. The phones localize themselves to be in proximity of the lights detected. The challenge in building this communication channel is that the camera frame rate is much lower than the light's operating frequency. 
+I designed one of the earliest visible light communication (VLC) systems to send data from overhead LED lights to phones. The phones use proximity to lights in order to determine their location.  The challenge in building this communication channel is that in order for the lights to be flicker-free, they have to operate at a much higher frequency that the camera frame rate. % is much lower than the light's operating frequency. 
 To overcome this, my insight was to exploit the low-level rolling-shutter effect of camera sensors to capture frequencies higher than the frame rate, %a time-varying light signal as a spatially varying image 
  and to use the exposure and focus control as filters to improve the signal-to-noise ratio \cite{rajagopal2014visual, rajagopal2014demonstration}. I extended this to design a novel hybrid communication system for camera and photodiodes \cite{rajagopal2014hybrid}. 
 %The proposed approaches generalizes to any LED-camera communication system and have been cited 170+ times. Subsequently the field of VLC has grown significantly in both academia and industry.
 
-I contributed to building an ultrasonic time-of-flight (ToF) platform that localizes unmodified mobile devices \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}.  I have worked with Apple on emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low Energy 5 ToF, and with commodity ultra-wideband ToF systems. I realized that ToF ranging is promising for localization and is getting integrated into future smart devices.  However, they face challenges in scaling up, with respect to location estimation and system setup. I then tackled these challenges. 
+I contributed to building an ultrasonic time-of-flight (ToF) platform that localizes unmodified mobile devices \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}.  I have worked with Apple on emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low Energy 5 ToF, and with commodity ultra-wideband ToF systems. I realized that ToF ranging is promising for localization and will eventually find its way into future smart devices.  However, these systems face challenges in scaling up, with respect to location estimation and system setup. \textit{I then tackled these challenges.} 
 
 
 \paragraph{Estimation Algorithms. } 
 %I designed sensor fusion methods to acquire location and orientation accurately under practical conditions. 
-Location estimation is done in two stages. An initial location is first acquired and over time the location is updated with new measurements. 
+Location estimation is typically done in two stages. An initial location is first acquired and over time the location is updated with new measurements. 
 %Location estimation has two stages - initialization or acquisition, and location updates when we have a prior. 
 Acquiring the initial location with ToF systems is challenging in the real world, since we often have only few line-of-sight (LOS) ranges and several incorrect non-line-of-light (NLOS) ranges. Further, we don't have ways to acquire orientation instantly. 
 
-I designed a novel solver that localizes with just two LOS beacons rather than three (for 2D localization). It maintains the same performance with high NLOS \cite{rajagopal2018enhancing}.  %This tackles the practical problem at scale of having too few line-of-sight ranges and having incorrect non-line-of-light ranges. 
+While past approaches deploy too many beacons, or require the user to walk around before the location converges, I designed a new solver that localizes with just two LOS beacons rather than three (for 2D localization). It maintains the same performance with high NLOS \cite{rajagopal2018enhancing}.  %This tackles the practical problem at scale of having too few line-of-sight ranges and having incorrect non-line-of-light ranges. 
 My main insight was that we can integrate the floor plan while solving and use the absence of measurements from beacons as useful information. 
 This significantly reduces the amount of infrastructure and increases robustness of the system. 
 %I implemented this in our system that won the Microsoft Indoor Localization Competition in 2015.
@@ -147,7 +149,7 @@ Using this concept, we built an end-to-end multi-user persistent augmented reali
 These approaches are implemented on our ultrasonic localization system that spawned into a startup. A pilot has been deployed for AR-based product finding in a retail store. 
 
 \paragraph{Tools for Scalable Setup of Systems.  }
-Beacon setup at scale lacks a systematic method, is laborious and time-consuming, and does not adapt over time. This hinders scaling up of systems in cost-effective ways. % to scaling up. %scaling in cost-effective ways.
+Beacon setup at scale lacks a systematic method, is laborious and time-consuming, and does not adapt over time. %This hinders scaling up of systems in cost-effective ways. % to scaling up. %scaling in cost-effective ways.
 
 To bring order to the deployment chaos, I designed systematic beacon placement algorithms \cite{rajagopal2016beacon}. 
 My first insight was to use the floor plan geometry in a clever way to reduce the number of beacons compared to conventional placement. 
@@ -185,7 +187,6 @@ I have also contributed to time-synchronization \cite{buevich2013hardware, donga
 monitoring \cite{rajagopal2013magnetic, rajagopal2013demo}.
 
 \section{Future Work}
-%In the near-term, I would apply my indoor localization expertise to new areas. 
 In the long-term I want to design resource-efficient systems and paradigms to go from sensor data to inference for emerging cyber-physical systems.
 In the near-term I want to build theoretical and practical frameworks for secure, reliable end-to-end location aware systems that are integrated with next generation communication systems and support seamless interaction with objects and smart devices indoors. 
 %solve problems more broadly in sensing, communication and designing more secure systems. 
