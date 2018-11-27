@@ -58,14 +58,16 @@
 
 \end{table}
  
+%I am interested in building practical and reliable networked embedded systems and inference algorithms for modern cyber-physical systems (CPS). 
+%With regard to sensing and estimation, the challenge in modern CPS from a practical perspective is that we have to deploy dedicated infrastructure for sensing and actuation, and there is a lack of a systematic way to go from sensor data to inference. My vision is that in future, given a sensing application and I tackle this challenge opportunistically. 
+%From a sensing and estimation perspective, the challenge in 
+%From a sensing and estimaiton perspective, there are two challenges in modern CPS. First, a large number of devices and new smart infrastructure deployed
+%is in dealing with heterogeneity in sensing across a large number of devices and the lack of a systematic way to go from sensor data to inference
 %I am interested in designing embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
-I am interested in designing embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
 My research focuses on embedded sensing systems and information processing for modern cyber-physical systems (CPS). 
-%I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
 I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
-%I work close to the physical layer, and I understand the practical constraints, the interaction between signals and systems from first principles, and the theoretical tools relevant to the problem. 
 I work close to the physical layer while striving to understand the practical constraints, the interaction between signals and systems from first principles, and the relevant theoretical tools to the problem. 
-The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from precise mobile phone localization that can be used for navigation and mobile augmented reality, to extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
+The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from precise mobile phone localization that can be used for navigation and mobile augmented reality, to extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be fused together. 
 
 %I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I believe my strong interest in systematic, rather than ad-hoc, approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from Signal processing to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing of practical, cost-effective, yet reliable and efficient CPS. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.
 
@@ -110,11 +112,21 @@ My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '1
 
 \section{Indoor Localization Research}
 
-
-Several solutions, like GPS, have emerged in the past decade for localizing mobile devices. Yet there is still no pervasive and accurate system for indoor environments.  
+GPS has revolutionized the way we interact with the outdoor environment.  % by providing location service. 
+%Several solutions, like GPS, have emerged in the past decade for localizing mobile devices. 
+Yet we don't have pervasive and accurate systems for indoor localization.  
 %It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  
-It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and indoor spaces.  
-Across solutions, there is a trade-off between cost of infrastructure and setup, and performance, in terms of accuracy and time taken for the location to converge. I take an alternate approach where I derive insights that cut across the sensing, embedded systems, and estimation stack. I jointly explore emerging localization technologies, the location estimation algorithms as well as tackle the challenges of system setup. 
+It is impossible for a single technology to solve all indoor localization problems, because of the wide variation in application requirements and indoor spaces.  At the same time, it is impractical to deploy several different localization systems in all buildings at global scale. %I believe, we require a systematic approach to obtain %An ideal 
+%It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and indoor spaces.  
+My approach is to solve this problem opportunistically - to do the best with what is available. %By being opportunistic, these systems use the available devices in the environment, 
+First, I opportunistically use infrastructure (smart lighting, smart speakers, emerging internet-of-things) in novel ways to obtain location information. Second, I opportunistically integrate the available sensor sources in novel ways to get more information with less data. \\
+However, the opportunistic approach will only work when we have the minimal infrastructure required in place. Third, I build tools that can guide users to place the minimal required infrastructure and enable them to know what information they can get from the available infrastructure. Finally, I build tools for localization with where there is no fixed infrastructure. I describe these below. 
+
+\paragraph{A Holistic Approach to Localization. } My holistic approach to localization spans embedded systems, sensing and estimation. It also spans working with industry 
+
+ %I describe my work in theses three areas in context of indoor localization. %Finally, in applications where there is no localization infrastructure in place, we require 
+%On one hand, we have systems with dedicated infrastructure that are high in cost and deliver 
+%Across solutions, there is a trade-off between cost of infrastructure and setup, and performance, in terms of accuracy and time taken for the location to converge. I take an alternate approach where I derive insights that cut across the sensing, embedded systems, and estimation stack. I jointly explore emerging localization technologies, the location estimation algorithms as well as tackle the challenges of system setup. 
 %My work has explored new techologies, location estimation algorithms as well as tackled the challenges of system setup. 
 %My approach is to design emerging technologies and the location estimation algorithms and system setup tools to enable them at scale in the real-world. 
 %To this end, my work has explored multiple emerging technologies in terms of estimating location as well as the challenges of configuration and setup.
