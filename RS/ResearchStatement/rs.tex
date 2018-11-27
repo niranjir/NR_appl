@@ -58,13 +58,18 @@
 
 \end{table}
  
-%I am interested in designing  embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
+%I am interested in designing embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
+I am interested in designing embedded sensing systems and inference algorithms for modern cyber-physical systems (CPS). 
 My research focuses on embedded sensing systems and information processing for modern cyber-physical systems (CPS). 
+%I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
 I leverage theoretical frameworks from signal processing and estimation and apply them to the complexities that arise from real-world sensing systems. 
 %I work close to the physical layer, and I understand the practical constraints, the interaction between signals and systems from first principles, and the theoretical tools relevant to the problem. 
 I work close to the physical layer while striving to understand the practical constraints, the interaction between signals and systems from first principles, and the relevant theoretical tools to the problem. 
-The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from extremely precise mobile phone localization that can be used for navigation and mobile augmented reality, to more extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
+The balance between systems and theory in my work positions me extremely well to tackle the important challenges in designing systems that are practical, cost-effective, efficient, and reliable. My thesis demonstrates this approach applied to several indoor localization applications, ranging from precise mobile phone localization that can be used for navigation and mobile augmented reality, to extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
 
+%I jointly design the sensor front-end, system models, the networked embedded system and the information processing algorithms. I believe my strong interest in systematic, rather than ad-hoc, approach to design combined with my appreciation for system level implementation and my breadth of knowledge, ranging from Signal processing to system level design of the sensing, communication and computing platforms, puts me in a perfect place to tackle the important challenges of designing of practical, cost-effective, yet reliable and efficient CPS. I do this by working close to the physical layer, understanding the interaction between signals and systems from first principles, understanding the practical constraints, and the theoretical tools (signal processing, estimation, optimization) relevant to the problem. I build systems that are practical and design information processing algorithms that are applicable to a broad class to systems. I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world.
+
+%From a sensing perspective, the challenge in CPS is the heterogeneity in sensors across a large number of devices and the lack of a systematic way to go from sensor data to inference. 
 % \paragraph{Old Intro: }
 % My research lies at the intersection between embedded systems, estimation theory, and signal processing applied to Cyber-Physical System (CPS) applications.  From a sensing and estimation perspective, the challenge in CPS is in dealing with heterogeneity in sensing across a large number of devices and the lack of a systematic way to go from sensor data to inference. I tackle this challenge by developing an understanding of the practical constraints, the theoretical tools relevant to the problem and a first principles understanding of the interaction between sensors, signals and systems. I then apply these constraints to the design of embedded sensing systems, system models and inference algorithms. My thesis demonstrates this approach applied to several indoor localization applications ranging from extremely precise mobile phone ranging that can be used for way-finding and mobile augmented reality to more extreme systems designed for firefighting scenarios where multiple incomplete sources of data need to be opportunistically fused together.  
 
@@ -100,7 +105,7 @@ The balance between systems and theory in my work positions me extremely well to
 %I have demonstrated my approach with indoor localization for my dissertation. I have deployed and proven several indoor localization systems in the real-world. 
 
 \paragraph{Impact. }
-My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '15, RTAS '17, RTSS '13, ICCPS '13, IPIN '16 and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received two patents, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and led to funding from NSF, SRC, NIST, and industry. %This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, and asset mapping applications.
+My research has resulted in publications at IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '15, RTAS '17, RTSS '13, ICCPS '13, IPIN '16 and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received two patents, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and led to funding from NSF, SRC, NIST, and industry. I worked in industry for three years prior to joining CMU. During my PhD, I have interned at and had product impact at Apple, and collaborate with Texas Instruments. My exposure to industry has helped ground my research in solving real-world problems in cost-effective scalable ways. %Working in systems reserachI worked in industry prior to joining CMU and interned at and had impact on products at Apple and Texas Instruments during my PhD. My%This work is being applied to indoor navigation, mobile persistent augmented reality, firefighter localization, and asset mapping applications.
 
 
 \section{Indoor Localization Research}
@@ -155,7 +160,7 @@ To bring order to the deployment chaos, I designed systematic beacon placement a
 My first insight was to use the floor plan geometry in a clever way to reduce the number of beacons compared to conventional placement. 
 My second insight was to quantify the quality of a beacon placement by adopting the Cramer-Rao lower bound on the location estimate, which is captured by the geometry of beacons. I built on these concepts and implemented beacon placement algorithms in a toolchain where system installers can specify accuracy and coverage requirements for a floor plan and obtain a placement. 
 
-While working on this, I found that we could apply theory in computation geometry to solve these problems in a rigorous manner.  
+While working on this, I found that we could apply computation geometry theory to solve these problems in a rigorous manner.  
 I started collaborating with Prof. Jie Gao from Stony Brook University and her student. 
 We mathematically formulated the beacon placement problem and proposed algorithms with provable guarantees \cite{beaconplacementtheory}.  
 
@@ -207,7 +212,8 @@ My next steps are to evaluate the feasibility of various technologies under smok
 %Our proposed system is a combination of fixed beacons on firetrucks that are automatically mapped using our SLAM algorithm; firefighters with wearable devices that range to each other; and estimation algorithms based on mobile network localization. We are exploring the possibility of exit signs as potential locations for low-power beacons in emergencies. 
 
 \paragraph{Secure Localization. }
-Indoor localization is imminent. However, current systems can easily be attacked and locations can be spoofed. It is critical to make these systems secure. Secure location-awareness is also important to enable device discovery and interaction in the internet-of-things with heterogeneous untrusted devices.
+%Indoor localization is imminent. However, c
+Current indoor localization systems can easily be attacked and locations can be spoofed. It is critical to make these systems secure for them to be usable. Secure location-awareness is also important to enable device discovery and interaction in the internet-of-things with heterogeneous untrusted devices.
 %Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. 
 %To start thinking about localization from a security-point-of-view, 
 My early conversations with a security research group suggest that we have to re-think all layers of the localization stack starting from the physical layer design, to the location estimation, and infrastructure setup algorithms. %can re-design various layers of the system stack for security, ranging from the low-level signals, to the localization and beacon placement algorithms.  
@@ -240,6 +246,35 @@ Localization and imaging techniques using mmWave technology can benefit localiza
 %nication. 
 To solve problems in this space, I can draw from my experience of working across layers of the system stack and my geometry-based methods for indoor localization. \\
 
+
+\vspace{-10pt}
+\paragraph{Mixed Reality. }
+Mixed reality is promising for interacting with future smart devices and to close the digital-physical loop in real-time. It requires accurate representation of the digital display, smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.
+I would develop design principles for fusing multiple sensors, such as vision, emerging localization technologies, and VLC at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. % and I am collaborating on a VLC-based approach for discovering AR content. 
+
+
+\paragraph{New Applications and New Paradigms. }
+I want to enable a future where we use minimal resources to go from smart devices to meaningful applications. 
+%I will continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
+With large amounts of sensor data, resource constraints on embedded devices, privacy challenges, and diverse end-applications that make	 inferences from the same data, we require new paradigms for 
+sensor data processing at the edge. % and sensing and system models that are suitable for edge devices. % I would explore efficient paradigms for processing sensor data at the edge, and in developing embedded machine learning algorithms for sensor data processing. 
+I am interested in tackling challenges for new application domains that are moving towards `smarts' - such as healthcare, manufacturing, agriculture and training. 
+I believe I can apply my approach of working across the system stack and working across theory and systems %designing embedded sensing systems, system models, design tools, and estimation algorithms to these domains where there is tremendous diversity in the sensors, devices, and application requirements. I will continue 
+%to tackle problems that span theory and systems 
+to tackle the challenges of designing practical and reliable cyber-physical systems. 
+
+
+
+\footnotesize
+\bibliographystyle{abbrv}
+
+\bibliography{references}  % sigproc.bib is the name of the Bibliography in this case
+
+\end{document}
+
+%I am interested in closing the digital-physical loop with mixed reality applications. %
+%I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
+
 % Future localization and communication technologies will impact each
 % other. I am interested in using localization for solving challenges in next generation communication tech-
 % nologies. Location awareness in fifth generation (5G) wireless networks will enable resource allocation by
@@ -259,38 +294,6 @@ To solve problems in this space, I can draw from my experience of working across
 % %New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, l
 % Location awareness in fifth generation (5G) wireless networks can predict channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
 % % New challenges and opportunities emerge when sensing, location, and communication technologies of the future co-exist. For instance, location awareness in fifth generation (5G) wireless networks can enable better allocation of resources, by predicting channel characteristics and connectivity. Location-aware distributed devices, such as a network of drones, can coordinate together for beamforming and creating large MIMO arrays for mmWave technology. To solve research challenges in this space, I can draw from my experience in localization and communication, and my approach of working across layers of the system stack. \\
-\vspace{-10pt}
-\paragraph{Mixed Reality. }
-Mixed reality is promising for interacting with future smart devices and to close the digital-physical loop in real-time. It requires accurate representation of the digital display, smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.
-%I am interested in closing the digital-physical loop with mixed reality applications. %
-%I am interested in both sensing methods to convert physical content into virtual content and in real-time overlay and updates of virtual content on physical objects. 
-I would develop design principles for fusing multiple sensors, such as vision, emerging localization technologies, and VLC at the low-level to create robust mixed reality systems. As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. % and I am collaborating on a VLC-based approach for discovering AR content. 
-
-%\paragraph{Resource-Constrained Sensor Data Processing. }
-
-\paragraph{New Applications and New Paradigms. }
-I want to enable a future where we use minimal resources to go from smart devices to meaningful applications. 
-%I will continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
-With large amounts of sensor data, resource constraints on embedded devices, privacy challenges, and diverse end-applications that make	 inferences from the same data, we require new paradigms for 
-sensor data processing at the edge. % and sensing and system models that are suitable for edge devices. % I would explore efficient paradigms for processing sensor data at the edge, and in developing embedded machine learning algorithms for sensor data processing. 
-I am interested in tackling challenges for new application domains that are moving towards `smarts' - such as healthcare, manufacturing, agriculture and training. 
-I believe I can apply my approach of working across the system stack and working across theory and systems %designing embedded sensing systems, system models, design tools, and estimation algorithms to these domains where there is tremendous diversity in the sensors, devices, and application requirements. I will continue 
-%to tackle problems that span theory and systems 
-to tackle the challenges of designing practical and reliable cyber-physical systems. 
-
-
-
-
-
-
-
-
-\footnotesize
-\bibliographystyle{abbrv}
-
-\bibliography{references}  % sigproc.bib is the name of the Bibliography in this case
-
-\end{document}
 
 %My future research would span several technical and application domains, and I plan to seek funding from government agencies and industry.
 
