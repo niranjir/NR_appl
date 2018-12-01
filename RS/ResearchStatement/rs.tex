@@ -1,7 +1,11 @@
 \documentclass[10pt]{article}
 
 %\usepackage{fancyhdr}
- 
+%  \usepackage{fancyheadings}
+% \pagestyle{fancy}
+% \usepackage[english]{babel}
+% \usepackage[utf8]{inputenc}
+% \usepackage{fancyhdr}
 %\pagestyle{headings}
 %\markright{John Smith}
 
@@ -15,7 +19,7 @@
 \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
 \usepackage{lipsum}
 \usepackage{url}
-
+\usepackage{fancyheadings}
 \usepackage[margin=1in]{geometry}
 \usepackage{lastpage}
 \usepackage{graphicx}
@@ -28,11 +32,27 @@
 \usepackage{enumerate}
 \usepackage{color}
 \usepackage{titling}
+\usepackage{scrpage2}
 %\usepackage{subcaption}
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
 \newcommand{\tableref}[1]{Table~\ref{tab:#1}}
 
 \newcommand{\compactimg}{\vspace{-12pt}}
+
+
+\ifoot[Research Statement: Niranjini Rajagopal]{}
+\cfoot[]{}
+\ofoot[\pagemark]{\pagemark}
+
+\pagestyle{scrplain}
+
+%\rhead{Your Name Here\\6.xxx\\ \today}
+% \rhead{}
+% \lhead{}
+% \lfoot{Teaching Statement - Niranjini Rajagopal}
+% \rfoot{\thepage}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
 
 \clubpenalty=20000 
 \widowpenalty=20000
@@ -60,27 +80,27 @@
  
 
 I strive to bridge theory and practice in modern Cyber-Physical Systems. %CPS. Modern cyber-physical systems require theoreticians and practitioners to work together.
-Theoreticians often abstract away relevant aspects of the problem to achieve elegant results and prove important properties about their analysis and design. While some insight can still be drawn from these advancements, they usually leave a wide gap that the system designer needs to fill in order to have a working implementation. %Unreliabilities occur as a consequence of unrealistic assumptions and inefficiencies arise as a consequence of non trivial constraints imposed by the real-world and finally cost is rarely taken into account. 
-Unreliability occurs as a consequence of unrealistic assumptions and inefficiencies arise as a consequence of non trivial constraints imposed by the real-world and finally cost is rarely taken into account. 
+Theoreticians often abstract away relevant aspects of problems to achieve elegant results and prove important properties about their analysis and design. While some insight can still be drawn from these advancements, they usually leave a wide gap that the system designer needs to fill in order to have a working implementation. %Unreliabilities occur as a consequence of unrealistic assumptions and inefficiencies arise as a consequence of non trivial constraints imposed by the real-world and finally cost is rarely taken into account. 
+Unreliability occurs as a consequence of unrealistic assumptions, and inefficiencies arise as a consequence of non-trivial constraints imposed by the real-world. Finally, cost is rarely taken into account. 
 % Unrealistic assumptions and non trivial constraints imposed by the real-world lead to unreliable and inefficient systems. Also, cost is rarely taken into account. 
-On the other hand, a complete bottom-up approach, based usually on experience and domain knowledge, is not scalable as intuition tends to fade in the face of scale and complexity. I strive to introduce systematic design principles into networked embedded sensing systems with the goal of designing inference algorithms that can achieve high reliability, cost-effectiveness and high performance in Cyber-Physical Systems (CPS). Differently from pure theoreticians, I work close to the physical layer, and I understand its practical constraints, which I include in my models. As a consequence, my systematic approach takes advantage of the peculiar structure of the system and provides solutions that not only are near optimal according to the chosen design metric, but also readily implementable. Knowledge of the system allows me to perform opportunistic design, by extracting useful information from sensors and devices deployed for other purposes. \\
+On the other hand, a complete bottom-up approach, based usually on experience and domain knowledge, is not scalable. This is because intuition tends to fade in the face of scale and complexity. I strive to introduce systematic design principles into networked embedded sensing systems with the goal of designing inference algorithms that can achieve high reliability, cost-effectiveness, and high performance in Cyber-Physical Systems (CPS). As opposed to pure theoreticians, I work close to the physical layer, and I understand its practical constraints, which I include in my models. As a consequence, my systematic approach takes advantage of the particular structure of the system and provides solutions that not only are near optimal according to the chosen design metric, but also readily implementable. Knowledge of the system allows me to perform opportunistic design, by extracting useful information from sensors and devices deployed for other purposes. \\
 
 My thesis demonstrates this approach applied to several indoor localization applications, ranging from precise mobile phone localization that can be used for navigation and mobile augmented reality, to extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
-In all of this, not only did I develop reliable algorithms, but I also successfully demonstrated the feasibility of my design in several real world deployments.
+In all of this, not only did I develop reliable algorithms, but I also successfully demonstrated the feasibility of my design in several real-world deployments.
 %In all of this, not only did I develop algorithms that provide performance guarantees, but I also demonstrated the feasibility of my design in several real world deployments.
-As a result, my research has been published at premier highly selective conferences in the broad area of CPS as IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '17, RTAS '15,  RTSS '13, ICCPS '13, IPIN '16 and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received a patent, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and led to funding from NSF, SRC, NIST, and industry.
+As a result, my research has been published at such premier highly selective conferences in CPS as IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '17, RTAS '15,  RTSS '13, ICCPS '13, IPIN '16, and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received a patent, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and led to funding from NSF, SRC, NIST, and industry.
 
 
 
 \section{Indoor Localization Research}
 
-GPS has revolutionized the way we interact with the outdoor environment.  % by providing location service. 
+GPS has revolutionized the way we interact with the outdoor environment,  % by providing location service. 
 %Several solutions, like GPS, have emerged in the past decade for localizing mobile devices. 
-Yet we don't have pervasive and accurate systems for indoor localization.  
+and yet, we don't have pervasive and accurate systems for indoor localization.  
 %It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and the constraints imposed by indoor spaces.  
-Due to the wide variation in application requirements and indoor spaces it is unlikely that a single technology will effectively address all indoor localization problems.  At the same time, it is impractical, due to cost, to deploy several different localization systems in all buildings at global scale. %I believe, we require a systematic approach to obtain %An ideal 
+Due to the wide variation in application requirements and indoor spaces, it is unlikely that a single technology will effectively address all indoor localization problems.  At the same time, it is impractical, due to cost, to deploy several different localization systems in all buildings at a global scale. %I believe, we require a systematic approach to obtain %An ideal 
 %It is unclear if a single technology will emerge that can solve all indoor localization problems, because of the wide variability in application requirements and indoor spaces.  
-Working between theory and systems allows me to approach this issue in a unique manner. I build new hardware platforms by opportunistically re-using existing infrastructure and designing new sensing and signaling schemes by exploiting low-level properties of sensors. For this I draw from my theoretical knowledge to build systems. I then design opportunistic estimation methods that can accurately localize even in unreliable conditions, where traditional estimation techniques would fail. This naturally requires an understanding of practical systems to scope the design of algorithms. Finally, I bridge theory and practice by building tools that allow system installers to deploy infrastructure with predictable behavior and high confidence about its performance and reliability.  
+Working between theory and systems allows me to approach this issue in a unique manner. I build new hardware platforms by opportunistically reusing existing infrastructure and designing new sensing and signaling schemes by exploiting low-level properties of sensors. For this, I draw from my theoretical knowledge to build systems. I then design opportunistic estimation methods that can accurately localize even in unreliable conditions, where traditional estimation techniques would fail. This naturally requires an understanding of practical systems to scope the design of algorithms. Finally, I bridge theory and practice by building tools that allow system installers to deploy infrastructure with predictable behavior and high confidence about its performance and reliability.  
 
 %My approach is to solve this problem opportunistically - to do the best with what is available. %By being opportunistic, these systems use the available devices in the environment, 
 %First, I opportunistically use infrastructure (smart lighting, smart speakers, emerging internet-of-things) in novel ways to obtain location information. Second, I opportunistically integrate the available sensor sources in novel ways to get more information with less data. \\
@@ -91,7 +111,7 @@ Working between theory and systems allows me to approach this issue in a unique 
 I designed one of the \textbf{earliest visible light communication (VLC) systems} to send data from overhead LED lights to phones. The phones use proximity to lights in order to determine their location.  The challenge in building this system is that in order for the lights to be flicker-free, they have to operate at a much higher frequency than what can be sampled by the camera frame rate. 
 To overcome this fundamental limitation, my insight was to exploit the low-level rolling-shutter effect of camera sensors to capture a time-varying light signal as a spatially varying image. Further, I used the exposure control as a temporal filter and the focus control as a spatial filter to improve the signal-to-noise ratio \cite{rajagopal2014visual, rajagopal2014demonstration}. %I extended this and leveraged the different properties of camera and photodiodes to design a novel hybrid communication system where a single light simultaneously sent two independent data streams at different rates for camera and photodiodes \cite{rajagopal2014hybrid}. 
 I extended this to design a novel hybrid communication system where a single light simultaneously sent two independent data streams at different rates to cameras and photodiodes \cite{rajagopal2014hybrid} by leveraging the fact that they have different filtering  properties. % different properties of camera and photodiodes . 
-In this work, I applied signal processing, communication and estimation theory to the design of these networked wireless embedded systems.
+In this work, I applied signal processing, communication, and estimation theory to the design of these networked wireless embedded systems.
 %The proposed approaches generalizes to any LED-camera communication system and have been cited 170+ times. Subsequently the field of VLC has grown significantly in both academia and industry.
 
 I also contributed to building an \textbf{ultrasonic time-of-flight (ToF) platform} that localizes unmodified mobile devices \cite{rtas-alps-platform, lazik2015alps,lazik2015alpsdemo}. This method is applicable to emerging smart speakers for localization. I experimented with and characterized several \textbf{emerging ToF technologies from industry} including WiFi, BLE, and UWB. %I worked with Apple on emerging WiFi ToF, with Texas Instruments on emerging Bluetooth Low Energy 5 ToF, and with commodity ultra-wideband ToF systems. 
@@ -99,12 +119,12 @@ I realized that ToF ranging is promising and will eventually find its way into f
 
 
 \paragraph{Novel Estimation Algorithms. } 
-We have solvers for location estimation in ideal scenarios with good measurements from multiple beacons, and have solvers for location tracking where we update the location based on prior estimate and new measurements. However, the realistic case where traditional location solvers fail occurs when we have to acquire the initial location without a prior and we may not have sufficient line-of-sight measurements from beacons. In addition, measurements may be incorrect due to lack of line-of-sight between transmitting beacons and the receiver. In order to cope with this issue, past approaches simply over deploy beacons, incurring higher deployment and maintenance cost, or do not initialize until the users walks around, causing a significant delay in providing a position estimate.
+We have solvers for location estimation in ideal scenarios with good measurements from multiple beacons, and have solvers for location tracking where we update the location based on prior estimate and new measurements. However, the realistic case where traditional location solvers fail occurs when we have to acquire the initial location without a prior and we may not have sufficient line-of-sight measurements from beacons. In addition, measurements may be incorrect due to lack of line-of-sight between transmitting beacons and the receiver. In order to cope with this issue, past approaches simply over-deploy beacons, incurring higher deployment and maintenance cost, or do not initialize until the users walks around, causing a significant delay in providing a position estimate.
 
-Differently from existing approaches, I \textbf{opportunistically estimate location} based on the available measurements and the floor plan knowledge \cite{rajagopal2018enhancing}. I use the insight that in indoor spaces, we can use the absence of measurements from beacons as useful information, and we can check for consistencies between the measurements and the floor plan. I use models that are simple enough to generalize across indoor environments and ranging technologies, yet practical enough. For instance, I model the beacon coverage using optical ray-tracing and the only assumption I make on an indirect  signal path is that it is longer than the direct path. This approach is effective since indoor spaces are not random in geometry.  % and the shortest measurement is likely to be received from a LOS beacon. 
+In contrast to existing approaches, I \textbf{opportunistically estimate location} based on the available measurements and the floor plan knowledge \cite{rajagopal2018enhancing}. I use the insight that in indoor spaces, we can use the absence of measurements from beacons as useful information, and we can check for consistencies between the measurements and the floor plan. I use models that are simple enough to generalize across indoor environments and ranging technologies, yet practical enough. For instance, I model the beacon coverage using optical ray-tracing and the only assumption I make on an indirect  signal path is that it is longer than the direct path. This approach is effective since indoor spaces are not random in geometry.  % and the shortest measurement is likely to be received from a LOS beacon. 
 I have shown how this approach significantly reduces the amount of infrastructure, and is robust to %uncertainties due to non-line-of-sight measurements in the real-world. 
 disturbances and uncertainties. %ness of the system. 
-This location estimation solver implemented on our ultrasonic platform \textbf{won the Microsoft Indoor Localization Competition} in 2015. In this work, I used my insights gained from practical system deployments to design estimation algorithms.% ultrasonic platform and this location estimation solver. 
+This location estimation solver implemented on our ultrasonic platform \textbf{won the Microsoft Indoor Localization Competition in 2015}. In this work, I used my insights gained from practical system deployments to design estimation algorithms.% ultrasonic platform and this location estimation solver. 
 %Location estimation is typically done in two stages. An initial location is first acquired and over time the location is updated with new measurements. 
 %Acquiring the initial location with ToF systems is challenging in the real world, since we often have only few line-of-sight (LOS) ranges and several incorrect non-line-of-light (NLOS) ranges. Further, we don't have ways to acquire orientation instantly. 
 %While past approaches deploy too many beacons, or require the user to walk around before the location converges, 
@@ -114,8 +134,8 @@ This location estimation solver implemented on our ultrasonic platform \textbf{w
 
 Another challenging practical problem on the estimation side is acquiring an initial orientation. Unfortunately, a compass is not sufficiently reliable indoors due to the large amount of metal in buildings. 
 %Acquiring orientation on phones is hard since the magnetic field is unreliable indoors. 
-To solve this problem, I designed a novel approach where I crowd-source a dense magnetic field map from pedestrians with mobile phones by fusing data from beacons, on-board camera and inertial sensors. Subsequently, I leverage this map as a reference to \textbf{instantly acquire orientation} upon startup. 
-Using this concept, my collaborators and I built an end-to-end \textbf{multi-user persistent augmented reality (AR)} system \cite{mobileAR}. This work won \textbf{best demo} award at IPSN 2018 \cite{rajagopal2018welcome}. I then extended this work to support \textbf{continuous location updates}. This system \textbf{won the Microsoft Indoor Localization competition} in 2018 with ultra-wideband beacons.  
+To solve this problem, I designed a novel approach where I crowd-source a dense magnetic field map from pedestrians with mobile phones by fusing data from beacons, on-board cameras, and inertial sensors. Subsequently, I leverage this map as a reference to \textbf{instantly acquire orientation} upon startup. 
+Using this concept, my collaborators and I built an end-to-end \textbf{multi-user persistent augmented reality (AR)} system \cite{mobileAR}. This work won the \textbf{best demo} award at IPSN 2018 \cite{rajagopal2018welcome}. I then extended this work to support \textbf{continuous location updates}. This system \textbf{won the Microsoft Indoor Localization competition in 2018} with ultra-wideband beacons.  
 
 The aforementioned techniques have been implemented on an ultrasound-based localization system that spawned a startup. A pilot has recently been deployed for AR-based product finding in a retail store. 
 
@@ -135,15 +155,15 @@ The aforementioned techniques have been implemented on an ultrasound-based local
 To the best of my knowledge, a systematic approach to the efficient deployment of time-of-flight indoor localization beacons is missing. 
 Beacon deployment is often seen as an installer's problem. 
 %Beacon setup at scale lacks a systematic method, is laborious and time-consuming, and does not adapt over time. 
-However, by jointly designing estimation algorithms and the beacon placement approaches, and quantifying the beacon placement in terms of the localization accuracy it can provide, one can at the same time place fewer beacons and achieve get greater robustness while estimating location.
+However, by jointly designing estimation algorithms and the beacon placement approaches, and by quantifying the beacon placement in terms of the localization accuracy it can provide, one can at the same time place fewer beacons and achieve greater robustness while estimating location.
 
 I decided to take on this challenge and designed systematic {\bf beacon placement} algorithms \cite{rajagopal2016beacon}. 
 My first insight was to use the floor plan geometry in a clever way to reduce the number of beacons compared to conventional placement. 
 My second insight was to quantify the quality of a beacon placement by adopting the Cramer-Rao lower bound on the location estimate, which is expressed analytically by the geometry of beacons. I built on these concepts and implemented beacon placement algorithms in a toolchain where system installers can specify accuracy and coverage requirements for a floor plan and obtain a suitable placement which aims at minimizing the number of employed beacons.
-After some research into existing methodologies, I found that tools from computation geometry theory can be extended and then used to solve these problems in a rigorous manner.  To this goal I stroke a collaboration with Prof. Jie Gao from Stony Brook University and her research group. We mathematically formulated the beacon placement problem and proposed algorithms with provable guarantees about minimality of beacons under performance constraints~\cite{beaconplacementtheory}.  In these works, I used my understanding from practical systems to design theoretical tools based on estimation, optimization and geometry, which we then use for practical deployments.
+After some research into existing methodologies, I found that tools from computation geometry theory can be extended and then used to solve these problems in a rigorous manner.  To this goal, I struck up a collaboration with Prof. Jie Gao from Stony Brook University and her research group. We mathematically formulated the beacon placement problem and proposed algorithms with provable guarantees about minimality of beacons under performance constraints~\cite{beaconplacementtheory}.  In these works, I used my understanding from practical systems to design theoretical tools based on estimation, optimization, and geometry, which we then use for practical deployments.
 
-To address another issue associated with deployment I built an algorithm for {\bf automatic beacon mapping}, applicable in scenarios where we deploy an ad-hoc, on-the-fly, localization systems, and  applicable to future internet-of-things applications where  infrastructure can be time-varying, where devices appear, disappear and move about the environment. %To solve the complementary problem where we first place beacons and then map their locations, 
-For this goal I leveraged existing algorithms in robotics and designed a pedestrian-based simultaneous localization and mapping (SLAM) algorithm \cite{mobileAR}. I implemented the algorithm to map ultra-wideband beacons in several deployments. The algorithm is also currently used for asset tracking applications.
+To address another issue associated with deployment, I built an algorithm for {\bf automatic beacon mapping}, applicable in scenarios where we deploy an ad-hoc, on-the-fly, localization systems. This algorithm is also applicable to future internet-of-things applications where infrastructure can be time-varying, and where devices appear, disappear, and move about the environment. %To solve the complementary problem where we first place beacons and then map their locations, 
+For this goal, I leveraged existing algorithms in robotics and designed a pedestrian-based simultaneous localization and mapping (SLAM) algorithm \cite{mobileAR}. I implemented the algorithm to map ultra-wideband beacons in several deployments. The algorithm is also currently used for asset tracking applications.
 
 
 \paragraph{Other Areas in CPS. }
@@ -154,14 +174,20 @@ Earlier in my studies, I worked on non-intrusive load monitoring \cite{rajagopal
 
 \section{Future Directions}
 
-CPS are becoming pervasive and growing in scale with applications ranging from smart cities, smart transport, smart buildings, to smart manufacturing and smart medical facilities inside buildings, to personalized applications like body area networks.  %Though these systems Soon, we will begin to see these applications coming together and sharing physical and compute resources. 
-We are moving towards paradigms where physical and compute resources are going to be used by multiple applications and shared by multiple tenants.  For instance, tracking of an asset will span smart manufacturing, smart transport and smart cities.  A second example is a shared network of drones serving multiple applications, such as imaging for smart agriculture, and transportation of critical resources to a hospital for an emergency. Multi-tenant problems are already beginning to plague smart building infrastructures that should be able to be reconfigured on-the-fly based on the context of the building occupants. %The grand challenge lies r
+CPS are becoming pervasive and growing in scale with applications ranging from smart cities, smart transport, 
+%and smart buildings, to smart manufacturing and smart medical facilities inside buildings, 
+to personalized applications like body area networks.  %Though these systems Soon, we will begin to see these applications coming together and sharing physical and compute resources. 
+In the long-term I want to develop theoretical and practical frameworks to support 
+%We are moving towards 
+paradigms where physical and computational resources are used by multiple applications and shared by multiple tenants.  For instance, tracking of an asset will span smart manufacturing, smart transport, and smart cities.  A second example is a shared network of drones serving multiple applications, such as imaging for smart agriculture, and transportation of critical resources to a hospital for an emergency. Multi-tenant problems are already beginning to plague smart building infrastructures that could %should be able to 
+be reconfigured on-the-fly based on the context of the building occupants. %My goal is to develop  %The grand challenge lies r
 
 %My goal is to develop theoretical and practical frameworks to enable these systems to reliably interoperate at scale, in a cost-effective manner. The critical challenges are right at the cyber-physical interface.
 %In addition to domain-specific tools, we require rapidly deployable systems, security built-in at the cyber-physical layer, new ways of cyber-physical interaction, algorithms for processing physically distributed data efficiently, and integration of next generation communication for real-time operation. I strongly believe my approach of working across theory and systems and experience in working across layers of the system stack puts me in the perfect place to tackle the challenges along the way. Moreover, location services are fundamental to these physically distributed applications, and I can employ my localization expertise to address many of these problems. Some preliminary steps are:
 
-In the near-term I want to build theoretical and practical frameworks for CPS in the built environment, for applications ranging from disaster resilience, smart buildings, to smart manufacturing or smart medical facilities. These systems should enable any user to scan the environment, discover devices, view and interact with both objects and digital content in real-time. % for any information, and interact with it in real time. 
-In addition to application-specific sensing, this requires advancements in several areas including system integration, rapid deployment methods, integration with communication, secure sensing and creating mixed reality systems for interaction. Some preliminary directions are:
+In the near-term, I want to build theoretical and practical frameworks for CPS in the built environment for applications ranging from disaster resilience or smart buildings, to smart manufacturing or smart medical facilities. 
+These systems should enable any user to scan the environment, discover services, and view and interact with both objects and digital content in real-time. % for any information, and interact with it in real time. 
+In addition to application-specific sensing, this requires advancements in several areas including system integration, rapid deployment methods, integration with next-generation communication systems, secure sensing, and creating mixed reality systems for interaction. Some preliminary directions are:
 
 %Imagine if we could seamless interact with smart buildings and %These systems should be secure, reliable, spatially-aware, integrated with next generation communication, support real-time interaction with objects and smart devices for a wide variety of applications indoors. % through interaction with objects and smart devices indoors. 
 
@@ -169,7 +195,7 @@ In addition to application-specific sensing, this requires advancements in sever
 \paragraph{Rapidly Deployable System. }
 Future CPS will require rapid infrastructure deployment in an ad-hoc manner.  As a concrete step towards this lofty goal, I would like to explore robust systems for localizing first responders and building occupants in serious fires without relying on existing infrastructure. I led the proposal for a firefighter localization project which is funded by National Institute of Standards and Technologies (NIST) that has started to look at the role of opportunistically sharing information between clusters of first responders to refine location estimates.
 The proposed method uses beacons on firetrucks, wearable devices on firefighters, a long-range low-power wireless network, and mobile network localization and mapping algorithms. 
-My next steps are to evaluate the impact on various technologies under smoke, develop methods to train low-accuracy inertial sensors using vision-based high accuracy sensors, integrate infrared sensors and drones for increasing resilience. I am working with NIST and industry on emerging beaconing technologies that could potentially be part of all buildings in the exit signs, primarily for emergency (e911), but are also useful for bootstrapping other systems. 
+My next steps are to evaluate the impact on various technologies under smoke, develop methods to train low-accuracy inertial sensors using vision-based high accuracy sensors, and integrate infrared sensors and drones for increasing resilience. I am working with NIST and industry on emerging beaconing technologies that could potentially be part of all buildings in the exit signs, primarily for emergency (e911), but could be also useful for bootstrapping other systems. 
  
 % by opportunistic use of available sensors. % This problem is challenging since we cannot rely on any existing infrastructure. 
 %Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. 
@@ -180,7 +206,7 @@ My next steps are to evaluate the impact on various technologies under smoke, de
 %re-designing looking at how the ToF localization stack I have designed would change for these systems to be robust to certain physical layer attacks. 
 %I am analyzing how to re-design the location estimation algorithms and the beacon placement algorithms for robustness to certain physical layer attacks. 
 \paragraph{Secure Sensing. }
-Current sensing systems can easily be attacked since the system models do not account for a possible attack. It is therefore critical to make these systems secure. As a first step, I am tackling the problem of secure location sensing. Secure location is a key feature to enable device discovery and interaction in the internet-of-things with heterogeneous untrusted devices. My early conversations with  security research groups suggest that security needs to be included at system design rather than added as an afterthought. This requires a complete overhaul of all the layers of the localization stack starting from the physical layer design, to the location estimation, and infrastructure setup algorithms. I will leverage the growing body of research on CPS resilience and the experience gained at Carnegie Mellon interacting with my advisors and peer PhD students at Cylab and adapt it to the CPS domain I am targeting, taking advantage of its nuances and peculiarities.  More broadly, I will once again work across theory and systems, for re-designing sensing systems to be designed-in secure. 
+Current sensing systems can easily be attacked since the system models do not account for a possible attack. It is therefore critical to secure these systems. As a first step, I am tackling the problem of secure location sensing. Secure location is a key feature to enable device discovery and interaction in the internet-of-things with heterogeneous untrusted devices. My early conversations with security research groups suggest that security needs to be included at system design rather than added as an afterthought. This requires a complete overhaul of all the layers of the localization stack, starting from the physical layer design, to the location estimation, and infrastructure setup algorithms. I will leverage the growing body of research on CPS resilience and the experience gained at Carnegie Mellon interacting with my advisors and peer PhD students at Cylab and adapt it to the CPS domain I am targeting, taking advantage of its nuances and peculiarities.  More broadly, I will once again work across theory and systems, for re-designing sensing systems to be designed-in secure. 
 % Current indoor localization systems can easily be attacked and locations can be spoofed. It is critical to make these systems secure for them to be usable. Secure location-awareness is also important to enable device discovery and interaction in the internet-of-things with heterogeneous untrusted devices. My early conversations with a security research group suggest that we have to re-think all layers of the localization stack starting from the physical layer design, to the location estimation, and infrastructure setup algorithms. 
 % A preliminary direction for physical layer security is to use multiple sensor sources and check for consistency among them since they have different physical properties and attack models. %More broadly, I want to design future sensing systems to be secure. %A preliminary direction is that we can check for consistency among different sensors physical layer properties. 
 
@@ -214,7 +240,7 @@ Current sensing systems can easily be attacked since the system models do not ac
 \paragraph{Mixed Reality. }
 Mixed reality is an ultimate realization of CPS with tight coupling between the digital and physical worlds in real-time, with a human-in-the-loop. %What makes it more challenging and interesting is the human-in-the-loop. 
 This includes augmenting the human's perception of reality through various senses and enabling the human to realize actuation in the physical world digitally. Among many challenges, 
-mixed reality requires accurate representation of the digital display, smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.  As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. In future, I would develop new sensing techniques and  design principles for fusing multiple sensors, e.g. vision, emerging localization technologies, and VLC, at the low-level to create robust mixed reality systems. More broadly, I am interested in building architectural frameworks for integration of various sensing, actuation and interaction technologies. \\
+mixed reality requires accurate representation of the digital display, as well as smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.  As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. In future, I would develop new sensing techniques and design principles for fusing multiple sensors, e.g. vision, emerging localization technologies, and VLC, at the low-level to create robust mixed reality systems. More broadly, I am interested in building architectural frameworks for integration of various sensing, actuation, and interaction technologies. \\
 
 
 %\paragraph{Longer Term: Smart Everything. }
@@ -230,17 +256,19 @@ mixed reality requires accurate representation of the digital display, smart dev
 %to tackle problems that span theory and systems 
 %I will continue to tackle problems across theory and systems to design practical and reliable CPS applications. 
 \section{Building my Research Group}
-I plan to have a large interdisciplinary research group. Irrespective of how students balance theory and practice in their work, my goal is for them to have a systematic analytical approach to design and an appreciation for practical real-world implementation. While working on indoor localization, I interned at Apple's location group, worked with Texas Instruments emerging localization technology, and met with users of localization systems ranging from firefighters to museum staff who wanted to deploy localization systems. These interactions helped me think about the problem more holistically and motivated me to keep my work grounded in real-world problems. I am looking forward to diversifying into new domains with collaborations.  \\
 
-My style of working is collaborative, I am co-advised and I have had the opportunity to be part of two research groups during my PhD. One of my external collaborations started off with a casual discussion with a faculty at a conference, and another collaboration started off when I met a faculty who visited Carnegie Mellon to give talks. % and I would encourage my students to collaborate with faculty and students in other research groups. 
-In addition, I have been part of two SRC multi-university research centers, Terraswarm and CONIX throughout my PhD. Being part of these research centers has given me the opportunity to experience first-hand the impact of collaborations across groups and universities, and build a wide academic network. I will create opportunities for my students to grow through such collaborations and interactions within and outside the university.  \\
+I plan to have a large, interdisciplinary research group. Irrespective of how students balance theory and practice in their work, my goal is for them to have a systematic and analytical approach to design, as well as an appreciation for practical real-world implementation. While working on indoor localization, I interned at Apple's location group, worked with Texas Instruments' emerging localization technology, and met with users of localization systems ranging from firefighters to museum staff who wanted to deploy localization systems. These interactions helped me think about the problem more holistically and motivated me to keep my work grounded in real-world problems. I am looking forward to diversifying into new domains with collaborations.  \\
+
+My style of working is collaborative. 
+I am co-advised, and I have been fortunate to be part of two research groups during my PhD. One of my external collaborations started off with a casual discussion with a faculty at a conference, and another collaboration started off when I met a faculty who visited Carnegie Mellon to give talks. % and I would encourage my students to collaborate with faculty and students in other research groups. 
+In addition, I have been part of two SRC multi-university research centers, Terraswarm and CONIX, throughout my PhD. Being part of these research centers has given me the opportunity to experience firsthand the impact of collaborations across groups and universities, and to build a wide academic network. I will create opportunities for my students to grow through such collaborations and interactions within and outside the university.  \\
 
 %Each student is unique and I will adapt my style of working to each student. 
 %I had the opportunity to see my work spawn into a startup, have worked full-time in both a multi-national and a small-sized organization, have collaborated with industry research labs, and I am choosing an academic path. With this experience, I will create an environment that supports each student's own interests and goals. That said, the common goal is for students to become independent thinkers and researchers. %I will create research opportunities for undergraduate and masters students as well. I would also like to engage 
  % Overall, I will create a group where students can grow both professionally and personally.\\
 
 %Given the nature of my work, spanning theory and systems, 
-During the course of my PhD, I have significantly contributed to writing of proposals by bringing new ideas and fresh perspectives on the proposed work. I am therefore confident in my ability to secure funding from industry and government agencies to build my group and sustain my proposed research agenda.  Most importantly, I can appreciate the value of refining ideas and giving students enough room to become independent thinkers and researchers. 
+During the course of my PhD, I have significantly contributed to the writing of proposals by bringing new ideas and fresh perspectives on the proposed work. I am therefore confident in my ability to secure funding from industry and government agencies to build my group and sustain my proposed research agenda.  %Most importantly, I can appreciate the value of refining ideas and giving students enough room to become independent thinkers and researchers. 
 %I have been fortunate to have two advisors ad be part of two research groups during my PhD, and have been part of both independent projects and working in large groups. 
 
 % how These research centers  exposure to research from diverse areas  to students and faculty in other universities has been extremeley valuable
@@ -249,7 +277,7 @@ During the course of my PhD, I have significantly contributed to writing of prop
 %I take an end-end approach right from system design to understanding 
 
 
-\footnotesize
+%\footnotesize
 \bibliographystyle{unsrt}
 
 \bibliography{references}  % sigproc.bib is the name of the Bibliography in this case

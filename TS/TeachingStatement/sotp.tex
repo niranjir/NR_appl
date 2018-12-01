@@ -1,7 +1,11 @@
 \documentclass[10pt]{article}
 
 %\usepackage{fancyhdr}
- 
+%  \usepackage{fancyheadings}
+% \pagestyle{fancy}
+% \usepackage[english]{babel}
+% \usepackage[utf8]{inputenc}
+% \usepackage{fancyhdr}
 %\pagestyle{headings}
 %\markright{John Smith}
 
@@ -15,9 +19,9 @@
 \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
 \usepackage{lipsum}
 \usepackage{url}
-
+\usepackage{fancyheadings}
 \usepackage[margin=1in]{geometry}
-
+\usepackage{lastpage}
 \usepackage{graphicx}
 \usepackage{balance}
 \usepackage{comment}
@@ -28,21 +32,36 @@
 \usepackage{enumerate}
 \usepackage{color}
 \usepackage{titling}
+\usepackage{scrpage2}
 %\usepackage{subcaption}
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
 \newcommand{\tableref}[1]{Table~\ref{tab:#1}}
 
 \newcommand{\compactimg}{\vspace{-12pt}}
 
-\clubpenalty=10000 
-\widowpenalty=10000
+
+\ifoot[Teaching Statement: Niranjini Rajagopal]{}
+\cfoot[]{}
+\ofoot[\pagemark]{\pagemark}
+
+\pagestyle{scrplain}
+
+%\rhead{Your Name Here\\6.xxx\\ \today}
+% \rhead{}
+% \lhead{}
+% \lfoot{Teaching Statement - Niranjini Rajagopal}
+% \rfoot{\thepage}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+\clubpenalty=20000 
+\widowpenalty=20000
 \setlength{\parindent}{0cm}
 
 
-
 \begin{document}
-\pagenumbering{gobble}
-
+%\pagenumbering{gobble}
+%\thispagestyle{empty}
 \begin{table}
 \color{blue}
 %\color{Emerald}
@@ -63,95 +82,91 @@
 
 %as a faculty.
 
-My teaching philosophy is informed by my work at the Eberly Center for Teaching Excellence and Educational Innovation at CMU, by teaching in my discipline, and by a variety of roles I have held in outreach programs. As a Graduate Teaching Fellow for the past five years at the Eberly Center, I have deepened my understanding of pedagogy through reading books and research papers, and regular discussions on pedagogy. By consulting for graduate students, I have had the opportunity to see diverse teaching styles and methods across various schools in CMU. 
+My teaching philosophy is informed by my work at the Eberly Center for Teaching Excellence and Educational Innovation at Carnegie Mellon, by teaching in my discipline, and by a variety of roles I have held in outreach programs. As a \textbf{Graduate Teaching Fellow} for four years at the Eberly Center, I have deepened my understanding of pedagogy through reading books and research papers and participating in discussions on pedagogy every two weeks, and %, and attending over a dozen workshops focused on learning and teaching. 
+by consulting for graduate students 
+%, I have had the opportunity to see diverse teaching styles 
+across various departments in Carnegie Mellon. 
 %\textit{"Learning results from what the student does and thinks and only from what the student does and thinks. The teacher can advance learning only by influencing what the student does to learn" - Herbert A. Simon. }
 %Learning is a complex process, influenced by several factors including students prior knowledge, 
-My approach is to be aware of underlying factors that influence student learning, take a research-based approach to teaching, and center my methods around goals for students. \\% and to be cognizant of 
+%I take an evidence-based to understanding student learning and  the factors that influence student learning and methods for effective teaching. I use this understanding to adapt my methods around discipline-specific goals for students, and to create inclusive learning environments. 
+My approach is to be aware of the underlying factors that influence student learning, and take an evidence-based approach to teaching. I adapt my methods around discipline-specific goals for students, and strive to create inclusive learning environments. 
+\\% and to be cognizant of 
 
-%Learning happens by the student. A teacher facilitates the process.  Each student, each class and each teaching experience is different. 
 
-%My philosophy is tha
-%to adapt my teaching methodology around goals for student learning since each student, class and teaching experince is different. \\
 
-%adapt my teaching methods based on the goals for student learning. In outreach
-
-%I have also learnt about 
-%Learning happens by the student. A teacher facilitates the process.  Each student, each class and each teaching experience is different. My teaching style is to adapt my teaching methodology around goals for student learning. 
-
-%In outreach programs, the goal is sometimes for the students to have fun with a new 
-%My teaching philosophy is to 
-%I take a research-based approach to teaching. This is influencced To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at CMU. I am among a select group (around 8 students across CMU) of graduate teaching fellows (GTF) at the Eberly Center for Teaching Excellence and Educational Innovation. First, I support the professional development of the CMU graduate student community in their teaching. Second, I gain deeper professional development in pedagogy through consultation training, as well as pedagogical reading and discussions. 
-%As a GTF, I have had the opportunity to work with students across various schools in CMU and see diverse teaching styles and methods. I have attended a dozen seminars in pedagogy as well as created two short seminars on peer feedback and classroom climate. In order to learn about pedagogical research from a computer science and design perspective, I took a course offered by CMU's human computer interaction department on designing large scale peer-learning systems. 
-%I am looking forward to trying out different methods for teaching and engaging students.
-
-%Learning happens by the student. A teacher facilitates the process.  Each student, class and teaching experience is different. %My teaching philosophy is to center my teaching methodology around the goals for students. I adapt my teaching methods 
-%My teaching philosophy is informed by my role as a Graduate Teaching Fellow at CMU's Eberly Center for Teaching Excellence and Educational Innovation, my roles as a teaching assistant Teaching Assistant in Electrical and Computer Engineering at CMU, and by my varied roles in several outreach programs.
-
-%\paragraph{Teaching Experience:}
-%At the department of Electrical and Computer Engineering (ECE) at Carnegie Mellon University (CMU), I was a teaching assistant for signals and systems (undergraduate course) for two semesters, wireless networks and applications (undergraduate and graduate course), and a guest lecturer for embedded systems (undergraduate course) for two lectures. I have assisted with ECE labs for high school students, and with science, maths and robotics classes for K-12 students through outreach initiatives. I have mentored masters students on research projects. \\
-
-%\paragraph{Teaching Philosophy: }
-%Learning happens by the student. A teacher facilitates the process.  Each student, each class and each teaching experience is different. My teaching philosophy is to adapt my teaching methodology around goals for student learning. 
-%s a teacher in ECE, I want students to develop the skills to think critically about solving real-world problems. 
-%Towards this, first, 
+%\paragraph{Student Learning Goals. }
 As a teacher in Electrical and Computer Engineering, my broad goals for students are the following. %depending on the level of the course and students, I balance the emphasis across these learning goals.
-First, students should develop a strong foundational understanding, irrespective of the course. Second, they should develop a framework to connect various concepts to each other. This includes connecting concepts across courses, connecting theory and practice,  and connecting concepts to other domains. Third, they should develop the ability to apply their skills to new problems, and be able to communicate their approach. \\%Depending on the level of the course and students, I adapt the emphasis across these learning goals.\\
+First, students should develop a \textbf{strong foundational understanding}. Second, they should develop a framework to \textbf{connect various concepts to each other}. This includes connecting concepts across courses, connecting theory and practice, and connecting concepts to other domains. Third, they should develop the ability to \textbf{apply their skills to new problems}, and be able to communicate their approach. \\%Depending on the level of the course and students, I adapt the emphasis across these learning goals.\\
 
 
-While teaching signals and systems, my goal was for students to develop strong fundamentals and an intuition of the mathematical concepts. 
-I often designed homework problems by breaking them down into smaller problems. Students said this was helpful since they were able to know how to connect the concepts to solve the problem. 
-I conducted frequent quizzes and gave them feedback, and revised my recitations based on the students understanding. 
+As a teaching assistant (TA) for \textbf{Signals and Systems}, my goal was for students to develop strong fundamentals and an intuition of the mathematical concepts. 
+I often designed homework problems by breaking them down into smaller, more manageable sub-problems. %Students said this was helpful since they were able to more easily see connections between the concepts required to solve the entire problem. 
+This helped students more easily see connections between the concepts required to solve the entire problem.
+I conducted quizzes, and \textbf{revised my recitations} specifically based on their level of understanding. 
 %For a particular concept that students struggle with every year, I put in extra effort and attempted different techniques. %I held a special class where we dived deep and spent time in  
-When students found equations confusing and wrote them incorrectly, rather than correcting them, I spent time with them one-on-one in my office hours and helped them step-through the process of interpreting what their equations meant intuitively and in the real-world. 
-One assessment of these methods was that the students performance in the midterm exam on a difficult concept for which I had tried several teaching approaches, was significantly better than any of the past years. 
-%This approach helped them understand the concepts better. 
-%I also tried an activity in the classroom where students first solved a convolution problem, then worked in pairs and discussed their appraoch then solved another problem individually. We saw an improvement in the class performance in the second problem. 
-%To help students develop an intuition of the concepts. I tried different approaches. 
-%I found that some while some students understood the concepts easier through illustrations, others found it easier with a purely mathematical approach. I included both approaches in my recitations and office hours. 
-To help students make connections between theory and practice,  I introduced applied problems in my recitations and the homework assignments. We invited faculty from different areas to talk about their research. These lectures have continued since then, and every year I give a short lecture in the class about how the course content applies to my research.  \\
+When students wrote equations incorrectly, rather than merely correcting them, I spent time with them one-on-one in my office hours and \textbf{helped them} step through the process of \textbf{interpreting} what their equations meant intuitively and in the real-world. 
+One assessment of these methods was that the \textbf{students performance} in the exams on a difficult concept for which I had tried several teaching approaches, was \textbf{significantly better than any of the past years}. \\
 
-A gratifying moment for me was when I got an email from a faculty (after being a two-time TA for this course)
+To help students make connections between theory and practice,  I \textbf{introduced applied problems} in my recitations and in the homework assignments. We \textbf{invited graduate students} from diverse areas to give talks about their research and how it connects to the course. These talks have \textbf{carried forward since then}, and I continue to give a short talk every year.
+As a TA for \textbf{Wireless Networks and Applications}, I \textbf{designed new labs} for students to experiment with the physical layer channel characteristics using various wireless platforms. 
+For one of the labs, I asked students to design their own experiment, make a hypothesis about what they expect to see, and then explain any differences between their hypothesis and the experiments. %In another lab, students experimented with channel state information. 
+Through these labs, students learned to connect the concepts in the class to the real-world. \\% and demonstrated their understanding of how the unpredictable nature of the physical layer requires sophisticated design from the upper layers.\\ 
+
+A gratifying moment for me was when I got an email from a faculty (after being a two-time TA for the signals course)
 %then I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty 
-that over the past few years there was a department-wide change in trend with more students taking upper-level signals courses, due to enjoying the signals and systems course. Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. \\
+that there was a \textbf{change in trend within the department} with more undergraduate students taking upper-level signals courses, due to their experience in the signals and systems course. Four of us who have been TAs for this course over the years were acknowledged to have contributed to the change in trend.\\
+\vspace{-12pt}
+%\paragraph{Inclusive Learning Environments.}
 
-%Students learn by doing and thinking. 
-%Experiments are an effective way for learning. 
-While being a TA for the wireless networks class, I designed new labs for students to experiment with the physical layer channel characteristics using various wireless platforms. 
-For one of the labs, I asked students to design their own experiments, make a hypothesis about what they expect to see, and then perform the experiment and explain any differences between their hypothesis and the real-world experiments. %In another lab, students experimented with channel state information. 
-Through these labs, students learnt to connect the concepts in the class to the real-world applications and demonstrated their understanding of how the unpredictable nature of the physical layer requires sophisticated design from the upper layers. Two groups of students subsequently defined their course project based on their interest in these initial labs. \\ 
+%I make a concerted effort to learn about students' backgrounds and interests. In large classes, I conduct ungraded quizzes on the first day of class to assess students prior knowledge, and address any gaps through extra classes and office hours. In smaller classes and while mentoring students for research, I meet students one-on-one early on and understand their background, any specific goals, and their interests, and we discuss various options for moving ahead. 
+I make a concerted effort to \textbf{learn about students' background knowledge} through ungraded quizzes on the first day of class, and through one-on-one meetings. I address any gaps through extra classes and office hours. In smaller classes and while mentoring students for research, I meet students one-on-one early on and understand their background, any specific goals, and their interests, and we discuss various options for moving ahead. 
+Within the  classroom, I \textbf{adapt my teaching methods} to the differences in learning styles of my students. %For instance, d
+During my recitations in the signals class, where I was explaining a concept through an illustration, one student told me that they were finding it difficult to understand through illustrations and preferred a mathematical approach. Subsequently, I used both methods while explaining concepts and preparing recitation notes that were available to students. %In order to
+%to not implicitly marginalize 
+%support who a student with learning disability, I often stayed back for \textbf{extended office hours} and continued to work with them.
+%Through observing classes in various domains and engaging in pedagogical discussions and readings, I became aware of the effect of classroom climate on student learning. %To understand this in more depth, with my peers, we read research papers to understand how factors ranging from the tone in syllabus to the design of peer-based activities impact the classroom climate. 
+To make all students feel comfortable in sharing their ideas and asking questions, one strategy I would try in future classes is to first \textbf{break them into smaller groups} to discuss with their group-mates, and then later ask them to share with the class. This would reduce the barrier some students face to speaking up. % and I have personally found this effective in seminars and workshops. %One strategy for students to feel free in sharing their ideas is to first break them into smaller groups to discuss with their group-mates, and then later ask them to share with the class. When I have implemented this, it has reduced the barrier some students face to speaking up.\\
 
-%Student motivation drives what they do. 
-%Students prior knowledge and their motivation influences their learning. 
-I take the effort to learn about students background and interests in both my teaching and research mentoring. In large classes, I conduct ungraded quizzes on the first day of class to assess students prior knowledge, and address any gaps through extra classes and office hours. In smaller classes and for research mentoring, I meet students one-on-one early on and understand their background, any specific goals, their interests, and discuss various options for moving ahead. %I frequently check in with research students I mentor on whe
+%While a TA for an undergraduate course, I made myself aware of students with learning disabilities. 
+
+
+%I frequently check in with research students I mentor on whe
  %While mentoring students for research, I check-in with them regularly about
 %When I was a TA for the wireless networking class, I met each student individually during the first week of class and discussed their background courses and their goals for this course. 
 %This understanding guided how I worked with them during the course, in office hours, providing feedback on as. 
-%\paragraph{Research Mentoring. }
-%When I mentor students for research, I start off by defining concrete problems where they can clearly measure their progress, and gain confidence to try out harder problems. Over time we together define research problems based on their interest, and at some point they transition to working independently and start teaching me. 
-One student I mentored got interested in robotics, subsequently we defined an independent project in simultaneous localization and mapping and she eventually joined a robotics startup. She co-authored two research papers. We Another student I mentored on mobile sensing got interested in augmented realty, worked with me in that area, and took courses in vision and graphics, and subsequently joined Apple. He is a co-author on a paper and was part of our team that won best demo. \\%I also give them feedback on how they communicate in writing, presentation or explaining concepts on a whiteboard.
+\paragraph{Research Mentoring. }
+Mentoring students for research has been a gratifying experience for me. 
+%When I mentor students for research, I start off by defining concrete problems where they can clearly measure their progress and gain confidence to try out harder problems. Over time, we together define research problems based on their interests. %, and at some point they transition to working independently and teaching me. 
+%A masters student I mentored contributed to localization research, became interested in \textbf{robotics}, and subsequently we defined an independent project in simultaneous localization and mapping, and eventually joined a robotics startup. \textbf{She co-authored two research papers} published in IPIN 2016 and IPSN 2018 conferences. % and eventually joined a robotics startup. 
+ A masters student I mentored on \textbf{localization research} became interested in robotics, worked on localization and mapping algorithms,  and eventually joined a robotics startup. \textbf{She co-authored two research papers} published at the IPIN 2016 and IPSN 2018 conferences.
+Another masters student I mentored on \textbf{mobile sensing research} became interested in augmented realty, worked with me in that area, and subsequently joined Apple. He \textbf{co-authored a paper}, which is under review, and was part of our team that won the \textbf{best demo award} at the IPSN 2018 conference.\\ %Occasionally, I also give them feedback on their communication through writing, presentation or explaining concepts on a whiteboard.
+
+I \textbf{led a student seminar} at Carnegie Mellon for two years to create a space where graduate students could give practice talks and receive feedback. In this role, I started panel-based seminars to discuss topics such as fellowships, internships, and job search for \textbf{graduate students' overall professional growth}. 
 
 
 
-\paragraph{Courses I Can Teach:}
-I can teach courses in the general area of signals, communication and estimation. For instance - signals and systems;  digital signal processing; statistical signal processing; inference, estimation and detection; digital communication; wireless networks and applications; linear systems. I can also teach embedded systems and control systems. 
-Seminar courses I can develop and teach are - cyber-physical-systems; mobile sensing applications; localization and mapping (theory and applications); internet-of-things; 
-I plan to have a project component and possibly labs in all my classes. I would introduce discussions on research papers for my graduate classes.
+\paragraph{Courses I Can Teach. }
+I can teach courses in the general area of signals, communication, and estimation. For instance: 
+Signals and Systems; Digital Signal Processing; Statistical Signal Processing; Estimation and Detection; Digital Communication; Wireless Networks and Applications; and Linear Systems. 
+%I can also teach embedded systems and control systems. 
+Seminar courses I can develop and teach are: Cyber-Physical Systems; Mobile Sensing Applications; Localization, Tracking and Mapping; Internet-of-Things. These courses would have a mix of theory and implementation. I plan to have a project component and possibly labs in all of my classes. I would introduce discussions on research papers for my graduate classes.
 
 %Created seminars on topics I wanted to understand better: peer feedback, and classroom climate\\
 
 
- \paragraph{Outreach.} 
- At CMU, I have been active in outreach and volunteering to increase participation of women in STEM. %to introduce ECE to high school women. 
-As an example, along with another PhD student, I started a new program called mobile labs to introduce ECE to high school girls. I wrote a grant to secure funding for the program and co-led it for two years. We conducted hands-on labs ranging from programming, microcontrollers, energy harvesting, to audio processing in a girls high school in Pittsburgh. I felt it was important that students develop confidence with their first ECE experience. For this, we made sure the labs were designed such that students completed concrete tasks, and reflected in writing on what new skills they learnt. We also added bonus assignments to challenge the students who wanted to explore further. We actively sought out female undergraduate students to lead the labs. At least one of their students joined CMU ECE's summer program the next year. I have volunteered for two years with Society of Women Engineer's middle school day where we introduce middle school girls to various engineering labs.
+ \paragraph{Outreach. } 
+ At Carnegie Mellon, I have been active in outreach and volunteering to increase participation of \textbf{women in STEM}. %to introduce ECE to high school women. 
+As an example, along with another PhD student, I started a new program called Mobile Labs to \textbf{introduce ECE to high school girls}. We wrote a grant to \textbf{secure funding} for the program and \textbf{co-led it for two years}. We conducted hands-on labs ranging from programming, microcontrollers, and energy harvesting, to audio processing in a girls' high school in Pittsburgh. I felt it was important that students develop confidence with their first ECE experience. For this, we made sure the labs were designed such that students completed concrete tasks, and \textbf{reflected on the new skill in a feedback form}. We also added bonus assignments to challenge the students who wanted to explore further. We actively sought out female undergraduate students to lead the labs. At least \textbf{one of their students joined Carnegie Mellon ECE's summer program} the next year. I have volunteered for two years with the \textbf{Society of Women Engineer's middle school day}, where we introduce middle school girls to various engineering labs.\\
 
-I have worked with several educational outreach programs for K-12 in both India and US and involved myself in various activities, ranging from raising funds, teaching, leading programs, creating instructor manuals and volunteering. Most of these are avenues where we introduce a new domain to students in a fun hands-on manner. Through these experiences, I have learnt to adapt the teaching style to the culture, resources available, and the background knowledge of students. \\
+I have worked with several \textbf{educational outreach programs for K-12 in both India and US} starting from my undergraduate years and involved myself in various activities, ranging from raising funds, teaching, assisting in labs, leading programs, creating instructor manuals, and volunteering. Most of these are avenues where we introduce a new domain to students in a fun, hands-on manner. Through these experiences, I have learned to \textbf{adapt the teaching style to the culture, resources available, and the background} knowledge of students. \\
 
-I led a student seminar at CMU for two years to create a space where graduate students could give practice talks and receive feedback. In this role, I started panel-based seminars to discuss topics such as fellowships, internships and job search for students overall professional growth. 
+%In order to accommodate students requests due to personal or medI have several occasions offered flexible office hours when students are not able to make it to office hours due to personal or medical reasons. 
+%While being a TA for the courses, I made notes for all my recitations and made them available to students who were unable to make it in person and who wanted to go over the content at their own pace. 
 
-% \paragraph{Learning about Teaching: }To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at CMU. I am among a select group (around 8 students across CMU) of graduate teaching fellows (GTF) at the Eberly Center for Teaching Excellence and Educational Innovation. First, I support the professional development of the CMU graduate student community in their teaching. Second, I gain deeper professional development in pedagogy through consultation training, as well as pedagogical reading and discussions. 
+% \paragraph{Learning about Teaching: }To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at Carnegie Mellon. I am among a select group (around 8 students across Carnegie Mellon) of graduate teaching fellows (GTF) at the Eberly Center for Teaching Excellence and Educational Innovation. First, I support the professional development of the Carnegie Mellon graduate student community in their teaching. Second, I gain deeper professional development in pedagogy through consultation training, as well as pedagogical reading and discussions. 
 % %We receive training in pedagogical research and science and 
 %  %In this role, I consult for graduate student instructors by observing their classes, and providing objective constructive feedback. 
-% As a GTF, I have had the opportunity to work with students across various schools in CMU and see diverse teaching styles and methods. I have attended a dozen seminars in pedagogy as well as created two short seminars on peer feedback and classroom climate. In order to learn about pedagogical research from a computer science and design perspective, I took a course offered by CMU's human computer interaction department on designing large scale peer-learning systems. %. Tattended a course in CMU on the design of large scale peer-learning systems to learn about ways to engage students through peer-based learning in large classes.  
+% As a GTF, I have had the opportunity to work with students across various schools in Carnegie Mellon and see diverse teaching styles and methods. I have attended a dozen seminars in pedagogy as well as created two short seminars on peer feedback and classroom climate. In order to learn about pedagogical research from a computer science and design perspective, I took a course offered by Carnegie Mellon's human computer interaction department on designing large scale peer-learning systems. %. Tattended a course in Carnegie Mellon on the design of large scale peer-learning systems to learn about ways to engage students through peer-based learning in large classes.  
 % %I enjoy learning about research in teaching and learning and am open to experimenting with different methods based on what is best for the students. 
 % I am looking forward to trying out different methods for teaching and engaging students. % working with students and trying out . %trying out new methods and improving them over time based on what is effective for students. %trying out different methods to engage students in the classroom,and facilitate their growth. %Students growth is my priority. % and I will always strive to  . % 
 
@@ -166,3 +181,169 @@ I led a student seminar at CMU for two years to create a space where graduate st
 %\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
 
 \end{document}
+
+%Two students subsequently defined their course projects based on their interest in these initial labs. \\
+%This approach helped them understand the concepts better. 
+%I also tried an activity in the classroom where students first solved a convolution problem, then worked in pairs and discussed their appraoch then solved another problem individually. We saw an improvement in the class performance in the second problem. 
+%To help students develop an intuition of the concepts. I tried different approaches. 
+%I found that some while some students understood the concepts easier through illustrations, others found it easier with a purely mathematical approach. I included both approaches in my recitations and office hours. 
+ % about how the course content applies to my research.  \\
+ 
+%Learning happens by the student. A teacher facilitates the process.  Each student, each class and each teaching experience is different. 
+
+%My philosophy is tha
+%to adapt my teaching methodology around goals for student learning since each student, class and teaching experince is different. \\
+
+%adapt my teaching methods based on the goals for student learning. In outreach
+
+
+%One indication of an inclusive climate, in my experience, is one where all students feel comfortable in sharing their ideas and asking questions. 
+
+%I have also learnt about 
+%Learning happens by the student. A teacher facilitates the process.  Each student, each class and each teaching experience is different. My teaching style is to adapt my teaching methodology around goals for student learning. 
+
+%In outreach programs, the goal is sometimes for the students to have fun with a new 
+%My teaching philosophy is to 
+%I take a research-based approach to teaching. This is influencced To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at Carnegie Mellon. I am among a select group (around 8 students across Carnegie Mellon) of graduate teaching fellows (GTF) at the Eberly Center for Teaching Excellence and Educational Innovation. First, I support the professional development of the Carnegie Mellon graduate student community in their teaching. Second, I gain deeper professional development in pedagogy through consultation training, as well as pedagogical reading and discussions. 
+%As a GTF, I have had the opportunity to work with students across various schools in Carnegie Mellon and see diverse teaching styles and methods. I have attended a dozen seminars in pedagogy as well as created two short seminars on peer feedback and classroom climate. In order to learn about pedagogical research from a computer science and design perspective, I took a course offered by Carnegie Mellon's human computer interaction department on designing large scale peer-learning systems. 
+%I am looking forward to trying out different methods for teaching and engaging students.
+
+%Learning happens by the student. A teacher facilitates the process.  Each student, class and teaching experience is different. %My teaching philosophy is to center my teaching methodology around the goals for students. I adapt my teaching methods 
+%My teaching philosophy is informed by my role as a Graduate Teaching Fellow at Carnegie Mellon's Eberly Center for Teaching Excellence and Educational Innovation, my roles as a teaching assistant Teaching Assistant in Electrical and Computer Engineering at Carnegie Mellon, and by my varied roles in several outreach programs.
+
+%\paragraph{Teaching Experience:}
+%At the department of Electrical and Computer Engineering (ECE) at Carnegie Mellon University (Carnegie Mellon), I was a teaching assistant for signals and systems (undergraduate course) for two semesters, wireless networks and applications (undergraduate and graduate course), and a guest lecturer for embedded systems (undergraduate course) for two lectures. I have assisted with ECE labs for high school students, and with science, maths and robotics classes for K-12 students through outreach initiatives. I have mentored masters students on research projects. \\
+
+%\paragraph{Teaching Philosophy: }
+%Learning happens by the student. A teacher facilitates the process.  Each student, each class and each teaching experience is different. My teaching philosophy is to adapt my teaching methodology around goals for student learning. 
+%s a teacher in ECE, I want students to develop the skills to think critically about solving real-world problems. 
+%Towards this, first, 
+
+% \documentclass[10pt]{article}
+
+% %\usepackage{fancyhdr}
+ 
+% %\pagestyle{headings}
+% %\markright{John Smith}
+
+% \date{}
+
+% \usepackage{amsmath}    % need for subequations
+% \usepackage{graphicx}   % need for figures
+% \usepackage{verbatim}   % useful for program listings
+% \usepackage{color}      % use if color is used in text
+% \usepackage{subfigure}  % use for side-by-side figures
+% \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
+% \usepackage{lipsum}
+% \usepackage{url}
+
+% \usepackage[margin=1in]{geometry}
+
+% \usepackage{graphicx}
+% \usepackage{balance}
+% \usepackage{comment}
+% \usepackage{amssymb,amsmath}
+% \usepackage{caption}
+% \DeclareCaptionType{copyrightbox}
+% \usepackage{subfigure}
+% \usepackage{enumerate}
+% \usepackage{color}
+% \usepackage{titling}
+% %\usepackage{subcaption}
+% \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+% \newcommand{\tableref}[1]{Table~\ref{tab:#1}}
+
+% \newcommand{\compactimg}{\vspace{-12pt}}
+
+% \clubpenalty=10000 
+% \widowpenalty=10000
+% \setlength{\parindent}{0cm}
+
+
+
+% \begin{document}
+% \pagenumbering{gobble}
+
+% \begin{table}
+% \color{blue}
+% %\color{Emerald}
+% \begin{tabular*}{\textwidth}{l r}
+% \large\textbf{TEACHING STATEMENT} & 
+% \hfill \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+% \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+% \large\textbf{NIRANJINI RAJAGOPAL}\\
+% \hline
+% \end{tabular*}
+
+% \end{table}
+
+
+% I am passionate about education and am looking forward to playing an active role in the personal and professional growth of students. 
+% %am looking forward to taking on the roles of a teacher and mentor as a faculty . %I enjoy teaching and working with students.    %I am looking forward to taking on the roles of being a teacher and mentor as a faculty. 
+% %I believe teachers and mentors play an important role in the personal and professional growth of students. 
+
+% %as a faculty.
+
+% \paragraph{Courses I Can Teach:}
+% I can teach courses in the general area of signals, communication and estimation. For instance - signals and systems;  digital signal processing; statistical signal processing; inference, estimation and detection; digital communication; wireless networks and applications; linear systems. I can also teach embedded systems and control systems. 
+% Seminar courses I can develop and teach are - cyber-physical-systems; mobile sensing applications; localization and mapping (theory and applications); internet-of-things; 
+% I plan to have a project component and likely labs in all of my classes. I would introduce discussions on research papers for my graduate classes.
+
+% \paragraph{Teaching Experience:}
+% At the department of Electrical and Computer Engineering (ECE) at Carnegie Mellon University (Carnegie Mellon), I was a teaching assistant for signals and systems (undergraduate course) for two semesters, wireless networks and applications (undergraduate and graduate course), and a guest lecturer for embedded systems (undergraduate course) for two lectures. I have assisted with ECE labs for high school students, and with science, maths and robotics classes for K-12 students through outreach initiatives. I have mentored masters students on research projects. \\
+
+% \paragraph{Teaching Philosophy: }
+% My teaching philosophy is to adapt my teaching methodology around pre-defined goals for student learning. 
+% As a teacher in ECE, I want students to develop the skills to think critically about solving real-world problems. 
+% Towards this, first, they should develop a strong foundational understanding, irrespective of the course. Second, they should develop a framework to connect various concepts to each other. This includes connecting concepts across courses, connecting theory and practice,  and connecting concepts to other domains. Third, they should develop the ability to apply their skills to new problems, and be able to communicate their approach. Depending on the level of the course and students, I adapt the emphasis across these learning goals.\\
+
+
+% While teaching signals and systems, my goal was for students to develop strong fundamentals and an intuition of the mathematical concepts.
+% I often designed homework problems by breaking them down into smaller problems. Students said this was helpful since they were able to know how to connect the concepts to solve the problem. 
+% I conducted frequent quizzes and gave them feedback, and revised my recitations based on the students understanding. 
+% %To help students develop an intuition of the concepts. I tried different approaches. 
+% %I found that some while some students understood the concepts easier through illustrations, others found it easier with a purely mathematical approach. I included both approaches in my recitations and office hours. 
+% When students found equations confusing and wrote them incorrectly, rather than correcting them, I spent time with them one-on-one in my office hours and helped them step-through the process of interpreting what their equations meant intuitively and in the real-world. %This approach helped them understand the concepts better. 
+% %I also tried an activity in the classroom where students first solved a convolution problem, then worked in pairs and discussed their appraoch then solved another problem individually. We saw an improvement in the class performance in the second problem. 
+% One assessment of these methods was that the students performance in the midterm exam on a difficult concept for which I had tried several teaching approaches, was significantly better than any of the past years. \\
+
+
+
+% To help students make connections between theory and practice,  I introduced applied problems in my recitations and the homework assignments. We invited faculty from different areas to talk about their research. These lectures have continued since then, and every year I give a short lecture in the class about how the course content applies to my research.  I was a TA for this course in 2012 and 2015. In 2017 I got an email from the faculty that over the past few years there was a department-wide change in trend with more students taking upper-level signals courses, due to enjoying the signals and systems course. Four of us who have been a TA for this course over the years were acknowledged to have contributed to the change in trend. \\
+
+% While being a TA for the wireless networks class, I designed new labs for students to experiment with the physical layer channel characteristics using various wireless platforms. 
+% For one of the labs, I asked students to design their own experiments, make a hypothesis about what they expect to see, and then perform the experiment and explain any differences between their hypothesis and the real-world experiments. In another lab, students experimented with channel state information. Through these labs, students learnt to connect the concepts in the class to the real-world applications and demonstrated their understanding of how the unpredictable nature of the wireless channel requires sophisticated design from the upper layers of the stack. Two groups of students subsequently defined their course project based on their interest in these initial labs. \\ 
+
+% %Student motivation drives what they do. 
+% When I have flexibility in working with students individually (for small classes, and while mentoring on research projects), I make sure to have a conversation early on with them about their background, any specific goals from the research project or class, their interests, and discuss various options for moving ahead. %While mentoring students for research, I check-in with them regularly about
+% %When I was a TA for the wireless networking class, I met each student individually during the first week of class and discussed their background courses and their goals for this course. 
+% %This understanding guided how I worked with them during the course, in office hours, providing feedback on as. 
+% When I mentor students for research, I start off by defining concrete problems where they can clearly measure their progress, and gain confidence to try out harder problems. Over time we together define research problems based on their interest, and at some point they transition to working independently and start teaching me. One student who got interested in robotics, subsequently worked on an independent project in simultaneous localization and mapping and eventually joined a robotics startup. She co-authored two research papers. Another student I mentored on mobile sensing got interested in augmented realty, worked with me in that area, and took courses in vision and graphics, and subsequently joined Apple. He is a co-author on a paper and was part of our team that won best demo. I also give them feedback on how they communicate in writing, presentation or explaining concepts on a whiteboard.
+
+
+%  \paragraph{Outreach: } 
+%  At Carnegie Mellon, I have been active in outreach and volunteering to increase participation of women in STEM. %to introduce ECE to high school women. 
+% As an example, along with another PhD student, I started a new program called mobile labs to introduce ECE to high school girls. I wrote a grant to secure funding for the program and co-led it for two years. We conducted hands-on labs ranging from programming, microcontrollers, energy harvesting, to audio processing in a girls high school in Pittsburgh. I felt it was important that students develop confidence with their first ECE experience. For this, we made sure the labs were designed such that students completed concrete tasks, and reflected in writing on what new skills they learnt. We also added bonus assignments to challenge the students who wanted to explore further. We actively sought out female undergraduate students to lead the labs. This program increased interest in engineering in the school and after the first semester of this program, one of their students joined Carnegie Mellon ECE's summer program.\\
+
+% I have worked with several educational outreach programs for K-12 in both India and US and involved myself in various activities, ranging from raising funds, teaching, leading programs, creating instructor manuals and volunteering. Most of these are avenues where we introduce a new domain to students in a fun hands-on manner. Through these experiences, I have learnt to adapt the teaching style to the culture, resources available, and the background knowledge of students. \\
+
+% I led a student seminar at Carnegie Mellon for two years to create a space where graduate students could give practice talks and receive feedback. In this role, I started panel-based seminars to discuss topics such as fellowships, internships and job search for students overall professional growth. 
+
+% \paragraph{Learning about Teaching: }To further my growth as a teacher, I actively seek avenues to improve my own understanding of effective teaching practices from pedagogical experts at Carnegie Mellon. I am among a select group (around 8 students across Carnegie Mellon) of graduate teaching fellows (GTF) at the Eberly Center for Teaching Excellence and Educational Innovation. First, I support the professional development of the Carnegie Mellon graduate student community in their teaching. Second, I gain deeper professional development in pedagogy through consultation training, as well as pedagogical reading and discussions. 
+% %We receive training in pedagogical research and science and 
+%  %In this role, I consult for graduate student instructors by observing their classes, and providing objective constructive feedback. 
+% As a GTF, I have had the opportunity to work with students across various schools in Carnegie Mellon and see diverse teaching styles and methods. I have attended a dozen seminars in pedagogy as well as created two short seminars on peer feedback and classroom climate. In order to learn about pedagogical research from a computer science and design perspective, I took a course offered by Carnegie Mellon's human computer interaction department on designing large scale peer-learning systems. %. Tattended a course in Carnegie Mellon on the design of large scale peer-learning systems to learn about ways to engage students through peer-based learning in large classes.  
+% %I enjoy learning about research in teaching and learning and am open to experimenting with different methods based on what is best for the students. 
+% I am looking forward to trying out different methods for teaching and engaging students. % working with students and trying out . %trying out new methods and improving them over time based on what is effective for students. %trying out different methods to engage students in the classroom,and facilitate their growth. %Students growth is my priority. % and I will always strive to  . % 
+
+% %Created seminars on topics I wanted to understand better: peer feedback, and classroom climate\\
+% %Combine my interest in research and teaching - by researching in teaching methods, and in teaching students to be researchers. \\
+% %Continue to mentor undergraduate, and other students from India?
+
+
+% %\small
+% %\bibliographystyle{alpha}
+
+% %\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+
+% \end{document}
