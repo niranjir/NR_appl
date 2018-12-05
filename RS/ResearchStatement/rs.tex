@@ -19,7 +19,7 @@
 \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
 \usepackage{lipsum}
 \usepackage{url}
-\usepackage{fancyheadings}
+%\usepackage{fancyheadings}
 \usepackage[margin=1in]{geometry}
 \usepackage{lastpage}
 \usepackage{graphicx}
@@ -88,7 +88,7 @@ On the other hand, a complete bottom-up approach, based usually on experience an
 My thesis demonstrates this approach applied to several indoor localization applications, ranging from precise mobile phone localization that can be used for navigation and mobile augmented reality, to extreme systems designed for firefighting scenarios wherein multiple incomplete sources of data need to be opportunistically fused together. 
 In all of this, not only did I develop reliable algorithms, but I also successfully demonstrated the feasibility of my design in several real-world deployments.
 %In all of this, not only did I develop algorithms that provide performance guarantees, but I also demonstrated the feasibility of my design in several real world deployments.
-As a result, my research has been published at such premier highly selective conferences in CPS as IPSN '14 (cited 130+ times), IPSN '18, SenSys '17, RTAS '17, RTAS '15,  RTSS '13, ICCPS '13, IPIN '16, and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received a patent, won the international Microsoft Indoor Localization competition twice, received a best demo award, spawned a startup, and led to funding from NSF, SRC, NIST, and industry.
+As a result, my research has been published at such premier highly selective conferences in CPS as IPSN '14 \textbf{(cited 130+ times)}, IPSN '18, SenSys '17, RTAS '17, RTAS '15,  RTSS '13, ICCPS '13, IPIN '16, and VLCS '14. My work has been demonstrated live at four conferences, been deployed in more than two dozen environments, received a patent, \textbf{won the international Microsoft Indoor Localization competition twice}, received a \textbf{best demo} award, spawned a \textbf{startup}, and led to funding from NSF, SRC, NIST, and industry.
 
 
 
@@ -178,9 +178,10 @@ CPS are becoming pervasive and growing in scale with applications ranging from s
 %and smart buildings, to smart manufacturing and smart medical facilities inside buildings, 
 to personalized applications like body area networks.  %Though these systems Soon, we will begin to see these applications coming together and sharing physical and compute resources. 
 %In the long-term I want to develop theoretical and practical frameworks to support 
-We are moving towards 
-paradigms where physical and computational resources are used by multiple applications and shared by multiple tenants.  For instance, tracking of an asset will span smart manufacturing, smart transport, and smart cities.  A second example is a shared network of drones serving multiple applications, such as imaging for smart agriculture, and transportation of critical resources to a hospital for an emergency. Multi-tenant problems are already beginning to plague smart building infrastructures that could %should be able to 
-be reconfigured on-the-fly based on the context of the building occupants. %My goal is to develop  %The grand challenge lies r
+%We are moving towards 
+In the future, I want to support 
+paradigms where physical and computational resources are used by multiple applications and shared by multiple tenants.  For instance, tracking of an asset will span smart buildings, smart transport, and smart cities.  A second example is a shared network of drones serving multiple applications, such as imaging for smart agriculture, and transportation of critical resources to a hospital for an emergency. Multi-tenant problems are already beginning to plague smart building infrastructures that %could 
+should be capable of being reconfigured on-the-fly based on the context of the building occupants. %My goal is to develop  %The grand challenge lies r
 
 %My goal is to develop theoretical and practical frameworks to enable these systems to reliably interoperate at scale, in a cost-effective manner. The critical challenges are right at the cyber-physical interface.
 %In addition to domain-specific tools, we require rapidly deployable systems, security built-in at the cyber-physical layer, new ways of cyber-physical interaction, algorithms for processing physically distributed data efficiently, and integration of next generation communication for real-time operation. I strongly believe my approach of working across theory and systems and experience in working across layers of the system stack puts me in the perfect place to tackle the challenges along the way. Moreover, location services are fundamental to these physically distributed applications, and I can employ my localization expertise to address many of these problems. Some preliminary steps are:
@@ -192,11 +193,10 @@ In addition to application-specific sensing, this requires advancements in sever
 %Imagine if we could seamless interact with smart buildings and %These systems should be secure, reliable, spatially-aware, integrated with next generation communication, support real-time interaction with objects and smart devices for a wide variety of applications indoors. % through interaction with objects and smart devices indoors. 
 
 
-\paragraph{Rapidly Deployable System. }
+\paragraph{Rapidly Deployable Systems. }
 Future CPS will require rapid infrastructure deployment in an ad-hoc manner.  As a concrete step towards this lofty goal, I would like to explore robust systems for localizing first responders and building occupants in serious fires without relying on existing infrastructure. I led the proposal for a firefighter localization project which is funded by National Institute of Standards and Technologies (NIST) that has started to look at the role of opportunistically sharing information between clusters of first responders to refine location estimates.
 The proposed method uses beacons on firetrucks, wearable devices on firefighters, a long-range low-power wireless network, and mobile network localization and mapping algorithms. 
 My next steps are to evaluate the impact on various technologies under smoke, develop methods to train low-accuracy inertial sensors using vision-based high accuracy sensors, and integrate infrared sensors and drones for increasing resilience. I am working with NIST and industry on emerging beaconing technologies that could potentially be part of all buildings in the exit signs, primarily for emergency (e911), but could be also useful for bootstrapping other systems. 
- 
 % by opportunistic use of available sensors. % This problem is challenging since we cannot rely on any existing infrastructure. 
 %Security and localization are siloed domains traditionally. However, there is an opportunity in working across the domains to make localization secure, and to leverage localization and sensing for enabling secure interaction among physically co-located devices. 
 %To start thinking about localization from a security-point-of-view, 
@@ -240,7 +240,8 @@ Current sensing systems can easily be attacked since the system models do not ac
 \paragraph{Mixed Reality. }
 Mixed reality is an ultimate realization of CPS with tight coupling between the digital and physical worlds in real-time, with a human-in-the-loop. %What makes it more challenging and interesting is the human-in-the-loop. 
 This includes augmenting the human's perception of reality through various senses and enabling the human to realize actuation in the physical world digitally. Among many challenges, 
-mixed reality requires accurate representation of the digital display, as well as smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.  As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. In future, I would develop new sensing techniques and design principles for fusing multiple sensors, e.g. vision, emerging localization technologies, and VLC, at the low-level to create robust mixed reality systems. More broadly, I am interested in building architectural frameworks for integration of various sensing, actuation, and interaction technologies. \\
+mixed reality requires accurate representation of the digital display, as well as smart devices and physical objects in the same reference frame, for which current vision-based methods are insufficient.  As a start, I have shown how we can improve state-of-the-art mobile Augmented Reality (AR) using beacons and magnetic fields \cite{mobileAR}. In future, I would develop new sensing techniques and design principles for fusing multiple sensors, e.g. vision, emerging localization technologies, and VLC, at the low-level to create robust mixed reality systems. More broadly, I am interested in building architectural frameworks for integration of various sensing, actuation, and interaction technologies. 
+
 
 
 %\paragraph{Longer Term: Smart Everything. }
@@ -259,8 +260,9 @@ mixed reality requires accurate representation of the digital display, as well a
 
 I plan to have a large, interdisciplinary research group. Irrespective of how students balance theory and practice in their work, my goal is for them to have a systematic and analytical approach to design, as well as an appreciation for practical real-world implementation. While working on indoor localization, I interned at Apple's location group, worked with Texas Instruments' emerging localization technology, and met with users of localization systems ranging from firefighters to museum staff who wanted to deploy localization systems. These interactions helped me think about the problem more holistically and motivated me to keep my work grounded in real-world problems. I am looking forward to diversifying into new domains with collaborations.  \\
 
-My style of working is collaborative. 
-I am co-advised, and I have been fortunate to be part of two research groups during my PhD. One of my external collaborations started off with a casual discussion with a faculty at a conference, and another collaboration started off when I met a faculty who visited Carnegie Mellon to give talks. % and I would encourage my students to collaborate with faculty and students in other research groups. 
+%My style of working is collaborative. 
+I would develop a collaborative culture in my research group.
+I am co-advised, and have had the opportunity  to be part of two research groups during my PhD. One of my external collaborations started off with a casual discussion with a faculty at a conference, and another collaboration started off when I met a faculty who visited Carnegie Mellon to give talks. % and I would encourage my students to collaborate with faculty and students in other research groups. 
 In addition, I have been part of two SRC multi-university research centers, Terraswarm and CONIX, throughout my PhD. Being part of these research centers has given me the opportunity to experience firsthand the impact of collaborations across groups and universities, and to build a wide academic network. I will create opportunities for my students to grow through such collaborations and interactions within and outside the university.  \\
 
 %Each student is unique and I will adapt my style of working to each student. 

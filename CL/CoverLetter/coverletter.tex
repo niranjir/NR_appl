@@ -1,9 +1,7 @@
+
 \documentclass[10pt]{article}
 
-%\usepackage{fancyhdr}
- 
-%\pagestyle{headings}
-%\markright{John Smith}
+
 
 \date{}
 
@@ -15,9 +13,9 @@
 \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
 \usepackage{lipsum}
 \usepackage{url}
-
+%\usepackage{fancyheadings}
 \usepackage[margin=1in]{geometry}
-
+\usepackage{lastpage}
 \usepackage{graphicx}
 \usepackage{balance}
 \usepackage{comment}
@@ -28,11 +26,33 @@
 \usepackage{enumerate}
 \usepackage{color}
 \usepackage{titling}
+\usepackage{scrpage2}
 %\usepackage{subcaption}
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+\hypersetup{%
+    %draft, % = no hyperlinking at all (useful in b/w printouts)
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=webbrown, citecolor=webbrown,
+    %pagecolor=RoyalBlue,% urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    % pdftitle={Joy Arulraj - Curriculum Vitae},%
+    % pdfauthor={Joy Arulraj},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfborder={ 0 0 0 }
+}
+
+
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
 \newcommand{\tableref}[1]{Table~\ref{tab:#1}}
 
 \newcommand{\compactimg}{\vspace{-12pt}}
+
 
 \clubpenalty=10000 
 \widowpenalty=10000
@@ -42,35 +62,164 @@
 
 \begin{document}
 \pagenumbering{gobble}
-
-% \begin{table}
-% \color{blue}
-% %\color{Emerald}
-% \begin{tabular*}{\textwidth}{l r}
-% \large\textbf{TEACHING STATEMENT} & 
-% \hfill \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-% \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
-% \large\textbf{NIRANJINI RAJAGOPAL}\\
-% \hline
-% \end{tabular*}
-
-% \end{table}
-
-Niranjini Rajagopal
-PhD Candidate
-Department of Electrical and Computer Engineering
-Carnegie Mellon University
-
-Dec 1, 2018
-
-Dear Faculty Search Committee:\\
+%\vspace{60pt}
+\begin{minipage}[t!]{\textwidth}
+\includegraphics[width=3in]{CMU_Logo_Horiz_Red}\vspace{-10pt}\\
+\noindent\rule{\textwidth}{0.5pt}
+\end{minipage}
 
 
-I am applying for the position of a tenure-track assistant professor in the Department of Electrical Engineering at Stanford University. I 
-%writing in regard to the available Tenure-Track Assistant Professor Position in the Department of Electrical and Computer Engineering at University of California, Los Angeles. 
-I am currently a PhD candidate in Electrical and Computer Engineering at Carnegie Mellon University. I expect to graduate in May 2019. \\
+\vspace{10pt}
 
-My research lies in the general area of Cyber-Physical Systems. I work across theory and systems, at the intersection of embedded sensing systems, signal processing and estimation. 
+
+
+Dec 5, 2018\\
+
+The Electrical and Computer Engineering Department\\
+The University of California, Los Angeles\\
+3233 S Sepulveda Blvd, \\
+Los Angeles, CA 90034\\
+%Department of Electrical Engineering and Computer Science\\
+%The Massachusetts Institute of Technology\\
+%50 Vassar St\\
+%Cambridge, MA 02142\\
+
+% School of Electrical and Computer Engineering\\
+% Georgia Institute of Technology\\
+% 777 Atlantic Drive NW\\
+% Atlanta, GA 30332-0250\\
+
+
+
+Dear Faculty Search Committee Members:\\
+
+
+I am applying for the position of a tenure-track assistant professor position at \textbf{The Electrical and Computer Engineering (ECE) Department in the Henry Samueli School of Engineering and Applied Science at the University of California, Los Angeles (UCLA)}, with primary interest in the area \textbf{Cyber-Physical Systems and Networked Control with Applications}. I have discussed my interest in this position with Mani Srivastava, Danijela Cabric, and Paulo Tabuada through the CONIX Research Center. % while interacting with them through the CONIX research center. 
+I am currently a PhD student with Anthony Rowe and Bruno Sinopoli at Carnegie Mellon University.\\ % and will complete my dissertation in May 2018. \\
+
+
+%My research lies in the general area of Cyber-Physical Systems. I work across theory and systems, at the intersection of embedded sensing systems, signal processing and estimation. My thesis contributes to new hardware platforms, estimation algorithms and tools for indoor localization. My work has been published in premier Cyber-Physical Systems conferences including IPSN, ICCPS, RTAS and SenSys.\\ 
+
+%I appreciate your consideration of my application. 
+%I look forward to discussing it with you further. \\
+
+I work across theory and practice of Cyber-Physical Systems, at the intersection of embedded sensing systems, signal processing and estimation.  
+With this approach, my dissertation has contributed to new hardware platforms, estimation algorithms and tools for indoor localization, resulting in publications in premier Cyber-Physical Systems (CPS) conferences including IPSN, ICCPS, and SenSys. %My work has been demonstrated in the real-world and won the international Microsoft Indoor Localization competition twice.\\ %My work I  andwinning the international Microsoft Indoor Localization competition twice. I worked in industry
+%for three years and continue to collaborate with industry on emerging technologies for my research.\\ % and winning the international Microsoft Indoor Localization competition twice. \\
+In my professional experience I worked in industry for three years, and have collaborated with industry (Apple, Texas Instruments, Samsung) through internships and research projects during my PhD. I would continue to initiate industry collaborations for my future research. Beyond my discipline-specific experience, my teaching is informed by my role as Graduate Teaching Fellow at the Center for Teaching Excellence at Carnegie Mellon University. This has has equipped me with an evidence-based approach to teaching, which I can apply to the growing requirements of the new Computer Engineering major at UCLA. \\%I can teach foundational courses in signals, communication, estimation as well as applied courses in internet-of-things, robotics systems and mobile sensing.\\ 
+%Given the department's 
+%With the ECE department's recent 
+
+For my future research in emerging CPS applications, I would like to collaborate closely with faculty in the Signals and Systems, and the Circuits and Embedded Systems areas, and initiate interdisciplinary collaborations at UCLA. In particular, I look forward to working with the Garrick Institute for the Risk Sciences in designing rapidly deployable resilient systems, for which I can leverage my current collaboration with NIST, where I am developing a resilient localization system for firefighters. Another direction of my future research is Mixed Reality systems for interaction with future smart environments, applicable to future smart medical facilities, for which I can collaborate with UCLA's Center for SMART Health. \\%More broadly\\
+
+
+I appreciate your consideration of my application. I look forward to discussing it with you further. \\
+
+Sincerely,\\\\
+\begin{minipage}[t!]{\textwidth}
+\includegraphics[width=1in]{Sign.png}%\vspace{-10pt}\\
+%\noindent\rule{\textwidth}{0.5pt}
+\end{minipage}\\
+
+%Niranjini Rajagopal\\
+\textbf{Niranjini Rajagopal}\\
+PhD Candidate\\
+Electrical and Computer Engineering\\
+Carnegie Mellon University\\
++1 (412) 708-7548 \\%$\vert$ 
+\href{mailto:niranjir@andrew.cmu.edu}{niranjir@andrew.cmu.edu}\\% $\vert$ 
+\href{http://www.niranjini.com}{http://www.niranjini.com} 
+
+%My interest in the position stems from the department's strength in all
+%ECE with new undergraduate specializations in  % and  and by my experience with undergraduate and graduate   at Carnegie Mellon. % and adopt an evidence-based approach to teaching, which has equipped me to I can bring to my teaching  I can contirbute to the growing undergraduate and graduate teaching require aligned with the growth of ECE at UCLA. %
+%I have demonstrated my commitment to increasing the participation of women in STEM through mentoring and outreach, for instance by piloting and leading a Mobile Labs ECE outreach program in a girls high school in Pittsburgh. UCLA's strength in Education would enable me to develop   % % in a girls high school in Pittsburgh.\\
+
+
+
+%
+%I am 
+%My future research diretions 
+%Given that the ECE department has identified Computer Engineering as a strategic area of growth, 
+%My interest in a faculty position in your department 
+%I am interested 
+%My future research agenda is to support cross-domain CPS applications that share physical and computational resources in an opportunistic manner. I believe I can add to your department's strength by collaborating with faculty in embedded systems, signals, communication, theory and emerging sensing technologies. I have discussed my interest with Mani Srivastava, Danijela Cabric, and Paulo Tabuada, while interacting with them through the CONIX research center. In particular, I look forward to working with the Garrick Institute for the Risk Sciences on developing rapidly deployable resilient infrastructure. Another direction of my research is in developing mixed reality systems for interacting with future smart environments, also applicable to future smart medical facilities, for which I can collaborate with UCLA's Center for SMART Health. \\% to bring  to future smart medical facilities.
+%My future research agenda is to support cross-domain CPS applications that share physical and computational resources in an opportunistic manner. 
+%U
+%I 
+%My future research agenda is to support cross-domain CPS applications that share physical and computational resources in an opportunistic manner. Towards this, I 
+%Beyond my research, I am a Graduate Teaching Fellow at the Center for Teaching Excellence at Carnegie Mellon University and adopt an evidence-based approach to teaching. Through my outreach and mentoring, I have demonstrated my commitment to increasing the participation of women in Electrical and Computer Engineering.\\
+%My research agenda is to develop theoretical and practical frameworks to support modern large-scale Cyber-Physical Systems. Towards this, I would like to work closely with faculty in theory, systems and emerging sensing technologies within the ECE department, and initiate cross-department collaborations at UCLA.
+%My future research agenda is to support cross-domain CPS applications that share physical and computational resources in an opportunistic manner. In the near-term, with near-term focus on applications in the built environment. 
+%Towards this, three thrusts of my research are in developing rapidly deployable deployable infrastructure, designing systems to be resilient
+%I look forward to working with the Garrick Institute for the Risk Sciences for designing rapidly deployable resilient CPS, as well as develop interactive mixed for interactive with future smart environments, and bring the future mixed reality systems for interacting with smart environments, which I can apply to smart healthcare, in collaboration with the Center for SMART Health
+
+% Towards this, I would like to work closely with faculty in theory, systems and emerging sensing technologies within the ECE department, and initiate cross-department collaborations at UCLA. %collaborate with other departments in UCLA as well as industry.
+% I look forward to working with the Garrick Institute for the Risk Sciences for designing rapidly deployable resilient CPS, as well as develop interactive mixed for interactive with future smart environments, and bring the future mixed reality systems for interacting with smart environments, which I can apply to smart healthcare, in collaboration with the Center for SMART Health
+% One direction includes developing tools for rapidly deployable infrastructure, for which I look forward to working with the Garrick Institute for the Risk Sciences. Another direction is in developing mixed reality systems for interacting with smart environments, which I can apply to smart healthcare, in collaboration with the Center for SMART Health. More broadly, I would like to collaborate closely with faculty in diverse areas within the ECE department, and initiate multidisciplinary collaborations within UCLA and with industry.
+% \\ 
+
+%In particular, % as well as work with with researchers in other departments. 
+%For instance, 
+%For this, I would like to work closely with the Garrick Institute for the Risk Sciences. 
+%For instance, one of my future directions is to develop rapidly deployable resilient infrastructure, %aligned with the center's 
+%with UCLA's strength in the Medical Field and Los Angleles's stran
+ %for which 
+ %I look forward to working with the Garrick Institute for the Risk Sciences in , and in collaborating with the Center for SMART Health to bring sensing and interactive mixed-reality systems to future medical facilities.\\ %for future smart environments, which I would like to bring to smart medical facilities by working with the Center for SMART Health. More broadly, I would like to collaborate closely with faculty in theory, systems and emerging sensing technologies within the ECE department, and initiate multidisciplinary collaborations within UCLA and with industry.\\
+
+%Beyond my research, I am a Graduate Teaching Fellow at the Center for Teaching Excellence at Carnegie Mellon University and adopt an evidence-based approach to teaching. Through my outreach and mentoring, I have demonstrated my commitment to increasing the participation of women in Electrical and Computer Engineering.\\
+
+ %experience of three years, and 
+%My future research agenda is to build theoretical and practical frameworks for supporting modern CPS. 
+%The department's  
+
+%near-term I would focus on applications in the built environment.
+%my next steps include supporting CPS applications in the built environmentrapidly deployable resilient infrastructure for disaster resilience, for which I particularly look forward to working with the Garrick Institute for the Risk Sciences, and 
+%My long-term vision is to support cross-domain CPS applications using shared physical and computational resources. I believe I can collaborate with I would particularly look forward to working with the Garrick Institute for the Risk Sciences for , as well as enabling 
+
+%In particular, UCLA ECE's strength in all Towards this, I would like to collaborate closely with faculty in theory, systems and emerging sensing technologies within the ECE department, and collaborate with other departments in UCLA as well as industry.
+%I would particularly look forward to working with the Garrick Institute for the Risk Sciences for developing rapidly deployable infrastructure, and working with  the Center for SMART Health for bringing mixed reality systems 
+%would built theoretical and practical frameworks for modern CPS in the built environment, including buidling rapidly deployable systems 
+%for which I would like to work with UCLA's multidisciplinary Garrick Institute for the Risk Sciences, and developing mixed-reality systems, which I would like to bring to smart medical facilities by working with 
+%to develop rapidly deployable systems for disaster resilience. Another direction I would pursue is to develop mixed-reality systems for interaction with the smart environemtns. I would like to work with 
+%the Center for SMART Health to bring mixed-reality to the smart healthcare domain. \\%More broadly,
+%\\ %In the long-term I want to build tools for supporting cross-application domains using shared physical and computation resources. I believe 
+
+
+
+%My research agenda is to support modern large-scale Cyber-Physical Systems. UCLA
+%Towards this, I can  collaborate with UCLA's Center for SMART Health in bringing sensing and interacting mixed reality systems to medical facilities. Another 
+% One of my future directions is Mixed Reality systems, applicable to domains such as smart healthcare, for which I can collaborate with UCLA's Center or SMART Health
+% Two of my nearOne specific area is in the developemnt of rapidly deployable infrastucture, which I beleive, I can collaborate with UCLA's  multidisciplinary Garrick Institute for the Risk Sciences. The other area is the develometn of mixed reality systems, which has potential future medical facilities, for which I can collaborate with UCLA's leadership 
+
+% UCLA 
+% My research agenda - future CPS\\
+% Center for Risk Science - one of my directions is disaster resilience and rapidly deployable infrastruture.\\
+% Another is mixed rality to bring automy to interaction - Center for Medical sScience.\\
+% collaborating and interdisciplinary. \\
+% Within the department, can collaborate with faculty in X areas, and in emerging sensing such as ..
+
+% PhD Candidate\\
+% Electrical and Computer Engineering\\
+% Carnegie Mellon University\\
+% +1 (412)7087548\\
+% \href{mailto:niranjir@andrew.cmu.edu}{niranjir@andrew.cmu.edu}\\
+% \href{http://www.niranjini.com}{http://www.niranjini.com} 
+% \\
+%www.niranjini.com
+
+%I am among the MIT EECS Rising Stars 2018, received the Samsung PhD Fellowship in 2016, 
+
+%My research strives to bridge theory and practice in Cyber-Physical Systems. In order to achieve this, I work at the intersection of embedded sensing systems, signal processing, and estimation. With this approach, my dissertation has contributed to new hardware platforms, estimation algorithms, and tools for indoor localization, resulting in pubications in premier Cyber-Physical Systems conferences including IPSN, ICCPS, RTAS, and SenSys. In addition to contributing to fundamental research, I demonstrate my approaches in the real-world. My work in indoor localization won the international Microsoft Indoor Localization competition twice. I worked in industry for three years and have had industry impact during my PhD. In the true spirit of bridging theory and systems, I am co-advised by Prof. Anthony Rowe and Prof. Bruno Sinopoli.\\
+
+%Beyond my research, I am a Graduate Teaching Fellow with the Eberly Center for Teaching Excellence at Carnegie Mellon Univeristy and apply evidence-based teaching approaches to teaching. % through my role as a Graduate Teaching Fellow with the Eberly Center for Teaching Excellence over the past four years. I am qualified%I am experienced in assisting teaching for undergraduate and graduate courses.
+
+
+%UCLA..
+%I 
+
+%interests are in the general area of Cyber-Physical Systems. I work across theory and systems, at the intersection of embedded sensing systems, signal processing, and estimation. My thesis contributes to new hardware platforms, estimation algorithms, and tools for indoor localization. My work has been published in premier Cyber-Physical Systems conferences including IPSN, ICCPS, RTAS, and SenSys.\\ 
+
+
 
 
 %I worked in the industry prior to joining CMU and my research brings an analytical approach to solving real-world problems. I have an expertise in indoor localization, the focus of my dissertation. My research has resulted in publications in top CPS conferences including IPSN, ICCPS, RTAS, and SenSys, spawned a startup, and has won the Microsoft Indoor Localization competition twice. I strongly believe that my unique research methodology of working across theory and systems, my strong analytical approach as well as my experience in building and deploying systems places me in an excellent position to tackle challenges faced by emerging CPS. 
@@ -94,3 +243,99 @@ My research lies in the general area of Cyber-Physical Systems. I work across th
 
 
 \end{document}
+% \documentclass[10pt]{article}
+
+% %\usepackage{fancyhdr}
+ 
+% %\pagestyle{headings}
+% %\markright{John Smith}
+
+% \date{}
+
+% \usepackage{amsmath}    % need for subequations
+% \usepackage{graphicx}   % need for figures
+% \usepackage{verbatim}   % useful for program listings
+% \usepackage{color}      % use if color is used in text
+% \usepackage{subfigure}  % use for side-by-side figures
+% \usepackage[colorlinks=true,citecolor=blue]{hyperref}   % use for hypertext links
+% \usepackage{lipsum}
+% \usepackage{url}
+
+% \usepackage[margin=1in]{geometry}
+
+% \usepackage{graphicx}
+% \usepackage{balance}
+% \usepackage{comment}
+% \usepackage{amssymb,amsmath}
+% \usepackage{caption}
+% \DeclareCaptionType{copyrightbox}
+% \usepackage{subfigure}
+% \usepackage{enumerate}
+% \usepackage{color}
+% \usepackage{titling}
+% %\usepackage{subcaption}
+% \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+% \newcommand{\tableref}[1]{Table~\ref{tab:#1}}
+
+% \newcommand{\compactimg}{\vspace{-12pt}}
+
+% \clubpenalty=10000 
+% \widowpenalty=10000
+% \setlength{\parindent}{0cm}
+
+
+
+% \begin{document}
+% \pagenumbering{gobble}
+
+% % \begin{table}
+% % \color{blue}
+% % %\color{Emerald}
+% % \begin{tabular*}{\textwidth}{l r}
+% % \large\textbf{TEACHING STATEMENT} & 
+% % \hfill \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+% % \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+% % \large\textbf{NIRANJINI RAJAGOPAL}\\
+% % \hline
+% % \end{tabular*}
+
+% % \end{table}
+
+% Niranjini Rajagopal
+% PhD Candidate
+% Department of Electrical and Computer Engineering
+% Carnegie Mellon University
+
+% Dec 1, 2018
+
+% Dear Faculty Search Committee:\\
+
+
+% I am applying for the position of a tenure-track assistant professor in the Department of Electrical Engineering at Stanford University. I 
+% %writing in regard to the available Tenure-Track Assistant Professor Position in the Department of Electrical and Computer Engineering at University of California, Los Angeles. 
+% I am currently a PhD candidate in Electrical and Computer Engineering at Carnegie Mellon University. I expect to graduate in May 2019. \\
+
+% My research lies in the general area of Cyber-Physical Systems. I work across theory and systems, at the intersection of embedded sensing systems, signal processing and estimation. 
+
+
+% %I worked in the industry prior to joining CMU and my research brings an analytical approach to solving real-world problems. I have an expertise in indoor localization, the focus of my dissertation. My research has resulted in publications in top CPS conferences including IPSN, ICCPS, RTAS, and SenSys, spawned a startup, and has won the Microsoft Indoor Localization competition twice. I strongly believe that my unique research methodology of working across theory and systems, my strong analytical approach as well as my experience in building and deploying systems places me in an excellent position to tackle challenges faced by emerging CPS. 
+
+% %My dissertation focus
+% %My research has been supported by the Carnegie Mellon Presidential Fellowship and the Samsung PhD Fellowship. 
+
+% %I have been a teaching assistant for undergraduate and graduate courses in signals and communication areas at CMU. I am in the unique position of being  graduate teaching fellow at CMU's center for teaching excellence. I started and led an ECE outreach program for high school students. 
+
+
+% % I am applying for an assistant professor position in the department of Electrical and Computer Engineering at University of California, Los Angeles. \\
+
+% % I work across theory and systems of cyber-physical systems.  My thesis focuses on indoor localization. My research has resulted in ...\\
+% % I bring a unique experience of spanning theory and systems.
+% % My future research agenda is to 
+
+% % In addition to research, I have a strong interest in teaching and mentoring students.\\
+
+% % I worked in industry for 3 years, and spent 2 summers in industy. I collaborate with industry during my PhD.\\
+% % I am looking forward to 
+
+
+% \end{document}
